@@ -1,27 +1,52 @@
 const {
-    src,       //來源
-    dest,      //目的地
-    series,    //執行完A任務再執行B任務
-    parallel,  //同時執行任務
-    watch      //監看   //以上五個為gulp原生方法，剩下要靠套件安裝後才能用 //同步
+    src,
+    dest,
+    series,
+    parallel,
+    watch
 } = require('gulp');
 
-//宣告任務
-function defaultTask(cb) {
-    console.log('hello gulp4');
-    cb();
+// sass 編譯
+
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+
+
+function sassStyle() {
+    return src('dev/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({compatibility: 'ie10'})) 
+        .pipe(dest('dist/css'));
+};
+
+
+
+
+// html template
+
+const fileinclude = require('gulp-file-include');
+
+function includeHTML() {
+    return src('dev/*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('dist'));
 }
 
-//執行任務
-exports.do = defaultTask;
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
 
 
-
-
-//搬家任務  *指令 在終端機輸入 gulp copy //copy為檔名、可隨意更改
-function move(){
-    return src('dev/*.*').pipe(dest('dist'));  //src -> 來源 dest -> 目的地    //第一* 指全部檔名、第二* 全部類型
+exports.default =  function browser() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['dev/*.html' , 'dev/**/*.html'], includeHTML).on('change' , reload);
+    watch(['dev/sass/*.scss' ,'dev/sass/**/*.scss'] , sassStyle).on('change' , reload);
 }
-
-//執行任務
-exports.copy = move

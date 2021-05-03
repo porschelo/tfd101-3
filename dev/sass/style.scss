@@ -1,8 +1,17 @@
 // 順序
 // var
+@import'base/var';
 // mixin
+@import'mixins/mixins';
 // reset
+@import'base/reset';
 // bootstrap
+
 // module
+@import'module/btn';
+@import'module/color';
+@import'module/form';
 // common
 // layout
+@import'layout/header';
+@import'layout/footer';
