@@ -194,8 +194,11 @@
             @include mobile{
                 max-width: 80px;
             }
-        
+            &:hover{
+                // gsap.to(graph, { duration: 2.5, ease: "back.out(1.7)", y: -500 });
+                transform: translateX(100px);
+                }
+            }
         }
-    }
 
 }
