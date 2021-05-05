@@ -159,8 +159,10 @@
             text-align: center;
             display: block;
             margin: 0 auto;
+            padding-top: 50px;
             padding-bottom: 120px;
         }
+
         .monster{
             max-width: 670px;
             // width: 100%;
@@ -194,11 +196,36 @@
             @include mobile{
                 max-width: 80px;
             }
+            transition: .6s cubic-bezier(0.25,0.1,0.25,1);
             &:hover{
                 // gsap.to(graph, { duration: 2.5, ease: "back.out(1.7)", y: -500 });
-                transform: translateX(100px);
-                }
+                transform: translateY(-50px);
+                transition: .6s cubic-bezier(0.25,0.1,0.25,1);
+            } 
+            &:hover img{
+                // transform: translateY(-50px);
+                // transition: .6s ease-in-out;
+            }
+            
+        }
+        .left-monster img{
+            width: 180px;
+            position: absolute;
+            top:150vh;
+            left:-5.5%;
+            @include md{
+                display: none;  
             }
         }
+        .right-monster img{
+            width: 160px;
+            position: absolute;
+            top:170vh;
+            right:-6%;
+            @include md{
+                display: none;  
+            }
+        }
+    }
 
 }
