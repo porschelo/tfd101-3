@@ -2714,8 +2714,14 @@ footer p {
 
 .t-wrapper .t-section1 {
   width: 100%;
+  height: 100%;
+}
+
+.t-wrapper .s-bg {
+  width: 100%;
   height: 100vh;
   position: fixed;
+  z-index: -2;
   background: linear-gradient(155deg, #07155f, #0a9483, #4713ae);
   background-size: 600% 600%;
   -webkit-animation: AnimationName 80s ease infinite;
@@ -2750,12 +2756,7 @@ footer p {
   position: fixed;
   width: 100%;
   height: 100vh;
-}
-
-.t-wrapper .t-stars html, .t-wrapper .t-stars body {
-  height: 100%;
-  overflow: hidden;
-  background-image: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
+  z-index: -1;
 }
 
 .t-wrapper .t-stars .star {
@@ -2766,16 +2767,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-1 {
   position: absolute;
-  top: 254px;
-  left: 82%;
+  top: 236px;
+  left: 28%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 4s linear infinite;
-          animation: meteor 4s linear infinite;
+  -webkit-animation: meteor 8.5s linear infinite;
+          animation: meteor 8.5s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-1:before {
@@ -2792,16 +2793,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-2 {
   position: absolute;
-  top: 126px;
-  left: 46%;
+  top: 170px;
+  left: 70%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 9.3s linear infinite;
-          animation: meteor 9.3s linear infinite;
+  -webkit-animation: meteor 8.8s linear infinite;
+          animation: meteor 8.8s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-2:before {
@@ -2818,16 +2819,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-3 {
   position: absolute;
-  top: 203px;
-  left: 82%;
+  top: 168px;
+  left: 83%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 5s linear infinite;
-          animation: meteor 5s linear infinite;
+  -webkit-animation: meteor 5.7s linear infinite;
+          animation: meteor 5.7s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-3:before {
@@ -2844,16 +2845,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-4 {
   position: absolute;
-  top: 227px;
-  left: 29%;
+  top: 76px;
+  left: 23%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 9.4s linear infinite;
-          animation: meteor 9.4s linear infinite;
+  -webkit-animation: meteor 3.3s linear infinite;
+          animation: meteor 3.3s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-4:before {
@@ -2870,16 +2871,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-5 {
   position: absolute;
-  top: 205px;
-  left: 62%;
+  top: 137px;
+  left: 54%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 6.1s linear infinite;
-          animation: meteor 6.1s linear infinite;
+  -webkit-animation: meteor 8.1s linear infinite;
+          animation: meteor 8.1s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-5:before {
@@ -2896,16 +2897,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-6 {
   position: absolute;
-  top: 274px;
-  left: 52%;
+  top: 146px;
+  left: 30%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 5.3s linear infinite;
-          animation: meteor 5.3s linear infinite;
+  -webkit-animation: meteor 9.7s linear infinite;
+          animation: meteor 9.7s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-6:before {
@@ -2922,16 +2923,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-7 {
   position: absolute;
-  top: 166px;
-  left: 36%;
+  top: 212px;
+  left: 89%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 7.9s linear infinite;
-          animation: meteor 7.9s linear infinite;
+  -webkit-animation: meteor 7.5s linear infinite;
+          animation: meteor 7.5s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-7:before {
@@ -2948,16 +2949,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-8 {
   position: absolute;
-  top: 147px;
-  left: 66%;
+  top: 201px;
+  left: 19%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 6.7s linear infinite;
-          animation: meteor 6.7s linear infinite;
+  -webkit-animation: meteor 4.3s linear infinite;
+          animation: meteor 4.3s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-8:before {
@@ -2974,16 +2975,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-9 {
   position: absolute;
-  top: 158px;
-  left: 85%;
+  top: 69px;
+  left: 24%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 10s linear infinite;
-          animation: meteor 10s linear infinite;
+  -webkit-animation: meteor 8.1s linear infinite;
+          animation: meteor 8.1s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-9:before {
@@ -3000,16 +3001,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-10 {
   position: absolute;
-  top: 51px;
-  left: 59%;
+  top: 240px;
+  left: 81%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 6.5s linear infinite;
-          animation: meteor 6.5s linear infinite;
+  -webkit-animation: meteor 8.6s linear infinite;
+          animation: meteor 8.6s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-10:before {
@@ -3026,16 +3027,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-11 {
   position: absolute;
-  top: 146px;
-  left: 45%;
+  top: 58px;
+  left: 38%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.6s linear infinite;
-          animation: meteor 3.6s linear infinite;
+  -webkit-animation: meteor 4.2s linear infinite;
+          animation: meteor 4.2s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-11:before {
@@ -3052,16 +3053,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-12 {
   position: absolute;
-  top: 275px;
-  left: 24%;
+  top: 206px;
+  left: 97%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.6s linear infinite;
-          animation: meteor 3.6s linear infinite;
+  -webkit-animation: meteor 3.3s linear infinite;
+          animation: meteor 3.3s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-12:before {
@@ -3078,16 +3079,16 @@ footer p {
 
 .t-wrapper .t-stars .meteor-13 {
   position: absolute;
-  top: 207px;
-  left: 67%;
+  top: 169px;
+  left: 36%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.2s linear infinite;
-          animation: meteor 3.2s linear infinite;
+  -webkit-animation: meteor 8.6s linear infinite;
+          animation: meteor 8.6s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-13:before {
@@ -3105,15 +3106,15 @@ footer p {
 .t-wrapper .t-stars .meteor-14 {
   position: absolute;
   top: 224px;
-  left: 34%;
+  left: 53%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 4.1s linear infinite;
-          animation: meteor 4.1s linear infinite;
+  -webkit-animation: meteor 7.6s linear infinite;
+          animation: meteor 7.6s linear infinite;
 }
 
 .t-wrapper .t-stars .meteor-14:before {
@@ -3130,8 +3131,8 @@ footer p {
 
 .t-wrapper .t-stars .meteor-15 {
   position: absolute;
-  top: 189px;
-  left: 59%;
+  top: 214px;
+  left: 50%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
@@ -3189,6 +3190,115 @@ footer p {
   }
   100% {
     opacity: 0;
+  }
+}
+
+.t-wrapper .rocket img {
+  display: block;
+  width: 50px;
+  padding: 60vh 0 10vh;
+  margin: 0 auto;
+}
+
+.t-wrapper .ufo {
+  position: absolute;
+  top: 80vh;
+  right: 0;
+}
+
+.t-wrapper .ufo a {
+  outline: 1px solid green;
+  text-decoration: none;
+  display: block;
+  color: #f5f3f3;
+}
+
+.t-wrapper .ufo img {
+  width: 60px;
+}
+
+.t-wrapper .ufo .cloud {
+  outline: 1px solid red;
+  height: 80px;
+  background-image: url(../../../../1.png);
+  background-size: cover;
+}
+
+.t-wrapper .t-section2 {
+  padding-top: 30vh;
+  width: 100vw;
+}
+
+.t-wrapper .t-section2 .t-text {
+  padding: 20px;
+}
+
+.t-wrapper .t-section2 .t-text img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.t-wrapper .t-section2 .t-text p {
+  max-width: 550px;
+  width: 100%;
+  color: #f1f1f1;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+.t-wrapper .t-section2 .monster {
+  max-width: 670px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .t-wrapper .t-section2 .monster {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .t-wrapper .t-section2 .monster {
+    max-width: 251px;
+  }
+}
+
+.t-wrapper .t-section2 .monster .scorpio {
+  max-width: 160px;
+}
+
+@media (max-width: 768px) {
+  .t-wrapper .t-section2 .monster .scorpio {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .t-wrapper .t-section2 .monster .first {
+    display: none;
+  }
+}
+
+.t-wrapper .t-section2 .monster img {
+  max-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .t-wrapper .t-section2 .monster img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .t-wrapper .t-section2 .monster img {
+    max-width: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
