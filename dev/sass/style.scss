@@ -1,6 +1,7 @@
 // 順序
 // var
 @import'base/var';
+@import'base/color';
 // mixin
 @import'mixins/mixins';
 // reset
@@ -19,3 +20,8 @@
 //vendor
 @import'vendor/hamburgers.min';
 @import'vendor/hamburgers';
+
+//page
+@import'page/unstore';
+@import 'page/customized';
+@import'page/product_detail';
