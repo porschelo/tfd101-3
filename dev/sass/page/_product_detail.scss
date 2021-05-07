@@ -1,0 +1,102 @@
+.wrapper_product-detail{
+    
+     background-image: url(../../images/store/pdctD_bg.png);
+     background-size: cover;
+     
+     a{
+         text-decoration: none;
+         color: white;
+     }
+
+    
+    .product-detail{
+        &_content{
+            border: 1px solid yellow;
+            width: 85%;
+            height: 85%;
+            color: white;
+            @include center;
+            // padding-top: 455px;
+            
+            background-image: url(../../images/store/pdctFrame_bg.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        &_top{
+            .breadcrumb {
+                max-width: 1200px;
+                margin: 0 auto;
+                /* border: 1px solid red; */
+                padding-left: 50px;
+            }
+            .breadcrumb_list li{
+                display: inline-block;
+                margin-right: 10px; 
+                margin-top: 20px;
+
+                &:before{
+                    content: "/";
+                    margin-right: 10px; 
+                }
+                &:first-child:before{
+                    content: " ";
+                }
+
+            }
+    
+        }
+
+        &_main{
+            border: 1px solid red;
+            width: 85%;
+            @include center;
+            display: flex;
+
+            .leftblock{
+                border: 1px solid yellow;
+                width: 40%;   
+            }
+
+            .img_block{
+                
+                img{
+                    width: 100%;
+                    border-radius: 20px;
+                    margin-bottom: 10px;
+                }    
+            }
+            
+            .btn_block{
+                display: flex;
+                button{
+                    width: calc(70% / 3);
+                    border-radius: 20px;
+                    margin-right: 5px;
+                }
+                img{
+                    border-radius: 20px;
+                    width: 100%;
+                }
+            }
+
+            .rightblock{
+                width: 50%;
+                
+                h2{
+                    width: 40px;
+                }
+            }
+        }
+
+        
+
+    }
+  
+
+}
+
+    
+
+
+    

@@ -1,0 +1,87 @@
+.wrapper_customized{
+    
+     background-image: url(../../images/store/costomize_bg.png);
+     background-size: cover;
+     letter-spacing: $ls;
+     
+
+    .customized_title{
+        // border: 1px solid red;
+        color: $colorT;
+        padding: 80px 0;
+        &-c{
+            display: flex;
+            justify-content: center;
+        }
+       
+       h1{
+           font-size: $h1;
+           padding: 5px 20px 10px;
+       }
+
+       &-e{
+            text-align: center;
+            font-size: $p1;
+       }
+
+    }
+
+    .customized_sort{
+        color: $colorP;
+        font-size: $h2;
+        width: 85%;
+        @include center;
+        display:flex;
+        margin-top: 375px;
+        margin-bottom: -12px;
+
+        li{
+            display: block;
+            width: 10%;
+            height: 75px * .7;
+            background-color: white;
+            margin-left: 20px;
+            text-align: center;
+            line-height: 2;
+            border-radius: 20px 20px 0 0;
+
+            &:nth-child(5){
+                background-color: $colorPb;
+                justify-content: right;
+                color: white;
+                margin-left: 40%;
+            }
+        }
+    }
+
+    
+    .customized_Content{
+        border: 1px solid yellow;
+        width: 85%;
+        height: 85%;
+        color: white;
+        @include center;
+        
+        background-image: url(../../images/store/cFrame_bg.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        
+        .customized_pagination{
+            @include pagination;
+            padding-bottom: 100px;
+            
+            a{
+                color: white;
+            }
+        }
+
+    }
+  
+
+}
+
+    
+
+
+    
