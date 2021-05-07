@@ -40,7 +40,7 @@ const imagemin = require('gulp-imagemin');
 
 function imgs_dev() {
     return src(['dev/images/*.*', 'dev/images/**/*.*'])
-        .pipe(dest('dist/img'))
+        .pipe(dest('dist/images'))
 }
 
 // 壓圖
