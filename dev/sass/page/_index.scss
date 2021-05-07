@@ -135,9 +135,10 @@
         .ufo .cloud{
             outline: 1px solid red;
             // width: 100px;
-            height: 80px;
-            background-image: url(../../../../1.png);
-            background-size: cover;
+            height: 70px;
+            width: 70px;
+            background-image: url(#{$a}index/text_box1.svg);
+            // background-size: cover;
         }
     }
 
