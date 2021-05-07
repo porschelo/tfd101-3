@@ -2,7 +2,7 @@
     border: 0;
     margin: 0;
     font-family: 'Raleway','Noto Sans TC', sans-serif !important;
-    // letter-spacing: 2.5;
+    letter-spacing: $ls;
 }
 
 header{
@@ -77,11 +77,11 @@ header{
             z-index: 1000;
             .closebtn{
                 position: absolute;
-                top: 40px;
-                right: 66px;
+                top: 34px;
+                right: 68px;
                 color: #fff;
-                font-size: 70px;
-                font-weight: 300;
+                font-size: 85px;
+                font-weight: 200;
                 text-decoration: none;
                 &:hover{
                     opacity: .7;
