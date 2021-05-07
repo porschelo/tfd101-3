@@ -1,0 +1,388 @@
+*{
+    outline: 1px solid yellow;
+}
+.t-wrapper{
+    
+    // 漸層
+    .s-bg {
+    width: 100vw; 
+    height: 100vh;   
+    position: fixed;
+    z-index: -2;
+    // ------     ------     ------     ------
+    background: linear-gradient(155deg, #07155f, #0a9483, #4713ae);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 90s ease infinite;
+    -moz-animation: AnimationName 90s ease infinite;
+    animation: AnimationName 90s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 4%}
+        50%{background-position:100% 97%}
+        100%{background-position:0% 4%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 4%}
+        50%{background-position:100% 97%}
+        100%{background-position:0% 4%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 4%}
+        50%{background-position:100% 97%}
+        100%{background-position:0% 4%}
+    }
+    // 流星
+    
+    .t-stars{
+        position: fixed;
+        width: 100vw; 
+        height: 100vh; 
+        z-index: -1;
+        // ------     ------     ------     ------
+        $n: 15; // 流星數量
+        $s: 300; // star數量
+
+        $shadow: ();
+
+        @for $i from 1 through $s {
+        $x: random(1920);
+        $y: random(1000);
+        $shadow: $shadow, ( $x+px $y+px #fff) !global;
+        }
+
+        .star {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $shadow;
+        }
+
+        @for $i from 1 through $n {
+            $v: random(90) + 9; // left
+            $h: random(250) + 50; // top
+            $d: random(70)/10 + 4; // 秒數
+            .meteor-#{$i} {
+                position: absolute;
+                top: $h + px;
+                left: $v*1%;
+                width: 300px;
+                height: 1px;
+                transform: rotate(-40deg);
+                background-image: linear-gradient(to right, #fff, rgba(255,255,255,0));
+                animation: meteor $d+s linear  infinite;
+                &:before {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 5px;
+                border-radius: 50%;
+                margin-top: -2px;
+                background: rgba(#fff,.7);
+                box-shadow: 0 0 15px 3px #fff;
+                }
+            
+            }
+        }
+
+        @keyframes meteor {
+            0% {
+                opacity: 1;
+                margin-top: -300px;
+                margin-right: -300px;
+            }
+            12% {
+                opacity: 0;
+            }
+            15% {
+                margin-top: 300px;
+                margin-left: -600px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    .t-section1{
+        width: 100%; 
+        height: 100%;  
+        .rocket{
+            // margin: 0 48vw;
+        }
+        .rocket img{
+            display: block;
+            width: 50px;
+            // padding-top:500px;
+            padding: 60vh 0 10vh;
+            margin: 0 auto ;
+        }
+        .ufo{
+            position: absolute;
+            top: 80vh;
+            right: 0;
+        }
+        .ufo a{
+            outline: 1px solid green;
+            text-decoration: none;
+            display: block;
+            color: rgb(245, 243, 243);
+        }
+        .ufo img{
+            width: 60px;
+        }
+        .ufo .cloud{
+            outline: 1px solid red;
+            // width: 100px;
+            height: 70px;
+            width: 70px;
+            background-image: url(#{$a}index/text_box1.svg);
+            // background-size: cover;
+        }
+    }
+
+    .t-section2{
+        padding-top: 30vh;
+        width: 100vw;
+        // overflow: hidden;
+        position: relative;
+        .t-text{
+            padding: 20px;
+        }
+        .t-text img{
+            display: block;
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+        } 
+        .t-text p{
+            max-width: 580px;
+            width: 100%;
+            color: rgb(241, 241, 241);
+            line-height: 1.6;
+            letter-spacing: 2px;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-bottom: 120px;
+            font-size: $h3;
+        }
+
+        .monster{
+            max-width: 670px;
+            // width: 100%;
+            margin: 0 auto;
+            margin-bottom: 250px;
+            @include pad{
+                max-width: 380px;
+                margin: 0 auto;
+            }
+            @include mobile{
+                max-width: 251px;
+            }
+        }
+        .monster .scorpio{
+            max-width: 160px;
+            // width: 100%;
+            @include pad{
+             display: none;   
+            }
+        }
+        .monster .first{
+            @include pad{
+                display: none;   
+               }
+        }
+        .monster img{
+            max-width: 120px;
+            // width: 100%;
+            @include pad{
+                width: 100%;
+               }
+            @include mobile{
+                max-width: 80px;
+            }
+            transition: .6s cubic-bezier(0.25,0.1,0.25,1);
+            &:hover{
+                // gsap.to(graph, { duration: 2.5, ease: "back.out(1.7)", y: -500 });
+                transform: translateY(-50px);
+                transition: .6s cubic-bezier(0.25,0.1,0.25,1);
+            } 
+            &:hover img{
+                // transform: translateY(-50px);
+                // transition: .6s ease-in-out;
+            }
+            
+        }
+        .left-monster img{
+            width: 180px;
+            position: absolute;
+            top:50vh;
+            left:-5.5%;
+            @include md{
+                display: none;  
+            }
+        }
+        .right-monster img{
+            width: 160px;
+            position: absolute;
+            top:90vh;
+            right:-6%;
+            @include md{
+                display: none;  
+            }
+        }
+    }
+    .t-section3{
+        .star-svg{
+            // max-width: 1920px;
+            width: 100vw;
+        }
+    }
+
+    .t-section4{
+        overflow: hidden;
+        .top-clouds{
+        
+        }
+         .svg{
+            width: 100%;
+            height: 120vh;
+            
+        }
+    }
+
+    .t-section5{
+       padding-top: 300px;
+        .earthSigns{
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        // .inside{
+        //     display: flex
+        // }
+        // .e-left{
+        //     width: 30%;
+        //     position: relative;
+        // }
+        // .e-left img{
+        //     width: 200px;
+        //     position: absolute;
+        // }
+        // .icon_capricorn{
+        //     top: -70px;
+        //     right: -80%;
+        // }
+        // .icon_Taurus{
+        //     top: 130px;
+        //     right: 0%;
+        // }
+        // .icon_virgo{
+        //     top: 380px;
+        //     right: 20%;
+        // }
+        // .e-right{
+        //     width: 70%;
+        //     position: relative;
+        // }
+        // .e-right img{
+        //     width: 80%;
+        //     position: absolute;
+        //     top: 80px;
+        //     right: 10%;
+        // }
+        // .e-right h1{
+        //     font-size: $h1;
+        //     color: rgb(0, 0, 0);
+        //     line-height: 1.2;
+        //     letter-spacing: 2.5px;
+        //     position: absolute;
+        //     z-index: 1;
+        //     top: 370px;
+        //     right: 40%;
+        // }
+        // .e-right .earth{
+        //     width: 188%;
+        //     z-index: 1;
+        //     top: 0;
+        //     right: -48%;
+        //     transform:rotate(-20deg)
+        // }
+        // .click_monster{
+
+        // }
+        // .click_monster img{
+        //     height: 250px;
+        //     z-index: 2;
+        // }
+        
+        
+        // ==========================
+
+
+        .inside{
+            display: flex
+            
+        }
+        .e-left{
+            width: 30%;
+        }
+        .e-left img{
+
+        }
+        .e-left .icon_capricorn{
+            margin-left:110%;
+            margin-top: -20%;
+        }
+        .e-left .icon_Taurus{
+            margin-left: 60%;
+            margin-top: 40%;
+        } 
+        .e-left .icon_virgo{
+            margin-left: 67%;
+            margin-top: 40%;
+        }
+        .e-right{
+            width: 70%;
+        }
+        .e-right img{
+            // width: 80%;
+        }
+        .e-right .earth{
+                width: 188%;
+        }
+        .e-right .capricorn{
+            // margin-top: 10px;
+            position: relative;
+            margin-left: 20%;
+            
+        }
+        .e-right .taurus{
+            // margin-top: -100vh;
+            // width: 56%;
+            width:47.6%; 
+            left: 44%;
+            position: absolute;
+        }
+        .e-right .virgo{
+            // width: 56%;
+            width:47.6%; 
+            left: 44%;
+            position: absolute;
+        }
+        .click_monster img{
+                height: 250px;
+                z-index: 2;
+                position: absolute;
+                margin-top: -33%;
+                margin-left: 25%;
+                
+        }
+
+
+
+    }   
+}
