@@ -1,11 +1,11 @@
+*{
+    outline: 1px solid yellow;
+}
 .t-wrapper{
-    .t-section1{
-        width: 100%; 
-        height: 100%;  
-    }
+    
     // 漸層
     .s-bg {
-    width: 100%; 
+    width: 100vw; 
     height: 100vh;   
     position: fixed;
     z-index: -2;
@@ -13,9 +13,9 @@
     background: linear-gradient(155deg, #07155f, #0a9483, #4713ae);
     background-size: 600% 600%;
 
-    -webkit-animation: AnimationName 80s ease infinite;
-    -moz-animation: AnimationName 80s ease infinite;
-    animation: AnimationName 80s ease infinite;
+    -webkit-animation: AnimationName 90s ease infinite;
+    -moz-animation: AnimationName 90s ease infinite;
+    animation: AnimationName 90s ease infinite;
     }
 
     @-webkit-keyframes AnimationName {
@@ -37,7 +37,7 @@
     
     .t-stars{
         position: fixed;
-        width: 100%; 
+        width: 100vw; 
         height: 100vh; 
         z-index: -1;
         // ------     ------     ------     ------
@@ -62,14 +62,14 @@
         @for $i from 1 through $n {
             $v: random(90) + 9; // left
             $h: random(250) + 50; // top
-            $d: random(70)/10 + 3; // 秒數
+            $d: random(70)/10 + 4; // 秒數
             .meteor-#{$i} {
                 position: absolute;
                 top: $h + px;
                 left: $v*1%;
                 width: 300px;
                 height: 1px;
-                transform: rotate(-45deg);
+                transform: rotate(-40deg);
                 background-image: linear-gradient(to right, #fff, rgba(255,255,255,0));
                 animation: meteor $d+s linear  infinite;
                 &:before {
@@ -105,53 +105,58 @@
             }
         }
     }
-    .rocket{
-        // margin: 0 48vw;
-    }
-    .rocket img{
-        display: block;
-        width: 50px;
-        // padding-top:500px;
-        padding: 60vh 0 10vh;
-        margin: 0 auto ;
-    }
-    .ufo{
-        position: absolute;
-        top: 80vh;
-        right: 0;
-    }
-    .ufo a{
-        outline: 1px solid green;
-        text-decoration: none;
-        display: block;
-        color: rgb(245, 243, 243);
-    }
-    .ufo img{
-        width: 60px;
-    }
-    .ufo .cloud{
-        outline: 1px solid red;
-        // width: 100px;
-        height: 80px;
-        background-image: url(../../../../1.png);
-        background-size: cover;
+    .t-section1{
+        width: 100%; 
+        height: 100%;  
+        .rocket{
+            // margin: 0 48vw;
+        }
+        .rocket img{
+            display: block;
+            width: 50px;
+            // padding-top:500px;
+            padding: 60vh 0 10vh;
+            margin: 0 auto ;
+        }
+        .ufo{
+            position: absolute;
+            top: 80vh;
+            right: 0;
+        }
+        .ufo a{
+            outline: 1px solid green;
+            text-decoration: none;
+            display: block;
+            color: rgb(245, 243, 243);
+        }
+        .ufo img{
+            width: 60px;
+        }
+        .ufo .cloud{
+            outline: 1px solid red;
+            // width: 100px;
+            height: 80px;
+            background-image: url(../../../../1.png);
+            background-size: cover;
+        }
     }
 
     .t-section2{
         padding-top: 30vh;
         width: 100vw;
-        
+        // overflow: hidden;
+        position: relative;
         .t-text{
             padding: 20px;
         }
         .t-text img{
             display: block;
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             margin: 0 auto;
         } 
         .t-text p{
-            max-width: 550px;
+            max-width: 580px;
             width: 100%;
             color: rgb(241, 241, 241);
             line-height: 1.6;
@@ -161,12 +166,14 @@
             margin: 0 auto;
             padding-top: 50px;
             padding-bottom: 120px;
+            font-size: $h3;
         }
 
         .monster{
             max-width: 670px;
             // width: 100%;
             margin: 0 auto;
+            margin-bottom: 250px;
             @include pad{
                 max-width: 380px;
                 margin: 0 auto;
@@ -211,7 +218,7 @@
         .left-monster img{
             width: 180px;
             position: absolute;
-            top:150vh;
+            top:50vh;
             left:-5.5%;
             @include md{
                 display: none;  
@@ -220,12 +227,161 @@
         .right-monster img{
             width: 160px;
             position: absolute;
-            top:170vh;
+            top:90vh;
             right:-6%;
             @include md{
                 display: none;  
             }
         }
     }
+    .t-section3{
+        .star-svg{
+            // max-width: 1920px;
+            width: 100vw;
+        }
+    }
 
+    .t-section4{
+        overflow: hidden;
+        .top-clouds{
+        
+        }
+         .svg{
+            width: 100%;
+            height: 120vh;
+            
+        }
+    }
+
+    .t-section5{
+       padding-top: 300px;
+        .earthSigns{
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        // .inside{
+        //     display: flex
+        // }
+        // .e-left{
+        //     width: 30%;
+        //     position: relative;
+        // }
+        // .e-left img{
+        //     width: 200px;
+        //     position: absolute;
+        // }
+        // .icon_capricorn{
+        //     top: -70px;
+        //     right: -80%;
+        // }
+        // .icon_Taurus{
+        //     top: 130px;
+        //     right: 0%;
+        // }
+        // .icon_virgo{
+        //     top: 380px;
+        //     right: 20%;
+        // }
+        // .e-right{
+        //     width: 70%;
+        //     position: relative;
+        // }
+        // .e-right img{
+        //     width: 80%;
+        //     position: absolute;
+        //     top: 80px;
+        //     right: 10%;
+        // }
+        // .e-right h1{
+        //     font-size: $h1;
+        //     color: rgb(0, 0, 0);
+        //     line-height: 1.2;
+        //     letter-spacing: 2.5px;
+        //     position: absolute;
+        //     z-index: 1;
+        //     top: 370px;
+        //     right: 40%;
+        // }
+        // .e-right .earth{
+        //     width: 188%;
+        //     z-index: 1;
+        //     top: 0;
+        //     right: -48%;
+        //     transform:rotate(-20deg)
+        // }
+        // .click_monster{
+
+        // }
+        // .click_monster img{
+        //     height: 250px;
+        //     z-index: 2;
+        // }
+        
+        
+        // ==========================
+
+
+        .inside{
+            display: flex
+            
+        }
+        .e-left{
+            width: 30%;
+        }
+        .e-left img{
+
+        }
+        .e-left .icon_capricorn{
+            margin-left:110%;
+            margin-top: -20%;
+        }
+        .e-left .icon_Taurus{
+            margin-left: 60%;
+            margin-top: 40%;
+        } 
+        .e-left .icon_virgo{
+            margin-left: 67%;
+            margin-top: 40%;
+        }
+        .e-right{
+            width: 70%;
+        }
+        .e-right img{
+            // width: 80%;
+        }
+        .e-right .earth{
+                width: 188%;
+        }
+        .e-right .capricorn{
+            // margin-top: 10px;
+            position: relative;
+            margin-left: 20%;
+            
+        }
+        .e-right .taurus{
+            // margin-top: -100vh;
+            // width: 56%;
+            width:47.6%; 
+            left: 44%;
+            position: absolute;
+        }
+        .e-right .virgo{
+            // width: 56%;
+            width:47.6%; 
+            left: 44%;
+            position: absolute;
+        }
+        .click_monster img{
+                height: 250px;
+                z-index: 2;
+                position: absolute;
+                margin-top: -33%;
+                margin-left: 25%;
+                
+        }
+
+
+
+    }   
 }
