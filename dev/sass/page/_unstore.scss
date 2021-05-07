@@ -1,6 +1,6 @@
 .wrapper_unstore{
     
-     background-image: url(../../images/store/pdct_bg.png);
+     background-image: url(../images/store/pdct_bg.png);
      background-size: cover;
      box-sizing: border-box;
      letter-spacing: $ls;
@@ -80,7 +80,7 @@
         @include center;
         
         
-        background-image: url(../../images/store/pdctFrame_bg.png);
+        background-image: url(../images/store/pdctFrame_bg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
 
