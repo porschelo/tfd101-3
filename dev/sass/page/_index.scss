@@ -1,8 +1,8 @@
-*{
-    outline: 1px solid yellow;
-}
+
 .t-wrapper{
-    
+ *{
+    outline: 1px solid yellow;
+}   
     // 漸層
     .s-bg {
     width: 100vw; 
@@ -138,7 +138,7 @@
             height: 70px;
             width: 70px;
             background-image: url(#{$a}index/text_box1.svg);
-            // background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 
