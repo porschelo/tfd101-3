@@ -33,7 +33,10 @@ header{
                 img{
                     width: 100% *0.8;
                 }
-
+                &:hover{
+                    opacity: .7;
+                }
+                cursor: pointer;
             }
         }
     }
@@ -44,6 +47,9 @@ header{
         cursor: pointer;
         img{
             width: 100% *0.8;
+        }
+        &:hover{
+            opacity: .7;
         }
     }
     
@@ -61,47 +67,48 @@ header{
     .menulist{
         display: flex;
         justify-content: flex-end;
-    }
-    .nav-menu{
-        background-image: url(../../images/header/nav.png);
-        background-size: 600px 400px;
-        width: 600px;
-        height: 400px;
-        position: relative;
-        z-index: 1000;
-        .closebtn{
-            position: absolute;
-            top: 27px;
-            right: 70px;
-            color: #fff;
-            font-size: 85px;
-            font-weight: 200;
-            text-decoration: none;
-            &:hover{
-                opacity: .7;
+
+        .nav-menu{
+            background-image: url(../../images/header/nav.png);
+            background-size: 600px 400px;
+            width: 600px;
+            height: 400px;
+            position: relative;
+            z-index: 1000;
+            .closebtn{
+                position: absolute;
+                top: 40px;
+                right: 66px;
+                color: #fff;
+                font-size: 70px;
+                font-weight: 300;
+                text-decoration: none;
+                &:hover{
+                    opacity: .7;
+                }
             }
-        }
-        ul{
-            font-size: 40px *0.7;
-            padding-top: 70px;
-            display: flex;
-            flex-wrap: wrap;
-            width: 400px;
-            padding-left: 150px;
-            li{
-                list-style: none;
-                margin: 6px 20px;
-                &:nth-child(5){
-                    padding-left: 164px;
-                }
-                .here{
-                    color: yellow;
-                }
-                a{
-                    text-decoration: none;
-                    color: #fff;
-                    font-weight: 300;
-                    letter-spacing: 3px;
+            ul{
+                font-size: $h2;
+                padding-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 500px;
+                padding-left: 145px;
+                li{
+                    list-style: none;
+                    margin: 12px 15px;
+                    &:nth-child(5){
+                        padding-left: 154px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: 300;
+                        letter-spacing: 3px;
+                        &:hover{
+                            color: yellow;
+                        }
+                    }
                 }
             }
         }
