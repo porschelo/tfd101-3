@@ -6,8 +6,8 @@
 //頁碼
 @mixin pagination {
     display: flex;
-	text-align: center;
-	justify-content: center;
+	  text-align: center;
+	  justify-content: center;
     font-size: $p2;
     color: white;
     li{
@@ -39,16 +39,23 @@
     }
   }
 
-// @mixin btn{
-//     font-size: $h2;
-//     width:280px;
-//     height:100px;
-//     color:transparent;
-//     text-align:center;
-//     border:4px solid #707070;
-//     border-radius:
-//     cursor:pointer;
-//     &:hover{
-        
-//         }
-//     }
+// 按鈕模組
+@mixin btn-module($class, $w, $h){
+  #{$class}{
+    font-size: $h3 - 2px;
+    width: $w * .7px;
+    height: $h * .7;
+    background-color:transparent;
+    text-align:center;
+    border: 3px solid #888;
+    border-radius: 30px;
+    line-height: 1.8;
+    cursor:pointer;
+    &:hover{
+      border: 3px solid rgba(245, 255, 103, 0.5);
+    };
+    @content;
+    
+  }
+  
+}
