@@ -2,6 +2,10 @@
 // var
 @import'base/var';
 @import'base/color';
+
+//common
+@import 'base/common';
+
 // mixin
 @import'mixins/mixins';
 // reset
@@ -34,5 +38,6 @@
 
 @import 'page/customized';
 @import'page/product_detail';
+
 
 
