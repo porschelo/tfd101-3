@@ -1,13 +1,41 @@
 .wrapper_product-detail{
     
-     background-image: url(../../images/store/pdctD_bg.png);
+     background-image: url(../images/store/pdctD_bg.png);
      background-size: cover;
+     box-sizing: border-box;
+     line-height: 1.6;
      
      a{
          text-decoration: none;
          color: white;
      }
+     .unstore_title{
+        // border: 1px solid red;
+        color: $colorT;
+        padding: ( 80px + 240px ) * .7 0 0;
+        &-c{
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+            img{
+                width: 63px * .7;
+                height: 43px * .7;
+                margin-bottom: 5px;
+            }
+        }
+       
+       h1{
+           font-size: $h1;
+           padding: 5px 20px 10px;
+       }
+
+       &-e{
+            text-align: center;
+            font-size: $p1;
+       }
+
+    }
     
     .product-detail{
         &_content{
@@ -16,19 +44,24 @@
             height: 85%;
             color: white;
             @include center;
-            // padding-top: 455px;
             
-            background-image: url(../../images/store/pdctFrame_bg.png);
+            
+            background-image: url(../images/store/pdctFrame_bg.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
+            margin-top: 500px;
         }
 
         &_top{
+            position: relative;
+
             .breadcrumb {
                 max-width: 1200px;
                 margin: 0 auto;
                 /* border: 1px solid red; */
                 padding-left: 50px;
+                padding-top: 80px * .7;
+                padding-bottom: 85px * .7;
             }
             .breadcrumb_list li{
                 display: inline-block;
@@ -44,18 +77,28 @@
                 }
 
             }
+
+            .love{
+                width: 60px * .7;
+                position: absolute;
+                right: 70px;
+                top: 70px;
+
+            }
     
         }
 
         &_main{
-            border: 1px solid red;
+            // border: 1px solid red;
             width: 85%;
             @include center;
             display: flex;
 
             .leftblock{
-                border: 1px solid yellow;
-                width: 40%;   
+                // border: 1px solid yellow;
+                width: 50%;
+                padding: 40px;
+                  
             }
 
             .img_block{
@@ -70,9 +113,9 @@
             .btn_block{
                 display: flex;
                 button{
-                    width: calc(70% / 3);
+                    width: calc((100% - 60px) / 3);
                     border-radius: 20px;
-                    margin-right: 5px;
+                    margin:0 10px;
                 }
                 img{
                     border-radius: 20px;
@@ -82,14 +125,100 @@
 
             .rightblock{
                 width: 50%;
-                
+                padding: 50px;
                 h2{
-                    width: 40px;
+                    font-size: $h2;
+                    margin-bottom: 50px;
                 }
+                p{
+                    font-size: $p2;
+                }
+            }
+
+            .price{
+               font-size: $h3;
+               margin-top: 120px;
+               margin-bottom: 50px;
+               text-align: right;
+               input{
+                   width: 50px;
+                   height: 30px;
+                   font-size: $p1;
+                   margin-left: 20px;
+                   border-radius: 5px;
+               } 
+            }
+
+        
+            @include btn-module('.add', 236, 93px){
+                color: white;
+                margin-right: 10px;
+            }
+
+            @include btn-module('.buy', 236, 93px){
+                color: white;
+            }  
+        }
+
+        &_info{
+            width: 85%;
+            @include center;
+            h2{
+                text-align: center;
+                font-size: $h2;
+                margin-top: 35px;
+                margin-bottom: 56px;
             }
         }
 
-        
+        &_evaluation{
+            width: 85%;
+            @include center;
+            h2{
+                text-align: center;
+                font-size: $h2;
+                margin-top: 35px;
+                margin-bottom: 56px;
+            }
+
+            hr{
+                color: white;
+                height: 1px;
+            }
+
+            
+        }
+
+        &_like{
+            width: 85%;
+            @include center;
+            text-align: center;
+
+            h2{
+                text-align: center;
+                font-size: $h2;
+                margin-top: 35px;
+                margin-bottom: 56px;
+            }
+
+            ul{
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+                
+                border: 1px solid red;
+                @include center;
+            }
+
+            li{
+                margin: 0 10px;
+            }
+
+            img{
+                border: 5px solid $colorBd;
+                font-size: 0;
+            }
+        }
 
     }
   

@@ -12,6 +12,17 @@
 <body>
     <div class="wrapper_product-detail">
         @@include('layout/header.html')
+
+        <div class="unstore_title">
+            <div class="unstore_title-c">
+                <img src="images/store/uv_icone.png" alt="">
+                <h1>宇宙商城</h1>
+                <img src="images/store/uv_icone.png" alt="">
+            </div>
+            <div class="unstore_title-e">
+                <h4>— Universe Store —</h4>
+            </div>
+        </div>
         
         <div class="product-detail_content">
 
@@ -23,7 +34,7 @@
                     </ul>
                 </div>
 
-                <div class="product-detail_love"><img src="" alt=""></div>
+                <div class="love"><img src="images/store/loveicone.png" alt=""></div>
             </div>
 
             <div class="product-detail_main">
@@ -46,9 +57,15 @@
                     <p>
                         淨化能量、開智慧、增加記憶、平穩心態、深層的冥想、增強洞察力、舒緩情緒減少壓力
                     </p>
-                    <p><span>500</span>元<input type="number" value="1">個</p>
-                    <button>加入購物車</button>
-                    <button>立即購買</button>
+
+                    <div class="price">
+                        <span>500</span>元<input type="number" value="1">個
+                    </div>
+                    
+                    <button class="add">加入購物車</button>
+                    <button class="buy">立即購買</button>
+                
+                   
                 </div>
 
                 
@@ -85,9 +102,9 @@
             <div class="product-detail_like">
                 <h2>— 您可能會喜歡 —</h2>
                 <ul>
-                    <li><a href=""><img src="images/store/maylike-1.jpg" alt=""></a></li>
-                    <li><a href=""><img src="images/store/maylike-2.jpg" alt=""></a></li>
-                    <li><a href=""><img src="images/store/maylike-3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/store/maylike-1.jpg" alt=""></a><h4>天然擴香健康石</h4></li>
+                    <li><a href=""><img src="images/store/maylike-2.jpg" alt=""></a><h4>冥王星晶石手鍊</h4></li>
+                    <li><a href=""><img src="images/store/maylike-3.jpg" alt=""></a><h4>德國花果茶與乾燥花盒</h4></li>
                     <!-- <li><a href=""><img src="images/store/maylike-4.jpg" alt=""></a></li>
                     <li><a href=""><img src="images/store/maylike-5.jpg" alt=""></a></li> -->
                     
