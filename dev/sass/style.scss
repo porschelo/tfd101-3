@@ -2,6 +2,10 @@
 // var
 @import'base/var';
 @import'base/color';
+
+//common
+@import 'base/common';
+
 // mixin
 @import'mixins/mixins';
 // reset
@@ -23,7 +27,8 @@
 //page
 @import'page/unstore';
 @import'page/starsign';
-@import'page/membercentre';
+@import 'page/membercentre';
+@import 'page/memberorderlist';
 @import 'page/index';
 @import 'page/customized';
 @import'page/product_detail';
@@ -34,3 +39,8 @@
 @import'page/order';
 
 
+
+//jacks
+@import 'page/match1';
+@import 'page/match2';
+@import 'page/match3';
