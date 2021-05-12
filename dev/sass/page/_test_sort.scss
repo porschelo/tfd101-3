@@ -1,0 +1,106 @@
+.wrapper_tSort{
+    
+    a{
+        text-decoration: none;
+         color: white;
+     }
+
+    .tSort_header{
+        height: 168px;
+        background-color: #023552;
+    }
+
+    .tSort_section{
+         background-image: url(../images/test/bgi_star.png);
+         background-size: 100% 100%;
+         padding-bottom: 140px;
+     }
+
+    .tSort_title{
+        // border: 1px solid red;
+        color: $colorT;
+        padding: ( 80px ) * .7 0 0;
+        &-c{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 63px * .7;
+                height: 43px * .7;
+                margin-bottom: 5px;
+            }
+        }
+       
+       h1{
+           font-size: $h1;
+           padding: 5px 20px 10px;
+       }
+
+       &-e{
+            text-align: center;
+            font-size: $p1;
+       }
+
+    }
+
+    .tSort_content{
+        border: 1px solid yellow;
+        width: 85%;
+        height: 85%;
+        color: white;
+        @include center;
+
+        background-image: url(../images/test/bgi-2.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin-top: 56px;
+    }
+
+    .tSort_option{
+        border: 1px solid red;
+        width: 70%;
+        @include center;
+        margin-top: 240px * .7;
+        margin-bottom: 20px;
+       
+        ul{
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            display: flex;
+            margin: 20px;
+            
+            img{
+                width: 45px * .7;
+                height: 31px * .7;
+            }
+            h2{
+                font-size: $h2;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .tSort_poster{
+        border: 1px solid red;
+        width: 50%;
+        @include center;
+        font-size: 0;
+    }
+
+    @include btn-module('.tSort_start', 280, 110){
+        color: white;
+        margin-top: 28px;
+        margin-bottom: 220px *.7;
+        margin-left: 40%;
+    }
+
+
+    .tSort_footer{
+        width: 100%;
+        height: 200px;
+        background-color: #44796A;
+    }
+}
