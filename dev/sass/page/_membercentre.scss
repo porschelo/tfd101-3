@@ -40,18 +40,18 @@ img {
     background-size: cover;
 
 
-    @include md {
-        // border: 5px solid yellow;
-    }
+    // @include md {
+    //     // border: 5px solid yellow;
+    // }
 
-    @include pad {
-        // border: 5px solid orange;
-    }
+    // @include pad {
+    //     // border: 5px solid orange;
+    // }
 
-    @include mobile {
-        // border: 5px solid green;
-    }
-}
+//     @include mobile {
+//         // border: 5px solid green;
+//     }
+// }
 
 
 
@@ -128,20 +128,20 @@ img {
     position: relative;
 
     // width: 100%;
-    @include md {
-        border: 5px solid yellow;
-        width: 1050px*.7;
-    }
+    // @include md {
+    //     border: 5px solid yellow;
+    //     width: 1050px*.7;
+    // }
 
-    @include pad {
-        border: 5px solid orange;
-        width: 700px*.7;
-    }
+    // @include pad {
+    //     border: 5px solid orange;
+    //     width: 700px*.7;
+    // }
 
-    @include mobile {
-        border: 5px solid green;
-        width: 550px*.7;
-    }
+    // @include mobile {
+    //     border: 5px solid green;
+    //     width: 550px*.7;
+    // }
 
     .tab {
         display: flex;
@@ -151,17 +151,17 @@ img {
 
         color: map-get($color, font_color);
 
-        @include md {
-            top: -40px;
-        }
+        // @include md {
+        //     top: -40px;
+        // }
 
-        @include pad {
-            top: -42px;
-        }
+        // @include pad {
+        //     top: -42px;
+        // }
 
-        @include mobile {
-            top: -44px;
-        }
+        // @include mobile {
+        //     top: -44px;
+        // }
 
 
         &_btn {
@@ -176,37 +176,37 @@ img {
             cursor: pointer;
             margin-left: 37*.7px;
 
-            @include md {
-                width: 200*.7px;
+            // @include md {
+            //     width: 200*.7px;
 
-            }
+            // }
 
-            @include pad {
-                width: 135*.7px;
-                font-size: 17px
-            }
+            // @include pad {
+            //     width: 135*.7px;
+            //     font-size: 17px
+            // }
 
-            @include mobile {
-                width: 110*.7px;
-                font-size: 12px
-            }
+            // @include mobile {
+            //     width: 110*.7px;
+            //     font-size: 12px
+            // }
 
 
             &:nth-of-type(1) {
                 background-color: map-get($color, white);
                 margin-left: 108*.7px;
 
-                @include md {
-                    margin-left: 75*.7px
-                }
+                // @include md {
+                //     margin-left: 75*.7px
+                // }
 
-                @include pad {
-                    margin-left: 30*.7px
-                }
+                // @include pad {
+                //     margin-left: 30*.7px
+                // }
 
-                @include mobile {
-                    margin-left: 19px
-                }
+                // @include mobile {
+                //     margin-left: 19px
+                // }
             }
         }
     }
@@ -214,9 +214,9 @@ img {
     .pic_out {
         z-index: 2;
 
-        @include md {
-            visibility: hidden;
-        }
+        // @include md {
+        //     visibility: hidden;
+        // }
     }
 }
 
@@ -230,12 +230,12 @@ img {
     width: 100%;
     border: 1px solid green;
 
-    @include md {
-        flex-wrap: wrap;
-        justify-content: center;
+    // @include md {
+    //     flex-wrap: wrap;
+    //     justify-content: center;
 
-        margin-top: 100*.7px;
-    }
+    //     margin-top: 100*.7px;
+    // }
 
 
     .left {
@@ -252,20 +252,20 @@ img {
             margin: 0 auto;
             margin-bottom: 16*.7px;
 
-            @include md {
-                width: 230*.7px;
-                height: 210*.7px;
-            }
+            // @include md {
+            //     width: 230*.7px;
+            //     height: 210*.7px;
+            // }
 
-            @include pad {
-                width: 180*.7px;
-                height: 160*.7px;
-            }
+            // @include pad {
+            //     width: 180*.7px;
+            //     height: 160*.7px;
+            // }
 
-            @include mobile {
-                width: 80*.7px;
-                height: 60*.7px;
-            }
+            // @include mobile {
+            //     width: 80*.7px;
+            //     height: 60*.7px;
+            // }
         }
 
         .name {
@@ -338,17 +338,17 @@ img {
     bottom: 160*.7px;
     width: 100%;
 
-    @include md {
-        bottom: 0;
-    }
+    // @include md {
+    //     bottom: 0;
+    // }
 
-    @include pad {
-        bottom: 0;
-    }
+    // @include pad {
+    //     bottom: 0;
+    // }
 
-    @include mobile {
-        bottom: 0;
-    }
+    // @include mobile {
+    //     bottom: 0;
+    // }
 
     border: 1px solid green;
 
@@ -380,4 +380,5 @@ img {
     @include btn-module('.change_data', 280, 100) {
         color: white;
     }
+}
 }
