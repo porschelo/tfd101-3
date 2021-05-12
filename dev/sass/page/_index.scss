@@ -357,36 +357,339 @@
     }
   }
 
-  .t-section4 {
-    width: 100%;
+  .i-section4 {
     position: relative;
-    .earthSigns {
+    text-align: right; //只對inline-block有用
+    padding: 200px 0 150px;
+    margin-bottom: 250px;
+
+    //此區塊做定位且稱寬高
+    .i-section4-earth {
       position: relative;
-    }
-    .clickicon {
-      width: whForPC(250);
-    }
-    .planet {
-      position: relative;
-      width: whForPC(800);
-      img {
-        position: relative;
+      display: inline-block; //變成行內元素
+      right: 0;
+      width: whForPC(850);
+
+      .icon_capricorn {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(-120, 850);
+        left: whForPC(120, 850);
+      }
+      .icon_Taurus {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(90, 850);
+        left: whForPC(-290, 850);
+      }
+      .icon_virgo {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(340, 850);
+        left: whForPC(-380, 850);
+      }
+      .planet {
         width: 100%;
-        &.planet {
-          //跟img同同一層 所以要用＆
-          &-monst {
-            &-capricorn {
-              width: whForPC(550);
+        position: relative;
+        visibility: hidden;
+
+        //讓圖片撐滿
+        img {
+          width: 100%;
+        }
+        &.earth {
+          visibility: visible;
+          width: whForPC(1737, 850);
+          transform: translate(-47.7%, -52%) rotate(-20deg);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+        }
+        &.capricorn {
+          position: relative;
+          visibility: visible;
+
+          .planet-monst-capricorn {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            position: absolute;
+            left: 35%;
+            top: 0;
+            margin-top: 30%;
+          }
+        }
+        &.taurus {
+          position: absolute;
+          top: 0;
+
+          .planet-monst-taurus {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            position: absolute;
+            left: 35%;
+            top: 0;
+            margin-top: 30%;
+          }
+        }
+        &.virgo {
+          position: absolute;
+          top: 0;
+
+          .planet-monst-irgo {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            position: absolute;
+            left: 35%;
+            top: 0;
+            margin-top: 30%;
+          }
+        }
+      }
+    }
+  }
+  @include rwd1260 {
+    .i-section4-earth {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  @include md {
+    .i-section4 {
+      .i-section4-earth {
+        width: whForPC(1200);
+        margin-right: -100px;
+      }
+      img {
+        width: 160px;
+      }
+    }
+  }
+
+  @include mobile {
+    .i-section4 {
+      .i-section4-earth {
+        //變成行內元素
+        width: wh(400);
+        margin-right: wh(-120);
+        img {
+          width: 130px;
+        }
+
+        .icon_capricorn {
+          width: wh(250);
+          margin-top: wh(-130);
+          left: wh(-10);
+        }
+        .icon_Taurus {
+          width: wh(250);
+          margin-top: wh(-75);
+          left: wh(-80);
+        }
+        .icon_virgo {
+          width: wh(250);
+          margin-top: wh(-20);
+          left: wh(-160);
+        }
+        .planet {
+          &.earth {
+            width: wh(690);
+            transform: translate(-47.7%, -52%) rotate(-20deg);
+            top: 50%;
+            left: 50%;
+          }
+          &.capricorn {
+            .planet-monst-capricorn {
+              width: wh(120);
+              left: 25%;
+
+              margin-top: 25%;
             }
-            &-taurus {
+          }
+          &.taurus {
+            .planet-monst-taurus {
+              width: wh(120);
+              left: 25%;
+
+              margin-top: 25%;
             }
-            &-virgo {
+          }
+          &.virgo {
+            .planet-monst-irgo {
+              width: wh(120);
+              left: 25%;
+
+              margin-top: 25%;
             }
           }
         }
       }
-      &.earth {
-        width: whForPC(1800);
+    }
+  }
+
+  .i-section5 {
+    position: relative;
+    text-align: left;
+    padding: 300px 0 150px;
+
+    .i-section5-wind {
+      display: inline-block;
+      position: relative;
+      left: 0;
+      width: whForPC(850);
+
+      .icon_libra {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(-150, 850);
+        right: whForPC(80, 850);
+      }
+      .icon_aquarius {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(70, 850);
+        right: whForPC(-300, 850);
+      }
+      .icon_gemini {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(455, 850);
+        right: whForPC(-446, 850);
+      }
+      .planet {
+        width: 100%;
+        position: relative;
+        visibility: hidden;
+        img {
+          width: 100%;
+        }
+        &.wind {
+          visibility: visible;
+          position: absolute;
+          width: whForPC(1890, 850);
+          top: 50%;
+          left: 50%;
+          transform: translate(-49.1%, -42.4%) rotate(15deg);
+        }
+        &.libra {
+          visibility: visible;
+          position: relative;
+          // visibility: hidden;
+          .planet_monst_libra {
+            position: absolute;
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            top: 0;
+            margin-top: 30%;
+            right: 32%;
+          }
+        }
+        &.aquarius {
+          position: absolute;
+          top: 0;
+
+          .planet_monst_aquarius {
+            position: absolute;
+            width: whForPC(230, 850);
+            top: 0;
+            margin-top: 30%;
+            right: 32%;
+          }
+        }
+        &.gemini {
+          position: absolute;
+          top: 0;
+
+          .planet_monst_gemini {
+            position: absolute;
+            width: whForPC(230, 850);
+            top: 0;
+            margin-top: 30%;
+            right: 32%;
+          }
+        }
+      }
+    }
+  }
+
+  @include rwd1260 {
+    .i-section5-wind {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  @include md {
+    .i-section5 {
+      .i-section5-wind {
+        width: whForPC(1200);
+        margin-left: -100px;
+      }
+      img {
+        width: 160px;
+      }
+    }
+  }
+
+  @include mobile {
+    .i-section5 {
+      .i-section5-wind {
+        //變成行內元素
+        width: wh(400);
+        margin-right: wh(-120);
+        img {
+          width: 130px;
+        }
+
+        .icon_libra {
+          width: wh(250);
+          margin-top: wh(-130);
+          left: wh(130);
+        }
+        .icon_aquarius {
+          width: wh(250);
+          margin-top: wh(-85);
+          left: wh(210);
+        }
+        .icon_gemini {
+          width: wh(250);
+          margin-top: wh(-30);
+          left: wh(290);
+        }
+        .planet {
+          &.wind {
+            width: wh(690);
+
+            top: 50%;
+            left: 50%;
+          }
+          &.libra {
+            .planet_monst_libra {
+              width: wh(120);
+              left: 35%;
+
+              margin-top: 25%;
+            }
+          }
+          &.aquarius {
+            .planet_monst_aquarius {
+              width: wh(120);
+              left: 35%;
+
+              margin-top: 25%;
+            }
+          }
+          &.gemini {
+            .planet_monst_gemini {
+              width: wh(120);
+              left: 35%;
+
+              margin-top: 25%;
+            }
+          }
+        }
       }
     }
   }
