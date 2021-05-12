@@ -1,0 +1,191 @@
+// *{
+//   outline: 1px solid orange;
+// }
+
+html {
+  height:100%;
+}
+
+// shared css properties
+$textColor: #B6C9F0;
+$transBackgnd: transparent;
+$hoverBorderColor: #F0DC9A;
+
+
+
+.jl_wrapper2{
+  background-image: url(../images/horoscope_page/matching2.png);
+  background-repeat: no-repeat;
+  width:100%;
+  height:100%;
+  z-index: 0;
+  
+}
+
+.jl_wrapper2{
+
+  .jl_section_a{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;  
+    width: 75%;
+    margin: 240px auto 0;
+    //outline: 10px solid orange;
+  }
+
+
+
+.jl_section_left, .jl_section_right{
+  width: 30rem;
+  height: 33rem;
+  // border: 1px solid red;
+  color:white;
+  text-align: center;
+  position:relative;
+  z-index: 2;
+
+}
+
+
+.jl_section_left img, .jl_section_right img{
+  position:absolute;
+  left:0;
+  bottom:50px;
+  z-index: -1;
+  // width: 100%;
+  //height: 35rem;
+  // border: 3px solid navy;
+}
+
+.jl-inside_box img{
+  width:60px;
+  // height:30px;
+  // height:auo;
+  border:5px solid green;
+}
+
+.jl_self_name, .jl_opp_name{
+  width:200px;
+  height:48px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: $textColor;
+  //padding: 50px 50px;
+  background-color: $transBackgnd;
+  border: 2px solid $textColor;
+  margin-top: 60px;
+}
+
+.jl_self_name::placeholder{
+  color:$textColor;
+  text-align: center;
+}
+
+.jl_opp_name::placeholder{
+  color:$textColor;
+  text-align: center;
+}
+
+
+
+
+// All border color, txt color, transparent background, size, border-radius + hover effect
+.jl_self_birth_year, .jl_opp_birth_year, .jl_self_birth_month, .jl_self_birth_date, .jl_selfsex, .jl_opp_gender, .jl_opp_birth_date, .jl_opp_birth_month{
+  background-color: $transBackgnd;
+  color: $textColor;
+  font-size: 20px;
+  width: 106px;
+  height: 54px;
+  border: 2px solid $textColor;
+  border-radius: 10px;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-left: 10px;
+  padding-left: 20px;
+
+  &:hover{
+    border: 2px solid #F0DC9A;
+    color: #F0DC9A;
+  }
+}
+
+
+
+.jl_section_left h2, .jl_section_right h2{
+  background-color: $transBackgnd;
+  color: $textColor;
+  width: 196px;
+  //height: 54px;
+  padding: 20px 0;
+  border: 2px solid $textColor;
+  border-radius: 10px;
+  z-index: 2;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+
+  &:hover{
+    border: 2px solid #F0DC9A;
+    color: #F0DC9A;
+  }
+
+}
+
+
+/*============== Match Button start*/
+// .match_btn{
+  // display: block;
+  // background-color: $transBackgnd;
+  // border: 2px solid #ccc;
+  // cursor: pointer;
+  // overflow: hidden;
+  // border-radius: 10px;
+  // color: $textColor;
+  // font-size: 40px;
+  // width: 280px;
+  // height:110px;
+
+  // margin:3rem auto 0; 
+
+  // &:hover{
+  //   border: 2px solid #F0DC9A;
+    
+  // }
+
+
+@include btn-module('.match_btn', 280, 100px) {
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*  Match Button Ends */
+
+
+
+  //nav-list 所在頁面樣式
+      .overlaymenu{
+          .menulist{
+              .nav-menu{
+                  ul{
+                      li:nth-child(3){
+                          a{
+                              color: yellow;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+
+}
+
+
+
+
+/* section left start*/
+
