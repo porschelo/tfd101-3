@@ -282,64 +282,87 @@
     }
 
     .monster {
-      max-width: 670px;
+      width: 100%;
+      position: relative;
       // width: 100%;
       margin: 0 auto;
       margin-bottom: 250px;
-      @include pad {
-        max-width: 380px;
-        margin: 0 auto;
-      }
-      @include mobile {
-        max-width: 251px;
-      }
-    }
-    .monster .scorpio {
-      max-width: 160px;
-      @include pad {
-        display: none;
-      }
-    }
-    .monster .first {
-      @include pad {
-        display: none;
-      }
-    }
-    .monster img {
-      max-width: 120px;
-      @include pad {
+      text-align: center;
+      //行內元素才可以用 要轉inline-block
+
+      img {
         width: 100%;
-      }
-      @include mobile {
-        max-width: 80px;
-      }
-      transition: 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
-      &:hover {
-        // gsap.to(graph, { duration: 2.5, ease: "back.out(1.7)", y: -500 });
-        transform: translateY(-50px);
         transition: 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
       }
-      &:hover img {
-        // transform: translateY(-50px);
-        // transition: .6s ease-in-out;
+      .monster-box {
+        display: inline-block;
+        position: relative;
+        width: 160px;
+
+        @include mobile {
+          width: 100px;
+          .monster-box {
+            width: 120px;
+          }
+        }
+        &:hover {
+          .monster-item {
+            transform: translateY(-100px);
+            transition: 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+        }
+        &.scorpio {
+          width: 220px;
+          @include index-bigPad {
+            display: none;
+          }
+        }
+        &.first {
+          max-width: 160px;
+          @include index-bigPad {
+            display: none;
+          }
+        }
       }
     }
+
     .left-monster {
-      width: 180px;
+      width: 220px;
       position: absolute;
-      top: 50%;
+      top: 30%;
       left: whForPC(-80);
+      animation: all 0.6s;
       @include md {
         display: none;
       }
+      &:hover {
+        img {
+          transform: translateX(-70px);
+          transition: 0.8s cubic-bezier(0.28, 1.44, 0.7, -0.25);
+        }
+      }
+      img {
+        position: relative;
+        width: 100%;
+      }
     }
     .right-monster {
-      width: 160px;
+      width: 180px;
       position: absolute;
       bottom: 10%;
       right: whForPC(-80);
       @include md {
         display: none;
+      }
+      &:hover {
+        img {
+          transform: translateX(80px);
+          transition: 1s cubic-bezier(1, 0.25, 0.21, 0.87);
+        }
+      }
+      img {
+        position: relative;
+        width: 100%;
       }
     }
   }
