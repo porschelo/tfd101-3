@@ -26,11 +26,17 @@
        h1{
            font-size: $h1;
            padding: 5px 20px 10px;
+           @include rwd(mobile){
+                font-size: $h1 - 6px;
+            }
        }
 
        &-e{
             text-align: center;
             font-size: $p1;
+            @include rwd(mobile){
+                font-size: $p1 - 6px;
+            }
        }
     }
 
@@ -56,6 +62,12 @@
             background-image: url(../images/store/frameC-b.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
+
+            @include rwd(mobile){
+                background-image: none;
+                border: 5px solid #F8F8F8;
+                margin-top: 11px;
+            }
         }
 
         &_top{
@@ -64,6 +76,9 @@
             width: 80%;
             @include center;
             font-size: $h3;
+            @include rwd(mobile){
+                font-size: $h3 - 6px;
+                }
             
             h3{
                 margin-bottom: 35px;
@@ -90,7 +105,7 @@
                     width: calc((100% - 20px) / 2);
                     margin:0 5px 10px 5px;
                     h4{
-                        font-size: 16px;
+                        font-size: $p1 - 6px;
                     }
                 }
             }    
@@ -104,12 +119,18 @@
             
             @include rwd(pad){
                 display: block;
-             }
+            }
+             @include rwd(mobile){
+                display: block;
+            }
         }
 
         &_bottom-left{
             font-size: $h3;
             width: 60%;
+            @include rwd(mobile){
+                font-size: $h3 - 6px;
+            }
             h3{
                 margin-bottom: 35px;
             }
@@ -184,8 +205,13 @@
         &_price{
             border: 1px solid red;
             p{
-                text-align: center;
+                font-size: $p1;
+                margin-top: -50px;
                 margin-bottom: 56px;
+                margin-left: 10%;
+                @include rwd(mobile){
+                    margin-top: 0;
+                }
             }
 
             input{
@@ -207,6 +233,20 @@
                 color: white;
             }  
         }    
+    }
+    
+    .overlaymenu{
+        .menulist{
+            .nav-menu{
+                ul{
+                    li:nth-child(4){
+                        a{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     
