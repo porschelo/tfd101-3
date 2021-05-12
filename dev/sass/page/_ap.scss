@@ -14,7 +14,7 @@ $letter-spacing:2.5;
 .j_wrapper{
     background-image: url(../images/appointment/wholebg.png);
     // width: 1920*.7px;
-    height: 2066*.7px;
+    // height: 2066*.7px;
     width: 100%;
     margin: 0 auto;
 
@@ -24,11 +24,14 @@ $letter-spacing:2.5;
     background-size: 100%;
     // max-width: 1920*.7px;
     width:100%;
-    height:1627*.7px;
+    // height: 100%;
+    height:1750*.7px;
     margin:0 auto;
-    z-index: 1;
+    // z-index: 1;
     // margin-top: 240*.7px;
     // opacity: .5;
+
+    // margin-bottom: 100px;
 }
 .j_title{
     // border:1px solid red;
@@ -72,47 +75,66 @@ $letter-spacing:2.5;
     background-repeat: no-repeat;
     max-width:1540*.7px;
     width: 100%;
-    height:1110*.7px;
+    height: 67%;
+    // height:1110*.7px;
     margin:0 auto;
     margin-top: 80*.7px;
+    // margin-bottom: 102*.7px;
     display:flex;
     flex-direction: column;
     align-items: center;
-        #j_btn{
+        .j_btn{
 
             border:1px solid;
             display:flex;
             flex-grow: 1;
+            width: 100%;
+            // max-width:280px;
+            @include btn-module('.J_btn2', 280, 100px){
+              margin-top:50*.7px;
+              color:$color;
+              font-size: $h2;
+              // margin-bottom: 170*.7px;
+              text-align: center;
+              line-height: 70px;
+              margin: 0 auto;
+              // width: 100%;
+              display:flex;
+
+               }
         }
-        #page{
-          width:280*.7px;
-          height:100*.7px;
-          line-height: 100*.7px;
-          margin-top:50*.7px;
-          background-color: transparent;
-          border:4px solid #707070;
-          border-radius: 30*.7px;
-          color:$color;
-          margin-bottom: 75*.7px;
-          font-size: $h2;
+        // .j_page{
+          @include btn-module('.j_page', 280, 100){
+                    margin-top:50*.7px;
+                    color:$color;
+                    font-size: $h2;
+                    margin-bottom: 170*.7px;
+          }
+          
+            // .J_btn2{
+                // @include btn-module('.J_btn2', 140, 100px){
+                // margin-top:50*.7px;
+                // color:$color;
+                // font-size: $h2;
+                // margin-bottom: 170*.7px;
+                // text-align: center;
+                // // line-height: 1.8;
+                // width: 100%;
+                // display:flex;
 
-
-
-        }
-    
-            .J_btn2{
-                max-width:400*.7px;
-                height:100*.7px;
-                line-height: 100*.7px;
-                text-align: center;
-                margin: 0 auto;
-                font-size: $h2;
-                margin-top:50*.7px;
-                background-color: transparent;
-                border:4px solid #707070;
-                border-radius: 30*.7px;
-                color:$color;
-            }
+                //  }
+                // max-width:400*.7px;
+                // height:100*.7px;
+                // line-height: 100*.7px;
+                // text-align: center;
+                // margin: 0 auto;
+                // font-size: $h2;
+                // margin-top:50*.7px;
+                // background-color: transparent;
+                // border:4px solid #707070;
+                // border-radius: 30*.7px;
+                // color:$color;
+            // }
             .j_document{
                 width:1000*.7px;
                 // width: 100%;
@@ -292,9 +314,7 @@ $letter-spacing:2.5;
     margin-top: 24*.7px;
     display: flex;
     align-items: flex-end;
-    // background-color: #385A67;
-    // opacity: .8;
-    // border: 1px solid;
+    
     
     .form_right{
         width:500*.7px;
@@ -359,9 +379,7 @@ $letter-spacing:2.5;
                 margin-bottom: 10*.7px;
                     option{
                         margin-top: 10*.7px;
-
                     }
-
 
             }
             
@@ -371,7 +389,6 @@ $letter-spacing:2.5;
         margin-top: 10*.7px;
         width:400*.7px;
         height:50*.7px;
-
     }
 
 
@@ -379,7 +396,6 @@ $letter-spacing:2.5;
         color:#000000;
         margin-bottom: 0;
         text-align:left;
-
     }
 
 }
@@ -401,6 +417,7 @@ table.blueTable {
   table.blueTable tbody td {
     font-size: 13px;
     color: #000000;
+    width:100%;
   }
   table.blueTable tr:nth-child(even) {
     background: #EDF2FD;
@@ -611,35 +628,7 @@ table.blueTable {
     flex-basis: 0;
   }
   
-  //訂單頁面 order
-//   .j_order_wrapper{
-//     background-image: url(./img/memberbg.png);
-//     background-size: 100%;
-//     background-repeat: no-repeat;
-//     max-width: 1920*.7px;
-//     height:2445*.7px;
-//     width: 100%;
-//     margin: 0 auto;
-//     // position: relative;
-// // 1344 1145.2
-//   }
-
-//   .j_panel2{
-//     // background-image: url(./img/1233.png);
-//     // background-size: 100%;
-//     // background-repeat: no-repeat;
-//     width: 1463.42*.7px;
-//     height:1068.53*.7px;
-//     width: 100%;
-//     margin: 0 auto;
-//     // margin-top: 1046*.7px;
-//     // opacity: .5;
-//     // position: absolute;
-//     // top:1046*.7px;
-//     // left: 99.4px;
-
-
-//   }
+  
 
 .zzz{
   @include btn-module('.qqq', 236, 93px){
