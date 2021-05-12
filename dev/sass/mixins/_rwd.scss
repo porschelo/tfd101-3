@@ -1,0 +1,51 @@
+//RWD
+@mixin rwd($breakpoint) {
+  @if $breakpoint == "desktop" {
+    @media all and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == "pad" {
+    @media all and(min-width:768px) {
+      @content;
+    }
+  } @else if $breakpoint == "mobile" {
+    @media all and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+//index專用 from Tanya
+@mixin rwd1260 {
+  @media (max-width: 1260px) {
+    @content;
+  }
+}
+
+@mixin index-md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin index-bigPad {
+  @media (max-width: 860px) {
+    @content;
+  }
+}
+@mixin index-pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin index-mobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+//header-rojo
+@mixin header-mobile {
+  @media (max-width: 414px) {
+    @content;
+  }
+}

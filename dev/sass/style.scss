@@ -2,6 +2,10 @@
 // var
 @import'base/var';
 @import'base/color';
+
+//common
+@import 'base/common';
+
 // mixin
 @import'mixins/mixins';
 // reset
@@ -32,3 +36,8 @@
 @import'page/test_sort';
 
 
+
+//jacks
+@import 'page/match1';
+@import 'page/match2';
+@import 'page/match3';

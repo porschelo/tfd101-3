@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @@include('layout/scripts.html')
+  <title>Matching Page</title>
+</head>
+
+<body>
+  
+<div class="jl_wrapper2">
+  @@include('layout/header.html')
+  <div class="jl-outside">
+    
+    <div class="jl_section_a">
+    
+      <div class="jl_section_left">
+        <img src="./images/horoscope_page/frame.svg" alt="frame_left">
+
+        <input type="text" placeholder="請輸入您的名字" class="jl_self_name">
+
+          <label for="gender"></label>
+            <select name="self" id="jl_selfsex" class="jl_selfsex">
+              <option value="male">男性</option>
+              <option value="female">女性</option>
+            </select> <br>
+
+            <select name="self_birth_year" id="jl_self_birth_year" class="jl_self_birth_year">
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+            </select>
+        
+            <select name="jl_self_birth_month" id="jl_self_birth_month" class="jl_self_birth_month">
+              <option value="Jan">1月</option>
+              <option value="Feb">2月</option>
+            </select>
+
+            <select name="self_birth_date" id="jl_self_birth_date" class="jl_self_birth_date">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+
+            <div class="jl-inside_box">
+              <h3>本人星座</h3> 
+              <br>
+              <h2>天蠍座</h2>
+            </div>
+      
+      </div> <!-- Section left end -->
+
+    
+
+
+        <div class="jl_section_right"> <!-- Section right start -->
+          <img src="./images/horoscope_page/frame.svg" alt="frame_left">
+          
+          <input type="text" placeholder="請輸入對方名字" class="jl_opp_name">
+
+          <select name="opp" id="jl_opp_gender" class="jl_opp_gender">
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+          </select> <br>
+
+          <select name="opp_birth_year" id="jl_opp_birth_year" class="jl_opp_birth_year">
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select>
+          
+          <select name="opp_birth_month" id="jl_opp_birth_month" class="jl_opp_birth_month">
+            <option value="Jan">1月</option>
+            <option value="Feb">2月</option>
+          </select>
+
+          <select name="opp_birth_date" id="jl_opp_birth_date" class="jl_opp_birth_date">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+
+          <br>
+          <h3><span>+星球+</span>對方星座<span>+星球+</span></h3>
+          <br>
+          <h2>巨蟹座</h2>
+          
+        </div> <!-- Section right end -->
+    </div> <!-- jl_section_a end -->
+    
+      
+  </div>    <!-- jl-outside end  -->
+
+  <button type="button" class="match_btn">MATCH</button>
+
+
+@@include('layout/footer.html')
+</div>  <!-- wrapper end -->
+
+
+
+
+</body>
+</html>
