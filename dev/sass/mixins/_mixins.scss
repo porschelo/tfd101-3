@@ -19,6 +19,26 @@
     
 };
 
+//RWD
+@mixin rwd($breakpoint){
+  @if $breakpoint == 'desktop'{
+    @media all and (min-width:1200px){
+      @content;
+    }
+  }
+  @else if $breakpoint == 'pad'{
+    @media all and (max-width:996px) and (min-width:769px){
+      @content;
+    }
+  }
+  @else if $breakpoint == 'mobile'{
+    @media all and (max-width:768px){
+      @content;
+    }
+      
+  }
+}
+
 
 
 
@@ -39,12 +59,14 @@
     }
   }
 
+  
+
 // 按鈕模組
 @mixin btn-module($class, $w, $h){
   #{$class}{
     font-size: $h3 - 2px;
     width: $w * .7px;
-    height: $h * .7;
+    height: $h * .7px;
     background-color:transparent;
     text-align:center;
     border: 3px solid #888;
@@ -58,4 +80,59 @@
     
   }
   
+}
+
+//商品頁頁籤專用
+@mixin bookmark($class){
+  #{$class}{
+    color: $colorP;
+    font-size: $h2;
+    width: 85%;
+    @include center;
+    display:flex;
+    margin-top: 375px;
+    margin-bottom: -12px;
+
+    li{
+        display: block;
+        width: 10%;
+        height: 75px * .7;
+        background-color: white;
+        margin-left: 20px;
+        text-align: center;
+        line-height: 2;
+        border-radius: 20px 20px 0 0;
+
+        @include rwd(pad){
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        @include rwd(mobile){
+            font-size: 18px;
+            line-height: 1.6;
+            margin-left: 5px;
+            height: 100px;
+            padding-top: 20px;
+        }
+
+        &:nth-child(5){
+            background-color:$colorPbg;
+            justify-content: right;
+            color: white;
+            margin-left: 40%;
+            width: 12%;
+            &:hover{
+                background-color: $colorPb;
+            }
+            @content;
+            @include rwd(mobile){
+               width: 10%;
+               padding-top: 10px;
+            }
+        }
+     }
+    
+  }
+
 }

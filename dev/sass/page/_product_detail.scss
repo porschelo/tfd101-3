@@ -3,12 +3,16 @@
      background-image: url(../images/store/pdctD_bg.png);
      background-size: cover;
      box-sizing: border-box;
-     line-height: 1.6;
      
      a{
          text-decoration: none;
          color: white;
      }
+
+     .product-detail_content{
+         line-height: 1.6;
+     }
+
      .unstore_title{
         // border: 1px solid red;
         color: $colorT;
@@ -39,17 +43,23 @@
     
     .product-detail{
         &_content{
-            border: 1px solid yellow;
+            // border: 1px solid yellow;
             width: 85%;
-            height: 85%;
+            // height: 500px;
             color: white;
+            // overflow-y: scroll;
             @include center;
+            margin-top: 40px;
             
             
-            background-image: url(../images/store/pdctFrame_bg.png);
+            // background-image: url(../images/store/pdctFrame_bg.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            margin-top: 500px;
+
+            @include rwd(mobile){
+                background-image: none;
+                border: 3px solid white;
+             }
         }
 
         &_top{
@@ -78,7 +88,7 @@
 
             }
 
-            .love{
+            .pd-love{
                 width: 60px * .7;
                 position: absolute;
                 right: 70px;
@@ -93,11 +103,18 @@
             width: 85%;
             @include center;
             display: flex;
+            @include rwd(mobile){
+                display: block;
+             }
 
             .leftblock{
                 // border: 1px solid yellow;
                 width: 50%;
                 padding: 40px;
+                padding-top: 0;
+                @include rwd(mobile){
+                    width: 100%;
+                 }
                   
             }
 
@@ -133,9 +150,12 @@
                 p{
                     font-size: $p2;
                 }
+                @include rwd(mobile){
+                    width: 100%;
+                 }
             }
 
-            .price{
+            .pd-price{
                font-size: $h3;
                margin-top: 120px;
                margin-bottom: 50px;
@@ -150,34 +170,34 @@
             }
 
         
-            @include btn-module('.add', 236, 93px){
+            @include btn-module('.pd-add', 236, 93){
                 color: white;
                 margin-right: 10px;
             }
 
-            @include btn-module('.buy', 236, 93px){
+            @include btn-module('.pd-buy', 236, 93){
                 color: white;
             }  
         }
 
         &_info{
-            width: 85%;
+            width: 70%;
             @include center;
             h2{
                 text-align: center;
                 font-size: $h2;
-                margin-top: 35px;
+                margin-top: 50px;
                 margin-bottom: 56px;
             }
         }
 
         &_evaluation{
-            width: 85%;
+            width: 70%;
             @include center;
             h2{
                 text-align: center;
                 font-size: $h2;
-                margin-top: 35px;
+                margin-top: 80px;
                 margin-bottom: 56px;
             }
 
@@ -185,6 +205,54 @@
                 color: white;
                 height: 1px;
             }
+
+            .pd-member{
+                border-top: 1px solid white;
+                padding-top: 10px;
+                display: flex;
+                position: relative;
+                @include rwd(mobile){
+                    display: block;
+                }
+            }
+
+            .pd-photo{
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .pd-name{
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+
+            .pd-star{
+                position: absolute;
+                right: 0;
+                top: 20%;
+                display: inline-block;
+                font-size: 0;
+             }
+             .star-item{
+                display: inline-block;
+                width: 20px;
+                height:20px;
+                cursor: pointer;
+                background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAYFBMVEUAAAD92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92UmCTPEWAAAAH3RSTlMA9iwe++hAgPLJo13i3Td8JO3Sk4xtYkYUC76cVBIjGgBFCwAAAMtJREFUKM+1kUkOhCAQRUEFBHGep67737JRlEFNJ73wbyAv9WtRD/1O3z/AqrqzDqC7spEAkPECGagwlwRJE28wbpJAk5xjcIJ5rmBBwAsp9nLpsvJYkMWWxRk6QrHZSJFJesIU2UQnjCwLwSQ0kG4zQmzzdmcCuA5VocaQGNiyQX8G1qK/8q6jNH1wtCx3RxwhfnUkM3Vs6ToSdNUDK52NI6JL+4R1JD/HYaXriOsP9xxN+p08R0JV1ZlnzxELRBSJIPccSe1IvufoCxGAFoLwSVOBAAAAAElFTkSuQmCC') center top no-repeat;
+             }
+             input[type="radio"]{
+                position: absolute;
+                clip: rect(0,0,0,0)
+             }
+             input[type="radio"]:checked~.star-item{
+                 background-position: center bottom;
+             }
+             .pd-star:hover label.star-item{
+                background-position: center top;
+             }
+             label.star-item:hover~.star-item{
+                background-position: center bottom;
+             }
 
             
         }
@@ -197,7 +265,7 @@
             h2{
                 text-align: center;
                 font-size: $h2;
-                margin-top: 35px;
+                margin-top: 80px;
                 margin-bottom: 56px;
             }
 
@@ -205,8 +273,9 @@
                 display: flex;
                 justify-content: space-around;
                 width: 80%;
+                padding-bottom: 150px;
                 
-                border: 1px solid red;
+                // border: 1px solid red;
                 @include center;
             }
 
