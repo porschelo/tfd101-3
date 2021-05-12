@@ -372,12 +372,12 @@ img {
 
     // }
 
-    @include btn-module('.change_pic', 280, 100px) {
+    @include btn-module('.change_pic', 280, 100) {
         color: white;
         margin-right: 62px*.7;
     }
 
-    @include btn-module('.change_data', 280, 100px) {
+    @include btn-module('.change_data', 280, 100) {
         color: white;
     }
 }
