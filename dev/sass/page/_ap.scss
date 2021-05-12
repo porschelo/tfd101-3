@@ -22,7 +22,7 @@ $letter-spacing:2.5;
 .j_middle{
     background-image: url(../images/appointment/middlebg.png);
     background-size: 100%;
-    max-width: 1920*.7px;
+    // max-width: 1920*.7px;
     width:100%;
     height:1627*.7px;
     margin:0 auto;
@@ -42,6 +42,11 @@ $letter-spacing:2.5;
         display:flex;
         color:$color;
         justify-content: center;
+          
+        @include btn-module('.123', 236, 93px){
+          color: red;
+        }
+          
     }
 }
 .j_bigtitle{
@@ -283,6 +288,7 @@ $letter-spacing:2.5;
 // form
 .form_info{
     max-width: 1000*.7px;
+    width: 100%;
     margin-top: 24*.7px;
     display: flex;
     align-items: flex-end;
@@ -634,3 +640,9 @@ table.blueTable {
 
 
 //   }
+
+.zzz{
+  @include btn-module('.qqq', 236, 93px){
+    color: red;
+  }
+}
