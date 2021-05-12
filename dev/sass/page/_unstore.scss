@@ -8,7 +8,6 @@
         text-decoration: none;
          color: white;
      }
-     
 
     .unstore_title{
         // border: 1px solid red;
@@ -38,38 +37,7 @@
 
     }
 
-    .unstore_sort{
-        color: $colorP;
-        font-size: $h2;
-        width: 85%;
-        @include center;
-        display:flex;
-        margin-top: 375px;
-        margin-bottom: -12px;
-
-        li{
-            display: block;
-            width: 10%;
-            height: 75px * .7;
-            background-color: white;
-            margin-left: 20px;
-            text-align: center;
-            line-height: 2;
-            border-radius: 20px 20px 0 0;
-
-            &:nth-child(5){
-                background-color:$colorPbg;
-                justify-content: right;
-                color: white;
-                margin-left: 40%;
-                width: 12%;
-                &:hover{
-                    background-color: $colorPb;
-                }
-            }
-        }
-    }
-
+    @include bookmark('.unstore_sort');
     
     .unstore_content{
         // border: 1px solid yellow;
@@ -82,6 +50,12 @@
         background-image: url(../images/store/pdctFrame_bg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        
+        @include rwd(mobile){
+            background-image: none;
+            border: 5px solid #F8F8F8;
+            margin-top: 11px;
+        }
 
         .unstore_product{
             //border: 1px solid red;
@@ -98,11 +72,21 @@
         .item{
             // border: 1px solid red;
             width: calc((100% - 60px) / 3);
-            
+
             // flex-grow: 1;
-            margin:0 10px;
-            margin-bottom: 60px;
+            margin:0 10px 60px 10px;
             font-size: 0;
+
+            @include rwd(pad){
+                width: calc((100% - 40px) / 2);
+                margin-bottom: 40px;
+            }
+
+            @include rwd(mobile){
+                width: calc((100% - 20px) / 2);
+                margin:0 5px 20px 5px;
+            }
+            
 
             img{
                 border: 5px solid $colorBd;
@@ -113,6 +97,10 @@
         h4{
             font-size: $p1;
             padding: 10px;
+            @include rwd(mobile){
+               font-size: 14px;
+               padding: 5px;
+            }
         }
 
         .unstore_pagination{
@@ -135,6 +123,9 @@
             position: absolute;
             right: 0;
             width: 28vw;
+            @include rwd(mobile){
+                width: 40vw;
+             }
         }
     }
 }
