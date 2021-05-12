@@ -7,7 +7,7 @@ $letter-spacing:2.5;
 
  *{
     box-sizing: border-box;
-    outline: 1px solid yellowgreen ;
+    // outline: 1px solid yellowgreen ;
     
  }
  img{
@@ -215,7 +215,7 @@ $letter-spacing:2.5;
     margin-left: 183*.7px;
     padding-left: 42*.7px;
     .order_payment{
-        @include btn-module('.order_payment', 236, 93px){
+        @include btn-module('.order_payment', 236, 93){
             color: blue;
             text-align: right;
           }
