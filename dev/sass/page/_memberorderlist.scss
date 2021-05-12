@@ -92,7 +92,11 @@ img {
 }
 
 
+
+;
+
 .MOL_midblock_out {
+
     border: $border red;
     width: 1475*.7px;
     position: relative;
@@ -105,7 +109,7 @@ img {
     .list_tab {
         display: flex;
         position: absolute;
-        top: -27%;
+        top: -5.3%;
 
         border: $border yellowgreen 3px;
 
@@ -143,65 +147,48 @@ img {
 .list_content {
     color: map-get($color, font_color);
     font-size: map-get($font_size, H4);
-
+    width: 90%;
+    margin: 0 auto;
     border: 5px solid green;
     // position: absolute;
 
     // // top: 0;
 
-    &_ul {
-        border: 1px solid red;
-        display: flex;
-        justify-content: center;
-        margin-top: 74px*.7;
 
-        li {
-            flex-grow: 1;
-
-            &:nth-of-type(1) {
-                padding-left: 230px*.7;
-            }
-
-            &:nth-of-type(5) {
-                padding-right: 197px*.7;
-            }
-        }
-    }
-
-    span {
-        display: block;
-        width: 80%;
-        border: 0.5px solid white;
-        margin: 34px*.7 auto;
-    }
 }
 
 .list_order1 {
     border: 1px solid green;
-    display: flex;
 
-    @include btn-module('.list_order1_btn', 191, 75px) {
+
+    @include btn-module('.buyagain', 191, 75) {
         color: white;
         line-height: (75*.7)-6px;
-        @include center
-
+        // margin:25% auto;
+        @include center;
     }
 
-    &_left {
-        border: 1px solid red;
-        width: 35%;
+    // }
+    table {
+        margin-top: 10%;
+        width: 100%;
+        text-align: center;
+        
 
-        h4 {
-            border: 1px solid orange;
-            text-align: center;
+
+        .line {
+            width: 95%;
+            margin: 40px auto;
+            border-top: 2px solid gray;
         }
-    }
 
-    &_right {
-        border: 1px solid orange;
-        width:65%;
+        td {
+            vertical-align: middle;
+        }
 
-
+        .numid{
+            margin-bottom: 20%;
+        }
     }
 
 }
