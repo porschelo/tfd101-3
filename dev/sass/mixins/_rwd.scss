@@ -4,6 +4,10 @@
     @media all and (min-width: 1200px) {
       @content;
     }
+  }@else if $breakpoint == "panel_pad" {
+    @media all and (max-width: 991px) {
+      @content;
+    }
   } @else if $breakpoint == "pad" {
     @media all and (max-width: 1199px)  {
       @content;
