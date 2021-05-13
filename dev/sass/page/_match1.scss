@@ -1,48 +1,97 @@
 
 .jl-m1-header{
-  height: 168px;
+  height: 140px;
   background-color: #023553;
 }
 
 .jl_wrapper1{
 
-  // margin-top: 12rem;
-  background-image: url(../../images/horoscope_page/matching_bg.png);
-  background-size: cover;
+  background-image: url(../../images/horoscope_page/match1_bg.png);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   width:100%;
-  // height: 1300px;
-  position:absolute;
-  // border: 5px solid red;
-}
+  position: absolute;
+  color:#D6E0F7;
+  text-decoration: none;
 
-
-.jl_section1 {
+  .jl_section1 {
   position:relative;
-  font-size: $h2;
-  // border: 2px solid pink;
-  margin-top: 30%;
-  margin-left: 35%;
-  
+  // border: 5px solid red;
+  margin-top: 15%;
+  margin-left: 25%;
+
+  h2{
+    color:#D6E0F7;
+    font-size: $h1;
+    text-align: center;
+    text-decoration: none;
+  }
 }
 
+.jl_section1_planet{
+  width:100%;
+  max-width: 600px;
+}
+
+.jl_section1txt a{
+  color:#D6E0F7;
+  font-size: $h1;
+  text-align: center;
+  text-decoration: none;
+  position:absolute;
+  top:40%;
+  left: 9%;
+}
 
 
 
 .jl_section2 {
-  font-size: 35px;
+  // position:absolute;
+  font-size: $h1;
   text-align: center;
-  padding-top: 5rem;
-  padding-left: 65rem;
+  // margin-top:30%;
+  margin-left: 46%;
+  padding-bottom: 10%;
   // border: 2px solid yellow;
+
+  h2{
+    color:#D6E0F7;
+    font-size: $h1;
+    text-align: center;
+    text-decoration: none;
+  }
 
 }
 
+.jl_section2_planet{
+  width:100%;
+  max-width: 1000px;
+}
 
-.jl_section2 a, .jl_section1 a{
-  text-decoration: none;
+.jl_section2txt{
   color:#D6E0F7;
-}   
+  font-size: $h1;
+  text-align: center;
+  text-decoration: none;
+  position:absolute;
+  top: 58%;
+  right:15%;
+
+  a, h3, h4{
+    text-decoration: none;
+    color:#D6E0F7;
+  }
+  }
+
+
+  .jl-footer{
+    width: 100%;
+    height: 200px;
+    background-color: #44796A;
+  }
+
+
+
 
 
   //nav-list 所在頁面樣式
@@ -60,10 +109,14 @@
           }
       }
 
+
+
+
+}
+
+
+
+
  // end of jl_wrapper1
 
-.jl-m1-footer {
-  height:600px;
-  background-color: red;
-  border: 3px solid red;
-}
+
