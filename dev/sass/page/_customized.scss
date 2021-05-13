@@ -3,6 +3,9 @@
      background-image: url(../images/store/customize_bg.png);
      background-size: cover;
      box-sizing: border-box;
+     @include rwd(mobile){
+        background-image: url(../images/store/pdctD_bg.png);
+     }
 
      a{
         text-decoration: none;
@@ -29,7 +32,7 @@
            @include rwd(mobile){
                 font-size: $h1 - 6px;
             }
-       }
+        }
 
        &-e{
             text-align: center;
@@ -37,7 +40,7 @@
             @include rwd(mobile){
                 font-size: $p1 - 6px;
             }
-       }
+        }
     }
 
     @include bookmark('.customized_sort'){
@@ -54,9 +57,10 @@
     
     .customized{
         &_content{
-            border: 1px solid yellow;
+            // border: 1px solid yellow;
             width: 85%;
             color: white;
+            line-height: 1.6;
             @include center;
             
             background-image: url(../images/store/frameC-b.png);
@@ -65,20 +69,20 @@
 
             @include rwd(mobile){
                 background-image: none;
-                border: 5px solid #F8F8F8;
+                border: 5px solid $colorPb;
                 margin-top: 11px;
             }
         }
 
         &_top{
-            border: 1px solid red;
+            // border: 1px solid red;
             padding-top: 60px;
             width: 80%;
             @include center;
             font-size: $h3;
             @include rwd(mobile){
                 font-size: $h3 - 6px;
-                }
+            }
             
             h3{
                 margin-bottom: 35px;
@@ -120,17 +124,18 @@
             @include rwd(pad){
                 display: block;
             }
-             @include rwd(mobile){
-                display: block;
-            }
         }
 
         &_bottom-left{
             font-size: $h3;
-            width: 60%;
+            width: 70%;
+            @include rwd(pad){
+                width: 100%;
+            }
             @include rwd(mobile){
                 font-size: $h3 - 6px;
             }
+           
             h3{
                 margin-bottom: 35px;
             }
@@ -138,12 +143,21 @@
         }
 
         &_box{
-            width: 450px;
-            height: 420px;
-            // padding: 0px 150px;
+            border: 1px solid red;
+            width: 100%;
+            // height: 420px;
             border: 5px solid $colorPb;
             margin-bottom: 56px;
             position: relative;
+
+            &::before{
+                content:"";
+                width: 100%;
+                // padding-bottom: 720 * 100% / 1280;
+                padding-bottom: 100%;
+                display: block;
+            }
+
             .cust_prod{
                 width: 40%;
                 position: absolute;
@@ -159,11 +173,33 @@
         }
 
         &_bottom-right{
-            border: 1px solid yellow;
-            width: 20%;
+            // border: 1px solid yellow;
+            width: 30%;
             margin-top: 60px;
             margin-left: 50px;
             font-size: $p1;
+            @include rwd(pad){
+                display: flex;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            @include rwd(mobile){
+                font-size: $p1 - 6px;
+            }
+
+            .cust_select-first{
+                @include rwd(mobile){
+                    width: 55%;
+                }
+            }
+            .cust_select-second{
+                @include rwd(mobile){
+                    width: 45%;
+                    margin-left: 10%;
+                }
+            }
+
             ul{
                 display: flex;
                 margin-bottom: 20px;
@@ -174,6 +210,7 @@
             li{
                 margin-right: 20px;
             }
+
             .cust-white{
                 width: 25px;
                 height: 25px;
@@ -192,10 +229,13 @@
 
             .cust-word{
                 input{
-                    width: 328px * .7;
+                    width: 80%;
                     height: 48px * .7;
                     border-radius: 5px;
                     font-size: $p1;
+                    @include rwd(mobile){
+                        font-size: $p1 - 6px;
+                    }
                 }
             }
             
@@ -203,14 +243,23 @@
         }
 
         &_price{
-            border: 1px solid red;
+            // border: 1px solid red;
+            width: 90%;
+            @include center;
+            padding-left: 10%;
+            @include rwd(mobile){
+                padding-left: 0;
+                text-align: center;
+            }
             p{
                 font-size: $p1;
-                margin-top: -50px;
+                margin-top: -70px;
                 margin-bottom: 56px;
-                margin-left: 10%;
+                @include rwd(pad){
+                    margin-top: 50px;
+                }
                 @include rwd(mobile){
-                    margin-top: 0;
+                    font-size: $p1 - 6px;
                 }
             }
 
@@ -218,19 +267,29 @@
                 width: 50px;
                 height: 30px;
                 font-size: $p1;
-                margin-left: 20px;
+                margin-left: 10px;
                 border-radius: 5px;
             } 
 
             @include btn-module('.cust-add', 236, 93){
                 color: white;
-                margin-left: 10%;
                 margin-right: 20px;
                 margin-bottom: 127px * .7;
+                @include rwd(mobile){
+                    font-size: $h3 - 8px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                    margin-right: 5px;
+                }
             }
 
             @include btn-module('.cust-buy', 236, 93){
                 color: white;
+                @include rwd(mobile){
+                    font-size: $h3 - 8px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                }
             }  
         }    
     }
@@ -252,6 +311,10 @@
     
   
 
+}
+
+.cls-2:hover{
+    fill:#f00;
 }
 
     

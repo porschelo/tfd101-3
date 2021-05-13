@@ -3,12 +3,16 @@
      background-image: url(../images/store/pdct_bg.png);
      background-size: cover;
      box-sizing: border-box;
+     @include rwd(mobile){
+        background-image: url(../images/store/pdctD_bg.png);
+     }
 
      a{
         text-decoration: none;
          color: white;
      }
 
+     /*===== 標題 =====*/
     .unstore_title{
         // border: 1px solid red;
         color: $colorT;
@@ -44,14 +48,17 @@
         }
     }
 
+    /*===== 頁籤 =====*/
     @include bookmark('.unstore_sort');
     
+    /*===== 商品內容 =====*/
     .unstore_content{
         // border: 1px solid yellow;
         width: 85%;
         height: 85%;
         color: white;
         @include center;
+        line-height: 1.2;
         
         
         background-image: url(../images/store/pdctFrame_bg.png);
@@ -110,6 +117,7 @@
             }
         }
 
+        /*===== 頁碼 =====*/
         .unstore_pagination{
             @include pagination;
             padding-bottom: 100px;
@@ -117,6 +125,7 @@
 
     }
 
+    /*===== 客製我小怪獸 =====*/
     .unstore_monster{
         // border: 1px solid red;
         position: relative;
