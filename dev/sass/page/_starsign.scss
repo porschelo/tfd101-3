@@ -230,7 +230,7 @@
             h2{
                 font-size: $h2;
                 color: rgb(252, 140, 99);
-                padding: 60px 0 30px;
+                padding: 70px 0 40px;
                 text-align: center;
             }
             .starsignleft{
@@ -240,15 +240,35 @@
                     background-size: 500px 520px;
                     width: 500px;
                     height: 520px;
-                    // border: 1px white solid;
+                    p{
+                        font-size: $h3 - 1px;
+                        line-height: 1.6;
+                        font-weight: 300;
+                        width: 380px;
+                        color: #fff;
+                        margin: auto;
+                        padding-left: 15px;
+                    }
                 }
                 .productforyou{
                     background-image: url(../images/starsign/lfbg.png);
                     background-size: 500px 520px;
                     width: 500px;
                     height: 520px;
-                    // border: 1px white solid;
                     margin-top: 30px;
+                    .sspd{
+                        width: 280px;
+                        height: 250px;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        margin: auto;
+                    }
+                    h3{
+                        font-size: $h3 - 1px;
+                        color: #fff;
+                        text-align: center;
+                        margin-top: 30px;
+                    }
                 }
             }
             .starsignarticle{
@@ -256,8 +276,47 @@
                 background-size: 550px 900px;
                 width: 550px;
                 height: 900px;
-                // border: 1px white solid;
+                .artimenu{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .artitem{
+                        padding-left: 10px;
+                        width: 430px;
+                        color: #fff;
+                        margin-bottom: 50px;
+                        .artitle{
+                            font-size: $h3 - 1px;
+                            line-height: 1.4;
+                        }
+                        .artminp{
+                            font-size: $p2;
+                            line-height: 1.6;
+                            padding-top: 10px;
+                            font-weight: 300;
+                        }
+                        .morebtn{
+                            font-size: $p2;
+                            color: rgb(252, 140, 99);
+                            display: block;
+                            text-align: right;
+                            padding-right: 15px;
+                        }
+                    }
+                }
+                .ssarti_pagination{
+                    @include pagination;
+                    a{
+                        color: white;
+                    }
+                    .-on{
+                            color: rgb(252, 140, 99);
+                    }
+                }
+
             }
+            
         }
     }
     
