@@ -20,13 +20,40 @@ $letter-spacing:2.5;
     position: relative;
      @include rwd(pad){
         border: 3px solid red; 
+        
      }
      @include rwd(mobile){
       border: 3px solid green; 
-
+     }
+     h1{
+      @media all and(max-width:767px) {
+        font-size: $h1 - 6px;
+      }
+     }
+     h4{
+      @media all and(max-width:767px) {
+        font-size: $h4 - 6px;
+      }
+     }
+     h2{
+      @media all and(max-width:767px) {
+        font-size: $h2 - 6px !important;
+      }
      }
 
+     p{
+      @media all and(max-width:767px) {
+        font-size: $p - 6px !important;
+      }
+     }
 }
+
+     
+    //  @media all and(max-width:767px) {
+    //   font-size: $h4 - 6px;
+    // }
+
+
 .j_middle{
     background-image: url(../images/appointment/middlebg.png);
     background-size: 100%;
@@ -55,10 +82,13 @@ $letter-spacing:2.5;
 
     .j_subtitle{
         font-size: $h4;
-        // border: 1px solid;
-        display:flex;
+        text-align:center;
         color:$color;
         justify-content: center;
+        width: 100%;
+        @media all and(max-width:767px) {
+          font-size: $h4 - 6px;
+        }
           
         
           
@@ -86,7 +116,7 @@ $letter-spacing:2.5;
     background-image: url(../images/appointment/panel.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    position: absolute;
+    // position: absolute;
     max-width:1540*.7px;
     width: 100%;
     height: 67%;
@@ -97,8 +127,12 @@ $letter-spacing:2.5;
     display:flex;
     flex-direction: column;
     align-items: center;
+      @include rwd(panel_pad){
+        border: 4px solid gold;
+        background-image: none; 
+      }
       @include rwd(mobile){
-        background-image: none;
+        // background-image: none;
       }
         .j_btn{
 
@@ -127,82 +161,67 @@ $letter-spacing:2.5;
                     font-size: $h2;
                     margin-bottom: 170*.7px;
           }
-          
-            // .J_btn2{
-                // @include btn-module('.J_btn2', 140, 100px){
-                // margin-top:50*.7px;
-                // color:$color;
-                // font-size: $h2;
-                // margin-bottom: 170*.7px;
-                // text-align: center;
-                // // line-height: 1.8;
-                // width: 100%;
-                // display:flex;
 
-                //  }
-                // max-width:400*.7px;
-                // height:100*.7px;
-                // line-height: 100*.7px;
-                // text-align: center;
-                // margin: 0 auto;
-                // font-size: $h2;
-                // margin-top:50*.7px;
-                // background-color: transparent;
-                // border:4px solid #707070;
-                // border-radius: 30*.7px;
-                // color:$color;
-            // }
+                
             .j_document{
                 max-width:1000*.7px;
                 margin:0 auto;
                 // width: 100%;
-                height: 565*.7px;
-                overflow: auto;
+                min-height: 450*.7px;
+	              overflow: auto;
                 background-color: #EDF2FD;
-                color:#000000;
+                // color:#000000;
+                color:$color;
                 padding-left: 43*.7px;
-                // border: 4px solid yellow;
+                border: 6px dotted  rgba(255, 255, 255, 0.4);
+                  @include rwd(panel_pad){
+                    overflow: visible;
+                  }
                   @include rwd(pad){
-                    border: 4px solid yellow;
+                    // border: 4px solid yellow;
                     width:70%;
                     height:280px;
-
-
                   }
                   @include rwd(mobile){
-                    border: 4px solid rgb(41, 160, 61);
+                    // border: 4px solid rgb(41, 160, 61);
                     width:50%;
 
                   }
                     .docu_title{
-                        background-color: #fff;
+                        // background-color: #fff;
                         max-width:305*.7px;
                         height:55*.7px;
                         line-height:55*.7px;
                         margin-top: 24*.7px;
                         margin-bottom: 38*.7px;
                             h4{
-                                color:#000000;
+                                // color:#000000;
                                 margin-bottom: 0;
-
+                                @include rwd(mobile){
+                                  font-size:$h4 - 6px;
+                                }
 
                             }
                     }
                     .docu_info{
-                        width:900*.7px;
-                        height:181*.7px;
-                        background-color:#FFFFFF;
+                        max-width:900*.7px;
+                        width: 100%;
+                        // height:181*.7px;
+                        // background-color:#FFFFFF;
                         display:flex;
                         // justify-content: left;
                         // align-items: top;
                         // text-align:center;
                         padding-top: 34*.7px;
                         // border:1px solid;
-                         
+                        @include rwd(mobile){
+                          flex-direction: column;
+                        }
 
                             img{
-                                width:100*.7px;
-                                height:100*.7px;
+                                max-width:100*.7px;
+                                width: 100%;
+                                // height:100*.7px;
                                 margin-left: 41*.7px;
                                 display:block;
                                 border:1px solid;
@@ -210,13 +229,14 @@ $letter-spacing:2.5;
                             }
                             .docu_detail{
                                 margin-left: 34*.7px;
-                                width:480*.7px;
-                                height:132*.7px;
+                                max-width:480*.7px;
+                                width: 100%;
+                                // height:132*.7px;
 
                                 // border:1px solid;
                                 // text-align:left;
                                 h4{
-                                    color: #000000;
+                                    // color: #000000;
                                     font-size: $h4;
                                     margin-bottom: 0;
                                     text-align: left;
@@ -229,8 +249,11 @@ $letter-spacing:2.5;
                                 // padding-left: 224*.7px;
                                 width:200px;
                                 // border:1px solid;
+                                @include rwd(mobile){
+                                  flex-direction: column;
+                                }
                                 h4{
-                                    color: #000000;
+                                    // color: #000000;
                                     font-size: $h4;
                                     margin-bottom: 0;
                                     text-align: left;
@@ -252,7 +275,7 @@ $letter-spacing:2.5;
     // border:2px solid red;
         #money{
             // border:1px solid yellow;
-            color: #000000;
+            // color: #000000;
             font-size: $h4;
             margin-bottom: 0;
             text-align: right;
@@ -267,7 +290,7 @@ $letter-spacing:2.5;
     height:54*.7px;
     // border:2px solid seagreen;
         #member{
-            color: #000000;
+            // color: #000000;
             font-size: $h4;
             line-height: 54*.7px;
             margin-bottom: 0;
@@ -280,12 +303,16 @@ $letter-spacing:2.5;
         text-align: left;
         margin:0 auto;
         width: 100%;
+        border: 1px solid cadetblue;
         h2{
             font-size: $h2;
             text-align: center;
             margin-top: 250*.7px;
             color:$color;
             margin-bottom: 46px;
+            @include rwd(panel_pad){
+              margin-top: 40px;
+            }
         }
         h4{
             font-size: $h4;
@@ -324,7 +351,7 @@ $letter-spacing:2.5;
   border: 1px solid fuchsia;
 }
 .j_panel_content p{
-    font-size: $p;
+    font-size: $p ;
     line-height: 36px;
     color:$color; 
 }
@@ -348,6 +375,11 @@ $letter-spacing:2.5;
     margin-top: 24*.7px;
     display: flex;
     align-items: flex-end;
+      @include rwd(mobile){
+        flex-direction:column ;
+        align-items: center;
+      }
+    // color: $color;
     
     
     .form_right{
@@ -355,6 +387,7 @@ $letter-spacing:2.5;
         // border:1px solid darkgreen;
         text-align: right;
         margin-bottom: 10*.7px;
+          
             #right{
                 width:150*.7px;
                 height:50*.7px;
@@ -369,6 +402,7 @@ $letter-spacing:2.5;
     .form_left{
         padding-bottom: 10*.7px;
         max-width: 400*.7px;
+        color: $color;
         // border:1px solid red;
 
             .name{
@@ -427,7 +461,7 @@ $letter-spacing:2.5;
 
 
      .form_left h4{
-        color:#000000;
+        // color:#000000;
         margin-bottom: 0;
         text-align:left;
     }

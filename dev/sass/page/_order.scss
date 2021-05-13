@@ -10,9 +10,7 @@ $letter-spacing:2.5;
     // outline: 1px solid yellowgreen ;
     
  }
- img{
-    //  max-width: 100%;
- }
+ 
  
  .j_order_wrapper{
      background-image: url(../images/order/memberbg.png);
@@ -22,15 +20,7 @@ $letter-spacing:2.5;
     background-position:center ;
      background-size: cover;
      margin: 0 auto;
-        @include  md{
-            
-          }
-          @include pad{
-              
-            }
-            @include mobile{
-              
-            }
+        
 
  }
 
