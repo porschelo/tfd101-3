@@ -1,0 +1,69 @@
+
+.jl-m1-header{
+  height: 168px;
+  background-color: #023553;
+}
+
+.jl_wrapper1{
+
+  // margin-top: 12rem;
+  background-image: url(../../images/horoscope_page/match1_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+
+  position:absolute;
+  
+  // border: 5px solid red;
+}
+
+
+.jl_section1 {
+  position:relative;
+  font-size: 35px;
+  text-align: center;
+  border: 2px solid pink;
+  margin-top: 200px;
+}
+
+
+
+
+.jl_section2 {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 5rem;
+  padding-left: 65rem;
+  // border: 2px solid yellow;
+
+}
+
+
+.jl_section2 a, .jl_section1 a{
+  text-decoration: none;
+  color:#D6E0F7;
+}   
+
+
+  //nav-list 所在頁面樣式
+      .overlaymenu{
+          .menulist{
+              .nav-menu{
+                  ul{
+                      li:nth-child(3){
+                          a{
+                              color: yellow;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+ // end of jl_wrapper1
+
+.jl-m1-footer {
+  height:600px;
+  background-color: red;
+  border: 3px solid red;
+}

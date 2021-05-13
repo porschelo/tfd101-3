@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    @@include('layout/scripts.html')
+
+</head>
+<body>
+    <div class="j_order_wrapper">
+        @@include('layout/header.html')
+        <!-- title -->
+        <div class="j_title">
+
+            <div class="j_bigtitle">
+                <img src="./images/appointment/earth2.png" alt="" id="earth">
+                <h1>訂單確認</h1>
+                <img src="./images/appointment/earth2.png" alt="" id="earth">
+            </div>
+               
+            <div class="j_subtitle">
+                <h4>
+                — Order Confirm — 
+                </h4>
+            </div>
+            
+        </div>
+
+        <!-- 訂單確認 -->
+        <div class="j_order">
+            <img src="./images/order/orderpanel.png" alt="" class="j_order_img">
+            <!-- <div class="order_title"> -->
+            <ul class="order_tilte">
+                <li>商品圖片</li>
+                <li>商品名稱</li>
+                <li>單件價格</li>
+                <li>數量</li>
+                <li>小計</li>
+            </ul>
+            <!-- </div> -->
+            <hr>
+            <!-- 訂單1 -->
+            <div class="firstorder">
+                <ul>
+                    <li>
+                        <img src="./images/store/hPd_1.png" alt="" class="fo_img">
+                    </li>
+                    <li> 
+                        <h4>宇宙能量水晶</h4>
+                    </li>
+                    <li>
+                        <h4>3,500</h4>
+                    </li>
+                    <li>                            
+                        <select name="amount" id="amount" >
+                            <option value="1">1</option>  
+                            <option value="2">2</option>  
+                            <option value="3">3</option>  
+                            <option value="4">4</option>  
+                            <option value="5">5</option>  
+                            <option value="6">6</option>  
+                        </select>
+                    </li>
+                    <li>
+                        NT:3,500
+                    </li>
+                </ul>
+            </div>
+            <!-- 訂單2 -->
+
+            <div class="secondorder">
+                <ul>
+                    <li>
+                        <img src="./images/store/maylike-2.jpg" alt="" class="fo_img">
+                    </li>
+                    <li> 
+                        <h4>宇宙能量手環</h4>
+                    </li>
+                    <li>
+                        <h4>500</h4>
+                    </li>
+                    <li>                            
+                        <select name="amount" id="amount" >
+                            <option value="1">1</option>  
+                            <option value="2">2</option>  
+                            <option value="3">3</option>  
+                            <option value="4">4</option>  
+                            <option value="5">5</option>  
+                            <option value="6">6</option>  
+                        </select>
+                    </li>
+                    <li>
+                        NT:500
+                    </li>
+                </ul>
+                
+                <hr>
+            </div>
+
+            <!-- 小計 -->
+            <div class="order_total">
+                <h4>合計：NT:4,000</h4>
+            </div>
+            <!-- 顧客資訊 -->
+            <div class="j_customer">
+                <div class="customer_left">
+                    <div class="info_title">
+                        <h4>顧客資料</h4>
+                    </div>
+                    <div class="name">
+                        <h4>A. 姓名</h4>
+                        <input type="text" placeholder="請輸入文字">
+                    </div>
+                    
+                    <div class="tel">
+                        <h4>B. 聯絡電話</h4>
+                        <input type="tel" name="" id="" placeholder="請輸入電話">
+                    </div>
+                    <div class="email">
+                        <h4>C. 聯絡信箱</h4>
+                        <input type="email" name="" id="" placeholder="請輸入信箱">
+                    </div>
+                    <div class="comment">
+                        <h4>D. 訂單備註(EX:建議收貨時間)</h4>
+                        <div class="comment_word">
+                        <textarea name="Content"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customer_right">
+                    <div class="info_title">
+                        <h4>送貨資料</h4>
+                    </div>
+                    <div class="docu_member">
+                        <h4 id="member">預約人資料
+                            <input type="checkbox" name="member">同會員
+                        </h4>                           
+                    </div>
+                    <div class="name">
+                        <h4>A. 收件人名稱</h4>
+                        <input type="text" placeholder="請輸入文字">
+                    </div>
+                    
+                    <div class="tel">
+                        <h4>B. 收件人電話</h4>
+                        <input type="tel" name="" id="" placeholder="請輸入電話">
+                    </div>
+                    
+                    <div class="comment">
+                        <h4>D. 訂單備註(EX:建議收貨時間)</h4>
+                        <div class="comment_word">
+                        <textarea name="Content"></textarea>
+                    </div>
+
+                    <div class="order_pay">
+                        <label for="ammount">付款方式</label><br>
+                                        <select name="payment" id="payment">
+                                            <option value="credit card">信用卡付款(經由綠世界)</option>  
+                                        </select>
+                    </div>
+                </div>
+                <div class="order_payment">
+                <button type="button" value="page" class="order_payment">前往結帳</button>
+            </div>
+                </div>
+
+                <!-- 結帳按鈕 -->
+                
+                    <!-- <button type="button" value="page" class="order_payment">前往結帳</button> -->
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

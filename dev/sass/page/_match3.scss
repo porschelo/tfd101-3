@@ -1,0 +1,74 @@
+
+
+
+
+.jl_wrapper3{
+    margin-top: 170px;
+    background-image: url(../images/horoscope_page/match_result_bkgd_1@2x.png); 
+    // width:1920px;
+    // height:1300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width:100%;
+    color: #B6C9F0;
+    // border: 5px red solid;
+}
+
+.jl_match_percent{
+  width: 150px;
+  height: 50px;
+  margin-top: 140px;
+  margin-left: 180px;
+  text-align: center;
+  display:inline-block
+
+}
+
+.jl_match_percent h4{
+  font-size: 28px;
+}
+
+.jl_match_percent h2{
+  color: red;
+  font-size: $h2;
+}
+
+.jl_match_comments span{
+  font-size:30px;
+}
+
+
+
+.jl_pros h3{
+  margin-top: -60px;
+  margin-left:900px;
+  font-size: $p1;
+
+}
+
+.jl_monster_combine{
+  // margin-top: 80px;
+  margin: 20px auto;
+  // margin-left: 300px;
+  width:300px;
+  height:300px;
+  // border: 4px solid red;
+  display: flex;
+}
+
+.jl_left_monster img{
+  margin-top: 0%;
+  
+  // border: 1px solid green;
+}
+
+.jl_right_monster img{
+  margin-top: 0%;
+  width:120%;
+  // border:1px solid yellow;
+}
+
+.jl_cons{
+  font-size: $h3;
+
+}
