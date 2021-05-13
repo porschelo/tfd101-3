@@ -1,41 +1,271 @@
 .wrapper_starsign{
-
-    background-image: 
-        url(../images/starsign/ss_bg2.png),
-        url(../images/starsign/ss_bg.png);
-    background-size: 100% auto;
-    background-position: center;
+    background: linear-gradient(to right,#467B6B,#003352);
+    width: 100%;
     letter-spacing: $ls;
     box-sizing: border-box;
-    
     a{
        text-decoration: none;
     }
-    .starsign_section{
-        margin-bottom: 2080px; //暫時
-        
+    .galaxys__top{
+        background-color:rgb(53, 52, 67); 
+        padding-bottom: 20px;
     }
-    .starsign_title{
-        color: $colorT;
-        padding: (80px+240px)*.7 0 0; 
-        &-c{
+    .galaxys{
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        .starsign_title{
+            position: relative;
+            margin:auto;
+            color: $colorT;
+            padding: (80px+240px)*.7 0 0; 
+            z-index: 15;
+            &-c{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 63px * .7;
+                    height: 43px * .7;
+                    margin-bottom: 5px;
+                }
+            }
+            h1{
+                font-size: $h1;
+                padding: 5px 20px 10px;
+            }
+            &-e{
+                text-align: center;
+                font-size: $p1;
+            }
+        }
+        .starship{
+            width: 100%;
+            height: auto;
+            position: relative !important;
+            display: block !important;
+            z-index: 10;
+            pointer-events: none; //穿透
+        }
+        .galx1{
+            top:15vw; //根據vw縮放
+            width: 100vw * 1000 /1920; 
+            position: absolute;
+            left: 16vw;
+            z-index: 5;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                width: 100vw * 1020 /1920; 
+                opacity: .9;
+            }
+        }
+        .galx2{
+            top:11vw; 
+            width: 100vw * 800 /1920; 
+            position: absolute;
+            right: -20vw;
+            z-index: 6;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                width: 100vw * 820 /1920; 
+                opacity: .9;
+            }
+        }
+        .galx3{
+            top:3vw; 
+            width: 100vw * 500 /1920; 
+            position: absolute;
+            left: 50vw;
+            z-index: 6;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                width: 100vw * 520 /1920; 
+                opacity: .9;
+            }
+        }
+        .galx4{
+            top:4vw; 
+            width: 100vw * 600 /1920; 
+            position: absolute;
+            left: -10vw;
+            z-index: 6;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                width: 100vw * 620 /1920; 
+                opacity: .9;
+            }
+        }
+
+
+    }
+    .starsignsec{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 300;
+        background-color:rgb(53, 52, 67); 
+
+        .starsignswitch{
             display: flex;
             justify-content: center;
             align-items: center;
-            img{
-                width: 63px * .7;
-                height: 43px * .7;
-                margin-bottom: 5px;
+            button{
+                outline: 0;
+                border: 0;
+                background: 0;
+                width: 50px;
+                cursor: pointer;
+                &:hover{
+                    opacity: .7;
+                }
+            }
+            .prbtn{
+                margin-right: 30px;
+            }
+            .nxbtn{
+                margin-left: 30px;
+            }
+            .drivingcard{
+                background-color: rgb(230, 230, 230);
+                width: 800px;
+                height: 528px;
+                border-radius: 10px;
+                h2{
+                    font-size: $h2;
+                    font-weight: 500;
+                    color: rgb(82, 82, 121);
+                    padding: 45px 0 30px;
+                    text-align: center;
+                }
+                .cardtop{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .cardpt{
+                        width: 180px;
+                    }
+                    .cardct{
+                        padding-left: 32px;
+                        width: 60%;
+                        color: #555;
+                        h3{
+                            font-size: $h3;
+                            padding-bottom: 30px;
+                        }
+                        p{
+                            font-size: $p1;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+                .cardbottom{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .cdbtl{
+                        font-size: $h3;
+                        line-height: 1.2;
+                        color: #aaa;
+                        padding-right: 30px;
+                        padding-left: 15px;
+                    }
+                    .cdbtr{
+                        display: flex;
+                        margin-top: 24px;
+                        .prs{
+                                background-size: 145px 138px;
+                                width: 145px;
+                                height: 138px;
+                                padding-top: 40px;
+                                padding-left: 9px;
+                                h3{
+                                    font-size: $h3;
+                                    line-height: 1.2;
+                                    text-align: center;
+                                }
+                            }
+                        .prs1{
+                            background-image: url(../images/starsign/prs1.png);
+                            margin-right: 15px;
+                            h3{
+                                color: #FA5078;
+                            }
+                        }
+                        .prs2{
+                            background-image: url(../images/starsign/prs2.png);
+                            margin-right: 15px;
+                            h3{
+                                color: #4078C4;
+                            }
+                        }
+                        .prs3{
+                            background-image: url(../images/starsign/prs3.png);
+                            h3{
+                                color: #29B196;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+        }
+        .starsigncont{
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
+            h2{
+                font-size: $h2;
+                color: rgb(252, 140, 99);
+                padding: 60px 0 30px;
+                text-align: center;
+            }
+            .starsignleft{
+                width: 530px;
+                .luckyeveryday{
+                    background-image: url(../images/starsign/lfbg.png);
+                    background-size: 500px 520px;
+                    width: 500px;
+                    height: 520px;
+                    // border: 1px white solid;
+                }
+                .productforyou{
+                    background-image: url(../images/starsign/lfbg.png);
+                    background-size: 500px 520px;
+                    width: 500px;
+                    height: 520px;
+                    // border: 1px white solid;
+                    margin-top: 30px;
+                }
+            }
+            .starsignarticle{
+                background-image: url(../images/starsign/rtbg.png);
+                background-size: 550px 900px;
+                width: 550px;
+                height: 900px;
+                // border: 1px white solid;
             }
         }
-        h1{
-            font-size: $h1;
-            padding: 5px 20px 10px;
-        }
-        &-e{
-            text-align: center;
-            font-size: $p1;
-        }
+    }
+    
+
+
+    footer{
+        background-color: rgb(53, 52, 67); 
+        margin-top: -10px;
     }
 
     //nav-list 所在頁面樣式
