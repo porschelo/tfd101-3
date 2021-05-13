@@ -23,6 +23,9 @@
     display: flex;
     margin-top: 375px;
     margin-bottom: -12px;
+    @include rwd(mobile){
+      margin-top: 50px;
+    }
 
     li {
       display: block;
@@ -44,6 +47,7 @@
         line-height: 1.6;
         margin-left: 5px;
         height: 100px;
+        margin-top: 15px;
         padding-top: 20px;
       }
 
