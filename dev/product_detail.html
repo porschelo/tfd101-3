@@ -13,6 +13,7 @@
     <div class="wrapper_product-detail">
         @@include('layout/header.html')
 
+        <!-- 標題 -->
         <div class="unstore_title">
             <div class="unstore_title-c">
                 <img src="images/store/uv_icone.png" alt="">
@@ -23,10 +24,12 @@
                 <h4>— Universe Store —</h4>
             </div>
         </div>
-        
+         
         <div class="product-detail_content">
 
             <div class="product-detail_top">
+
+                <!-- 麵包屑 -->
                 <div class="breadcrumb">
                     <ul class="breadcrumb_list">
                         <li><a href="#">開運商品</a></li>
@@ -34,17 +37,20 @@
                     </ul>
                 </div>
 
+                <!-- 愛心收藏 -->
                 <div class="pd-love"><img src="images/store/loveicone.png" alt=""></div>
             </div>
 
             <div class="product-detail_main">
+
+                <!-- 商品角度切換 -->
                 <div class="pd-leftblock">
                     <div class="pd-img_block">
 						<img src="images/store/healthP-1.png" class="b -on" data-img="img1">
 						<img src="images/store/healthP-2.png" class="b" data-img="img2">
 						<img src="images/store/healthP-3.png" class="b" data-img="img3">
-					
 					</div>
+
 					<div class="pd-btn_block">
 						<button type="button" data-target="img1" class="a"><img src="images/store/healthP-1.png" alt=""></button>
 						<button type="button" data-target="img2" class="a"><img src="images/store/healthP-2.png" alt=""></button>
@@ -52,6 +58,7 @@
 					</div>
                 </div>
 
+                <!-- 商品簡介 -->
                 <div class="pd-rightblock">
                     <h2>七星陣水晶原石能量陣</h2>
                     <p>
@@ -67,16 +74,15 @@
                 
                    
                 </div>
-
                 
             </div>
 
-
+             <!-- 商品細節介紹 -->
             <div class="product-detail_info">
                 <h2>— 商品介紹 —</h2>
                 <div class="pd-chart">
-                    <p>購買商品的星座比例</p>
-                    <canvas id="myChart" width="400" height="400"></canvas></div>
+                    <p>購買此商品的星座比例</p>
+                    <canvas id="myChart1" width="400" height="400"></canvas></div>
                 <div class="pd-more">
                     <p>★宇宙之能-奧剛金字塔<br>
                     ★尺寸：底邊 7 cm 斜邊8.5 cm <br>
@@ -87,6 +93,7 @@
                 
             </div>
 
+            <!-- 商品評價 -->
             <div class="product-detail_evaluation">
                 <h2>— 商品評價 —</h2>
                 <hr>
@@ -113,6 +120,7 @@
                 <p>超級喜歡！一戴上馬上感覺像喝了蠻牛！精神都來了！推薦大家都來買！</p>
             </div>
 
+            <!-- 可能喜歡的商品 -->
             <div class="product-detail_like">
                 <h2>— 您可能會喜歡 —</h2>
                 <ul>
@@ -136,25 +144,62 @@
 		var btn_a = document.getElementsByClassName("a");
 		for(let j = 0; j < btn_a.length; j++){
 		
-		btn_a[j].addEventListener("click", function(){
-			let imgs_b = document.getElementsByClassName("b");
-			for(let i = 0; i < imgs_b.length; i++){
-			//console.log(i)
-			imgs_b[i].classList.remove("-on");
-			}
-			let data_target = this.getAttribute("data-target");
-			
-			for(let i = 0; i < imgs_b.length; i++){
-			if(data_target == imgs_b[i].getAttribute("data-img")){
-				
-				imgs_b[i].classList.add("-on");
-			}
-
-			}
-		})
-		
+            btn_a[j].addEventListener("click", function(){
+                let imgs_b = document.getElementsByClassName("b");
+                
+                for(let i = 0; i < imgs_b.length; i++){
+                //console.log(i)
+                imgs_b[i].classList.remove("-on");
+                }
+                let data_target = this.getAttribute("data-target");
+                
+                for(let i = 0; i < imgs_b.length; i++){
+                    if(data_target == imgs_b[i].getAttribute("data-img")){
+                    
+                        imgs_b[i].classList.add("-on");
+                    }
+                }
+		    })
 		}
 	</script>
+
+    <script>
+        var ctx = document.getElementById('myChart1').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 
     
     

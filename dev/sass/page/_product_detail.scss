@@ -8,11 +8,7 @@
          text-decoration: none;
          color: white;
      }
-
-     .product-detail_content{
-         line-height: 1.6;
-     }
-
+     /*===== 標題 =====*/
      .unstore_title{
         // border: 1px solid red;
         color: $colorT;
@@ -49,6 +45,7 @@
     
     .product-detail{
         &_content{
+            line-height: 1.6;
             // border: 1px solid yellow;
             width: 85%;
             // height: 500px;
@@ -71,6 +68,7 @@
         &_top{
             position: relative;
 
+            /*===== 麵包屑 =====*/
             .breadcrumb {
                 max-width: 1200px;
                 margin: 0 auto;
@@ -97,6 +95,7 @@
 
             }
 
+            /*===== 愛心收藏 =====*/
             .pd-love{
                 width: 60px * .7;
                 position: absolute;
@@ -119,6 +118,7 @@
                 display: block;
              }
 
+             /*===== 商品角度切換 =====*/
             .pd-leftblock{
                 // border: 1px solid yellow;
                 width: 50%;
@@ -160,6 +160,7 @@
                 }
             }
 
+            /*===== 商品簡介 =====*/
             .pd-rightblock{
                 width: 50%;
                 padding: 50px;
@@ -197,6 +198,7 @@
                }
                @include rwd(mobile){
                font-size: $h3 - 6px;
+               text-align: center;
                     input{
                         font-size: $p1 - 6px;
                     }
@@ -226,6 +228,7 @@
             }  
         }
 
+        /*===== 商品細節介紹 =====*/
         &_info{
             width: 80%;
             @include center;
@@ -240,13 +243,19 @@
             }
             .pd-chart{
                 width: 50%;
+                text-align: center;
+                @include center;
                 margin-bottom: 56px;
+                @include rwd(mobile){
+                    width: 100%;
+                }
                 p{
                     margin-bottom: 20px;
                 }
             }
         }
 
+        /*===== 商品評價 =====*/
         &_evaluation{
             width: 70%;
             @include center;
@@ -321,6 +330,7 @@
             
         }
 
+        /*===== 可能喜歡的商品 =====*/
         &_like{
             width: 85%;
             @include center;
@@ -357,6 +367,8 @@
         }
 
     }
+
+    /*===== header 所在頁面 =====*/
     .overlaymenu{
         .menulist{
             .nav-menu{
