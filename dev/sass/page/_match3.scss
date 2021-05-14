@@ -81,7 +81,7 @@
     .jl_cons{
       padding: 2%;
       margin: 0% 5% 0 60%;
-      font-size: $h2;
+      font-size: $p1;
       border-top: 10px $textColor double;
       border-bottom: 10px $textColor double;
       border-radius: 40px;
@@ -95,7 +95,13 @@
     .jl_lucky_charms{
       margin-bottom: 50%;
       margin-left: 5%;
-      display: inline-block;
+      
+
+      h3{
+        font-size: $h2;
+        text-align: center;
+        border: 2px solid red;
+      }
     }
 
 
