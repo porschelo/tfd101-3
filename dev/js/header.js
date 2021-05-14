@@ -22,11 +22,6 @@ function doFirst(){
     });
 
     //註冊popup
-
-    $("a.login").on("click", function (e) {
-      e.preventDefault();
-      $("div.loginpopup").fadeIn();
-    });
     
     $("a.gosignup").on("click", function (e) {
       e.preventDefault();
@@ -37,6 +32,12 @@ function doFirst(){
     $("a.close_signup_btn").on("click", function (e) {
       e.preventDefault();
       $("div.signup").fadeOut();
+    });
+
+    $("a.gologin").on("click", function (e) {
+      e.preventDefault();
+      $("div.signup ").fadeOut();
+      $("div.loginpopup").fadeIn();
     });
 
 
