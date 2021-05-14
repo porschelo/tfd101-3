@@ -32,12 +32,18 @@
        h1{
            font-size: $h1;
            padding: 5px 20px 10px;
+           @include rwd(mobile){
+            font-size: $h1 - 6px;
+            }
        }
 
        &-e{
             text-align: center;
             font-size: $p1;
-       }
+            @include rwd(mobile){
+                font-size: $p1 - 6px;
+            }
+        }
 
     }
     
@@ -56,10 +62,10 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
 
-            @include rwd(mobile){
-                background-image: none;
-                border: 3px solid white;
-             }
+            // @include rwd(mobile){
+            //     background-image: none;
+            //     border: 3px solid white;
+            //  }
         }
 
         &_top{
@@ -72,6 +78,9 @@
                 padding-left: 50px;
                 padding-top: 80px * .7;
                 padding-bottom: 85px * .7;
+                @include rwd(mobile){
+                    padding-left: 20px;
+                }
             }
             .breadcrumb_list li{
                 display: inline-block;
@@ -93,6 +102,9 @@
                 position: absolute;
                 right: 70px;
                 top: 70px;
+                @include rwd(mobile){
+                    right: 20px;
+                }
 
             }
     
@@ -107,18 +119,26 @@
                 display: block;
              }
 
-            .leftblock{
+            .pd-leftblock{
                 // border: 1px solid yellow;
                 width: 50%;
                 padding: 40px;
                 padding-top: 0;
                 @include rwd(mobile){
                     width: 100%;
+                    padding: 0;
                  }
-                  
+                .pd-img_block{
+                    img{
+                        display: none;
+                    }
+                    img.-on{
+                        display: inline-block;
+                    }
+                }  
             }
 
-            .img_block{
+            .pd-img_block{
                 
                 img{
                     width: 100%;
@@ -127,7 +147,7 @@
                 }    
             }
             
-            .btn_block{
+            .pd-btn_block{
                 display: flex;
                 button{
                     width: calc((100% - 60px) / 3);
@@ -140,7 +160,7 @@
                 }
             }
 
-            .rightblock{
+            .pd-rightblock{
                 width: 50%;
                 padding: 50px;
                 h2{
@@ -152,6 +172,14 @@
                 }
                 @include rwd(mobile){
                     width: 100%;
+                    padding: 10px;
+                    h2{
+                        font-size: $h2 - 6px;
+                        margin-top: 50px;
+                    }
+                    p{
+                        font-size: $p2 - 3px;
+                    }
                  }
             }
 
@@ -166,28 +194,56 @@
                    font-size: $p1;
                    margin-left: 20px;
                    border-radius: 5px;
-               } 
+               }
+               @include rwd(mobile){
+               font-size: $h3 - 6px;
+                    input{
+                        font-size: $p1 - 6px;
+                    }
+                }
             }
 
         
             @include btn-module('.pd-add', 236, 93){
                 color: white;
                 margin-right: 10px;
+
+                @include rwd(mobile){
+                    font-size: $h3 - 8px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                    margin-right: 0;
+                }
             }
 
             @include btn-module('.pd-buy', 236, 93){
                 color: white;
+                @include rwd(mobile){
+                    font-size: $h3 - 8px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                }
             }  
         }
 
         &_info{
-            width: 70%;
+            width: 80%;
             @include center;
             h2{
                 text-align: center;
                 font-size: $h2;
                 margin-top: 50px;
                 margin-bottom: 56px;
+                @include rwd(mobile){
+                    font-size: $h2 - 6px;
+                }
+            }
+            .pd-chart{
+                width: 50%;
+                margin-bottom: 56px;
+                p{
+                    margin-bottom: 20px;
+                }
             }
         }
 
@@ -199,6 +255,9 @@
                 font-size: $h2;
                 margin-top: 80px;
                 margin-bottom: 56px;
+                @include rwd(mobile){
+                    font-size: $h2 - 6px;
+                }
             }
 
             hr{
@@ -217,13 +276,18 @@
             }
 
             .pd-photo{
-                border-radius: 50%;
-                overflow: hidden;
+                img{
+                    border-radius: 50%;
+                }
             }
 
             .pd-name{
                 padding-left: 20px;
                 padding-top: 10px;
+                @include rwd(mobile){
+                    padding-left: 0;
+                    margin-bottom: 10px;
+                 }
             }
 
             .pd-star{
@@ -267,6 +331,9 @@
                 font-size: $h2;
                 margin-top: 80px;
                 margin-bottom: 56px;
+                @include rwd(mobile){
+                    font-size: $h2 - 6px;
+                }
             }
 
             ul{
@@ -289,6 +356,19 @@
             }
         }
 
+    }
+    .overlaymenu{
+        .menulist{
+            .nav-menu{
+                ul{
+                    li:nth-child(4){
+                        a{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
   
 

@@ -38,21 +38,21 @@
             </div>
 
             <div class="product-detail_main">
-                <div class="leftblock">
-                    <div class="img_block">
+                <div class="pd-leftblock">
+                    <div class="pd-img_block">
 						<img src="images/store/healthP-1.png" class="b -on" data-img="img1">
-						<!-- <img src="images/store/healthP-2.png" class="b" data-img="img2">
-						<img src="images/store/healthP-3.png" class="b" data-img="img3"> -->
+						<img src="images/store/healthP-2.png" class="b" data-img="img2">
+						<img src="images/store/healthP-3.png" class="b" data-img="img3">
 					
 					</div>
-					<div class="btn_block">
+					<div class="pd-btn_block">
 						<button type="button" data-target="img1" class="a"><img src="images/store/healthP-1.png" alt=""></button>
 						<button type="button" data-target="img2" class="a"><img src="images/store/healthP-2.png" alt=""></button>
 						<button type="button" data-target="img3" class="a"><img src="images/store/healthP-3.png" alt=""></button>
 					</div>
                 </div>
 
-                <div class="rightblock">
+                <div class="pd-rightblock">
                     <h2>七星陣水晶原石能量陣</h2>
                     <p>
                         淨化能量、開智慧、增加記憶、平穩心態、深層的冥想、增強洞察力、舒緩情緒減少壓力
@@ -74,7 +74,9 @@
 
             <div class="product-detail_info">
                 <h2>— 商品介紹 —</h2>
-                <div class="pd-chart"></div>
+                <div class="pd-chart">
+                    <p>購買商品的星座比例</p>
+                    <canvas id="myChart" width="400" height="400"></canvas></div>
                 <div class="pd-more">
                     <p>★宇宙之能-奧剛金字塔<br>
                     ★尺寸：底邊 7 cm 斜邊8.5 cm <br>
@@ -124,17 +126,38 @@
                 
             </div>
 
-
-
-
         </div>
-
-        
-        
-        
         
         @@include('layout/footer.html')
     </div>
+
+    <script>
+
+		var btn_a = document.getElementsByClassName("a");
+		for(let j = 0; j < btn_a.length; j++){
+		
+		btn_a[j].addEventListener("click", function(){
+			let imgs_b = document.getElementsByClassName("b");
+			for(let i = 0; i < imgs_b.length; i++){
+			//console.log(i)
+			imgs_b[i].classList.remove("-on");
+			}
+			let data_target = this.getAttribute("data-target");
+			
+			for(let i = 0; i < imgs_b.length; i++){
+			if(data_target == imgs_b[i].getAttribute("data-img")){
+				
+				imgs_b[i].classList.add("-on");
+			}
+
+			}
+		})
+		
+		}
+	</script>
+
+    
+    
     
 </body>
 </html>

@@ -55,6 +55,11 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         margin-top: 56px;
+
+        @include rwd(mobile){
+            background-image: none;
+            border: 5px solid #F8F8F8;
+        }
     }
 
     .tSort_option{
@@ -90,7 +95,7 @@
         font-size: 0;
     }
 
-    @include btn-module('.tSort_start', 280, 110){
+    @include btn-module('.tSort_start', 280, 100){
         color: white;
         margin-top: 28px;
         margin-bottom: 220px *.7;

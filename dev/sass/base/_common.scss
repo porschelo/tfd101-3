@@ -1,0 +1,8 @@
+//依照你使用的螢幕尺寸可以去更改
+@function whForPC($value, $width: 1920){
+    @return $value/$width*100%;
+}
+
+@function wh($value, $width: 375){
+    @return $value/$width*100vw;
+}
