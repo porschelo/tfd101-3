@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="ap_style.css"> -->
+  @@include('layout/scripts.html')
+
+
+</head>
+
+<body>
+  <div class="j_wrapper">
+    @@include('layout/header.html')
+
+    <!-- 中間背景 -->
+    <div class="j_middle">
+      <!-- 頁面標題 -->
+      <div class="j_title">
+
+        <div class="j_bigtitle">
+          <img src="./images/appointment/earth2.png" alt="" id="earth">
+          <h1>預約談星</h1>
+          <img src="./images/appointment/earth2.png" alt="" id="earth">
+        </div>
+
+        <div class="j_subtitle">
+          <h4>
+            — Reservation With Experts —
+          </h4>
+        </div>
+
+      </div>
+      <!-- 進度條 -->
+      <div class="progress">
+
+        <li class="container__item">
+          <div class="stepper">
+            <input class="stepper__input" id="stepper-5-0" name="stepper-5" type="radio" checked="checked" />
+            <div class="stepper__step">
+              <label class="stepper__button" for="stepper-5-0"></label>
+              <p class="stepper__content">step 1:選擇老師</p>
+            </div>
+            <input class="stepper__input" id="stepper-5-1" name="stepper-5" type="radio" />
+            <div class="stepper__step">
+              <label class="stepper__button" for="stepper-5-1"></label>
+              <p class="stepper__content">step 2:選擇時段</p>
+            </div>
+            <input class="stepper__input" id="stepper-5-2" name="stepper-5" type="radio" />
+            <div class="stepper__step">
+              <label class="stepper__button" for="stepper-5-2"></label>
+              <p class="stepper__content">step 3: 確認結帳資料</p>
+            </div>
+            <input class="stepper__input" id="stepper-5-3" name="stepper-5" type="radio" />
+            <div class="stepper__step">
+              <label class="stepper__button" for="stepper-5-3"></label>
+              <p class="stepper__content">step 4: 預約完成</p>
+            </div>
+
+          </div>
+        </li>
+      </div>
+      <!-- 儀錶板 -->
+      <div class="j_panel">
+        
+        <div class="j_panel_title">
+          <h2>預約完成</h2>
+          <h4>恭喜您,您的預約已經完成!</h4>
+        </div>
+
+          <div class="j_panel_content">
+            <p> 訂單編號: 073294758302</p>
+            <p> 預約姓名: 王小明 </p>
+            <p> 預約時段: 18:30 唐揚雞</p>
+          </div>
+
+        <div class="j_panel_notice">
+          <p> 提醒您, 請依預約時間抵達,若有任何問題,請事先來電告知
+            電話:02-27580000</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    @@include('layout/footer.html')
+
+  </div>
+</body>
+
+</html>
