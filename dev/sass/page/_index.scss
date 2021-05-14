@@ -1094,7 +1094,7 @@
       .unstore_title {
         // border: 1px solid red;
         color: $colorT;
-        padding: 80px * 0.7 0 50px;
+        padding: 80px * 0.7 0 80px;
         &-c {
           display: flex;
           justify-content: center;
@@ -1116,16 +1116,32 @@
       }
 
       // ------ Swiper  ------
+      .index_swiper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2%;
+        .index_prbtn {
+          margin-right: 15px;
+        }
+        .index_nextbtn {
+          margin-left: 15px;
+        }
+      }
       .swiper-container {
-        // width: 800px;
-        // height: 500px;
-        width: 100%;
+        width: 85%;
         height: 100%;
 
         .swiper-slide {
+          padding: 10px;
           text-align: center;
           font-size: 18px;
-          background: #fff;
+
+          background-color: rgba(218, 199, 199, 0.6);
+          height: 400px;
+          width: 400px;
+          border: 5px solid rgb(65, 121, 173);
+          // border-radius: 55%;
 
           /* Center slide text vertically */
           display: -webkit-box;
@@ -1141,21 +1157,31 @@
           -webkit-align-items: center;
           align-items: center;
 
-          img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+          .info_img {
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .inner_text {
+            max-width: 280px;
+            // height: 80px;
+            font-size: $p1;
+            line-height: 1.6;
           }
         }
       }
     }
 
-    .section9_boxbuttom {
+    //boxButtom  start
+
+    .section9_boxButtom {
       .unstore_title {
         // border: 1px solid red;
         color: $colorT;
-        padding: 80px * 0.7 0 50px;
+        padding: 80px 0;
         &-c {
           display: flex;
           justify-content: center;
@@ -1175,21 +1201,34 @@
           font-size: $p1;
         }
       }
-      .swiper-container {
-        width: 500px;
-        height: 450px;
-      }
 
       // ------ Swiper  ------
+      .index_swiper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2%;
+        .index_prbtn {
+          margin-right: 15px;
+        }
+        .index_nextbtn {
+          margin-left: 15px;
+        }
+      }
       .swiper-container {
-        // width: 800px;
-        // height: 500px;
-        width: 100%;
+        width: 85%;
         height: 100%;
+
         .swiper-slide {
+          padding: 10px;
           text-align: center;
           font-size: 18px;
-          background: #fff;
+
+          background-color: rgba(218, 199, 199, 0.6);
+          height: 400px;
+          width: 400px;
+          border: 5px solid rgb(65, 121, 173);
+          // border-radius: 55%;
 
           /* Center slide text vertically */
           display: -webkit-box;
@@ -1204,14 +1243,25 @@
           -ms-flex-align: center;
           -webkit-align-items: center;
           align-items: center;
-          img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+          .info_img {
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .inner_text {
+            max-width: 280px;
+            // height: 80px;
+            font-size: $p1;
+            line-height: 1.6;
           }
         }
       }
     }
+
+    //boxButtom  end
   }
 }

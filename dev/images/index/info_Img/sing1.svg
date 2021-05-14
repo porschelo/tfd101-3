@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="288.166" height="150" viewBox="0 0 288.166 150">
-  <g id="Group_5948" data-name="Group 5948" transform="translate(-362 -14305)">
-    <g id="Group_4452" data-name="Group 4452" transform="translate(362 14305)">
+<svg xmlns="http://www.w3.org/2000/svg" width="288.166" height="160" viewBox="0 0 288.166 160">
+  <g id="Group_5952" data-name="Group 5952" transform="translate(-312.557 -13430)">
+    <g id="Group_5951" data-name="Group 5951" transform="translate(0 -15.123)">
+      <g id="Group_4449" data-name="Group 4449" transform="translate(440.723 13470.123)">
+        <text id="雙魚座" transform="translate(92 45)" fill="#fff" font-size="40" font-family="PingFangTC-Medium, PingFang TC" font-weight="500" letter-spacing="0.13em"><tspan x="-65.2" y="0">雙魚座</tspan></text>
+      </g>
+      <g id="Group_4453" data-name="Group 4453" transform="translate(446.723 13515)">
+        <text id="Pisces" transform="translate(87 53)" fill="#fff" font-size="40" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500" letter-spacing="0.05em"><tspan x="-66.16" y="0">Pisces</tspan></text>
+      </g>
+    </g>
+    <g id="Group_4452" data-name="Group 4452" transform="translate(312.557 13435)">
       <g id="Group_133" data-name="Group 133" transform="translate(0 0)">
         <g id="Group_128" data-name="Group 128" transform="translate(103.165 10.583)">
           <path id="Path_467" data-name="Path 467" d="M610.239,222.637s12.686-2.681,5.008-27.092c0,0-4.771-.284-5.258-1.974s2.966-.812,2.966-.812-3.028-4.876-2.113-5.221c.756-.286,4.188,3.417,4.188,3.417s-1.6-4.87-.3-5.021,2.325,4.916,2.325,4.916,1.935-4.005,2.618-2.706-1.043,5-1.043,5,10.054,25.225-7.343,32.329" transform="translate(-609.709 -185.7)" fill="#f4da6b"/>
@@ -52,11 +60,6 @@
       <path id="Path_503" data-name="Path 503" d="M587.763,237.054a6.455,6.455,0,0,1-1.884-.28,4.267,4.267,0,0,1-2.183-1.422,2.658,2.658,0,0,1-.381-2.655.369.369,0,1,1,.67.307,1.946,1.946,0,0,0,.3,1.9,3.6,3.6,0,0,0,1.814,1.162,5.762,5.762,0,0,0,4.093-.286.369.369,0,0,1,.313.668A6.47,6.47,0,0,1,587.763,237.054Z" transform="translate(-531.854 -130.926)" fill="#fff"/>
       <path id="Path_504" data-name="Path 504" d="M587.065,229.369a4.965,4.965,0,0,1-2.154-.416,2.571,2.571,0,0,1-1.408-3.186.368.368,0,0,1,.666.315,1.843,1.843,0,0,0,1.063,2.207,5.858,5.858,0,0,0,3.046.278,5.507,5.507,0,0,0,2.892-.783.369.369,0,0,1,.439.592,6.17,6.17,0,0,1-3.269.925C587.958,229.334,587.521,229.369,587.065,229.369Z" transform="translate(-531.657 -137.496)" fill="#fff"/>
     </g>
-    <g id="Group_4449" data-name="Group 4449" transform="translate(490.166 14335.123)">
-      <text id="雙魚座" transform="translate(92 45)" fill="#fff" font-size="40" font-family="PingFangTC-Medium, PingFang TC" font-weight="500" letter-spacing="0.13em"><tspan x="-65.2" y="0">雙魚座</tspan></text>
-    </g>
-    <g id="Group_4453" data-name="Group 4453" transform="translate(496.166 14380)">
-      <text id="Pisces" transform="translate(87 53)" fill="#fff" font-size="40" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500" letter-spacing="0.05em"><tspan x="-66.16" y="0">Pisces</tspan></text>
-    </g>
+    <rect id="Rectangle_652" data-name="Rectangle 652" width="285" height="160" transform="translate(313 13430)" fill="none"/>
   </g>
 </svg>
