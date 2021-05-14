@@ -384,121 +384,123 @@ img {
 }
 
 
-.popout {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(7, 7, 7, 0.3);
-    display: none;
-    z-index: 1000;
-    overflow-y: scroll;
-}
+// .popout {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background: rgba(7, 7, 7, 0.3);
+//     display: none;
+//     z-index: 1000;
+//     overflow-y: scroll;
+// }
 
-.popup {
-    margin: 145px auto;
-    background-color: #fff;
-    border-radius: 180px;
-    width: 660px;
-    position: relative;
-    z-index: 1000;
+// .popup {
+//     margin: 145px auto;
+//     background-color: #fff;
+//     border-radius: 180px;
+//     width: 660px;
+//     position: relative;
+//     z-index: 1000;
 
-    .close_login_btn {
-        position: absolute;
-        top: 0px;
-        right: -5%;
-        color: #fff;
-        font-size: 50px;
-    }
+//     .close_login_btn {
+//         position: absolute;
+//         top: 0px;
+//         right: -5%;
+//         color: #fff;
+//         font-size: 50px;
+//     }
 
-    .close_signup_btn {
-        position: absolute;
-        top: 0px;
-        right: -5%;
-        color: #fff;
-        font-size: 50px;
-    }
-}
+//     .close_signup_btn {
+//         position: absolute;
+//         top: 0px;
+//         right: -5%;
+//         color: #fff;
+//         font-size: 50px;
+//     }
+// }
 
-.login_title {
-    h1 {
-        font-size: $h1;
-        text-align: center;
-        padding-top: 3%;
-    }
-}
+// .login_title {
+//     h1 {
+//         font-size: $h1;
+//         text-align: center;
+//         padding-top: 3%;
+//     }
+// }
 
-.login_info {
-    &_content {
-        width: 60%;
-        border: 1px solid red;
-        @include center;
-
-
-
-        h3 {
-            font-size: $h3;
-            margin: 3% 0;
-        }
-
-        input {
-            background-color: gray;
-            width: 100%;
-            margin: 3% 0;
-
-        }
-
-        .logina {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5%;
-        }
-
-        @include btn-module(".send", 200, 90) {
-            display: block;
-            margin: 0 auto;
-        }
-    }
-}
-
-.signuptitle {
-    h1 {
-        font-size: $h1;
-        text-align: center;
-        padding-top: 3%;
-    }
-}
-
-.signup_info {
-    &_content {
-        width: 60%;
-        border: 1px solid red;
-        @include center;
+// .login_info {
+//     &_content {
+//         width: 60%;
+//         border: 1px solid red;
+//         @include center;
 
 
 
-        h3 {
-            font-size: $h3;
-            margin: 3% 0;
-        }
+//         h3 {
+//             font-size: $h3;
+//             margin: 3% 0;
+//         }
 
-        input {
-            background-color: gray;
-            width: 100%;
-            margin: 3% 0;
+//         input {
+//             background-color: gray;
+//             width: 100%;
+//             margin: 3% 0;
+//             font-size: $h3;
 
-        }
+//         }
 
-        .signupa {
-            display: flex;
-            justify-content: center;
-            margin: 5% auto;
-        }
+//         .logina {
+//             display: flex;
+//             justify-content: space-between;
+//             margin-bottom: 5%;
+//         }
 
-        @include btn-module(".sign", 200, 90) {
-            display: block;
-            margin: 0 auto;
-        }
-    }
-}
+//         @include btn-module(".send", 200, 90) {
+//             display: block;
+//             margin: 0 auto;
+//         }
+//     }
+// }
+
+// .signuptitle {
+//     h1 {
+//         font-size: $h1;
+//         text-align: center;
+//         padding-top: 3%;
+//     }
+// }
+
+// .signup_info {
+//     &_content {
+//         width: 60%;
+//         border: 1px solid red;
+//         @include center;
+
+
+
+//         h3 {
+//             font-size: $h3;
+//             margin: 3% 0;
+//         }
+
+//         input {
+//             background-color: gray;
+//             width: 100%;
+//             margin: 3% 0;
+            
+
+//         }
+
+//         .signupa {
+//             display: flex;
+//             justify-content: center;
+//             margin: 5% auto;
+//         }
+
+//         @include btn-module(".sign", 200, 90) {
+//             display: block;
+//             margin: 0 auto;
+//         }
+//     }
+// }
