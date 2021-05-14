@@ -1,8 +1,11 @@
 .t-wrapper {
+  position: relative;
+  overflow: hidden;
   //  *{
   //     outline: 1px solid yellow;
   // }
   // 漸層
+
   .s-bg {
     width: 100vw;
     height: 100vh;
@@ -225,8 +228,9 @@
     }
     .ufo {
       position: absolute;
-      bottom: 20%;
+      top: 0;
       right: 0;
+      margin-top: 50%;
       a {
         text-decoration: none;
         display: block;
@@ -364,16 +368,23 @@
       }
     }
   }
-  .t-section3 {
-    .star-svg {
-      // max-width: 1920px;
-      width: 100%;
-    }
-    overflow: hidden;
+  .i-section3 {
+    margin: 50px 0 200px;
+    position: relative;
+    .cloudBg {
+      position: relative;
 
-    .svg {
-      width: 100%;
-      height: 120vh;
+      padding-top: whForPC(1835);
+      // background-color: rgb(238, 143, 143);
+      opacity: 0.4;
+    }
+    .cloudGroup {
+      max-width: initial;
+      width: whForPC(2611);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-53.8%, -50%);
     }
   }
 
@@ -552,6 +563,7 @@
     position: relative;
     text-align: left;
     padding: 300px 0 150px;
+    margin-bottom: 300px;
 
     .i-section5-wind {
       display: inline-block;
@@ -712,5 +724,544 @@
         }
       }
     }
+  }
+
+  // ＝＝＝＝＝＝＝  section 6 ＝＝＝＝＝＝＝＝＝
+  .i-section6 {
+    position: relative;
+    text-align: right; //只對inline-block有用
+    padding: 200px 0 150px;
+    margin-bottom: 250px;
+
+    //此區塊做定位且稱寬高
+    .i-section6-water {
+      position: relative;
+      display: inline-block; //變成行內元素
+      right: 0;
+      width: whForPC(850);
+
+      .icon_Cancer {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(-120, 850);
+        left: whForPC(120, 850);
+      }
+      .icon_Scorpio {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(90, 850);
+        left: whForPC(-290, 850);
+      }
+      .icon_Pisces {
+        width: whForPC(225, 850);
+        position: absolute;
+        margin-top: whForPC(340, 850);
+        left: whForPC(-380, 850);
+      }
+      .planet {
+        width: 100%;
+        position: relative;
+        visibility: hidden;
+
+        //讓圖片撐滿
+        img {
+          width: 100%;
+        }
+        &.water {
+          visibility: visible;
+          width: whForPC(1300, 850);
+          transform: translate(-48.2%, -46.9%) rotate(-35deg);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+        }
+        &.Cancer {
+          position: relative;
+          visibility: visible;
+
+          .planet-monst-Cancer {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            position: absolute;
+            left: 35%;
+            top: 0;
+            margin-top: 30%;
+          }
+        }
+        &.Scorpio {
+          position: absolute;
+          top: 0;
+
+          .planet-monst-Scorpio {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            position: absolute;
+            left: 35%;
+            top: 0;
+            margin-top: 30%;
+          }
+        }
+        &.Pisces {
+          position: absolute;
+          top: 0;
+
+          .planet-monst-Pisces {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            position: absolute;
+            left: 35%;
+            top: 0;
+            margin-top: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  @include rwd1260 {
+    .i-section6-water {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  @include index-md {
+    .i-section6 {
+      .i-section6-water {
+        width: whForPC(1200);
+        margin-right: -100px;
+      }
+      img {
+        width: 160px;
+      }
+    }
+  }
+
+  @include index-mobile {
+    .i-section6 {
+      .i-section6-water {
+        //變成行內元素
+        width: wh(400);
+        margin-right: wh(-120);
+        img {
+          width: 130px;
+        }
+
+        .icon_Cancer {
+          width: wh(250);
+          margin-top: wh(-130);
+          left: wh(-10);
+        }
+        .icon_Scorpio {
+          width: wh(250);
+          margin-top: wh(-75);
+          left: wh(-80);
+        }
+        .icon_Pisces {
+          width: wh(250);
+          margin-top: wh(-20);
+          left: wh(-160);
+        }
+        .planet {
+          &.water {
+            width: wh(610);
+            transform: translate(-48.8%, -46.5%) rotate(-20deg);
+            top: 50%;
+            left: 50%;
+          }
+          &.Cancer {
+            .planet-monst-Cancer {
+              width: wh(120);
+              left: 25%;
+
+              margin-top: 25%;
+            }
+          }
+          &.Scorpio {
+            .planet-monst-Scorpio {
+              width: wh(120);
+              left: 25%;
+
+              margin-top: 25%;
+            }
+          }
+          &.Pisces {
+            .planet-monst-Pisces {
+              width: wh(120);
+              left: 25%;
+
+              margin-top: 25%;
+            }
+          }
+        }
+      }
+    }
+  }
+  // ＝＝＝＝＝＝＝  section 7 ＝＝＝＝＝＝＝＝＝
+
+  .i-section7 {
+    position: relative;
+    text-align: left;
+    padding: 300px 0 150px;
+    margin-bottom: 250px;
+
+    .i-section7-fire {
+      display: inline-block;
+      position: relative;
+      left: 0;
+      width: whForPC(850);
+
+      .icon_Aries {
+        position: absolute;
+        width: whForPC(225, 850);
+        margin-top: whForPC(-150, 850);
+        right: whForPC(80, 850);
+      }
+      .icon_Leo {
+        position: absolute;
+        width: whForPC(225, 850);
+        margin-top: whForPC(70, 850);
+        right: whForPC(-300, 850);
+      }
+      .icon_Sagittarius {
+        position: absolute;
+        width: whForPC(225, 850);
+        margin-top: whForPC(455, 850);
+        right: whForPC(-446, 850);
+      }
+      .planet {
+        width: 100%;
+        position: relative;
+        position: relative;
+        img {
+          width: 100%;
+        }
+        &.fire {
+          position: absolute;
+          width: whForPC(1520, 850);
+          top: 50%;
+          left: 50%;
+          transform: translate(-47.3%, -49.4%) rotate(35deg);
+        }
+        &.Aries {
+          position: relative;
+          .planet_monst_Aries {
+            position: absolute;
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            top: 0;
+            margin-top: 30%;
+            right: 32%;
+          }
+        }
+        &.Leo {
+          position: absolute;
+          top: 0;
+
+          .planet_monst_Leo {
+            position: absolute;
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            width: whForPC(230, 850);
+            top: 0;
+            margin-top: 30%;
+            right: 32%;
+          }
+        }
+        &.Sagittarius {
+          position: absolute;
+          top: 0;
+
+          .planet_monst_Sagittarius {
+            filter: drop-shadow(13px 10px 7px rgba(0, 0, 0, 0.4));
+            position: absolute;
+            width: whForPC(230, 850);
+            top: 0;
+            margin-top: 30%;
+            right: 32%;
+          }
+        }
+      }
+    }
+  }
+
+  @include rwd1260 {
+    .i-section7-fire {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  @include index-md {
+    .i-section7 {
+      .i-section7-fire {
+        width: whForPC(1200);
+        margin-left: -100px;
+      }
+      img {
+        width: 160px;
+      }
+    }
+  }
+
+  @include index-mobile {
+    .i-section7 {
+      .i-section7-fire {
+        //變成行內元素
+        width: wh(400);
+        margin-right: wh(-120);
+        img {
+          width: 130px;
+        }
+
+        .icon_Aries {
+          width: wh(250);
+          margin-top: wh(-130);
+          left: wh(130);
+        }
+        .icon_Leo {
+          width: wh(250);
+          margin-top: wh(-85);
+          left: wh(210);
+        }
+        .icon_Sagittarius {
+          width: wh(250);
+          margin-top: wh(-30);
+          left: wh(290);
+        }
+        .planet {
+          &.fire {
+            width: wh(690);
+            top: 50%;
+            right: 50%;
+          }
+          &.Aries {
+            .planet_monst_Aries {
+              width: wh(120);
+              right: 35%;
+              margin-top: 25%;
+            }
+          }
+          &.Leo {
+            .planet_monst_Leo {
+              width: wh(120);
+              right: 35%;
+              margin-top: 25%;
+            }
+          }
+          &.Sagittarius {
+            .planet_monst_Sagittarius {
+              width: wh(120);
+              right: 35%;
+              margin-top: 25%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ＝＝＝＝＝＝＝  section 8 ＝＝＝＝＝＝＝＝＝
+  .i-section8 {
+    position: relative;
+    margin: 220px 0 300px;
+    .cloudBg2 {
+      position: relative;
+      padding-top: whForPC(2323); //圖的高
+      opacity: 0.4;
+    }
+    .cloudGroup2 {
+      max-width: initial;
+      width: whForPC(2717); //圖的寬
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-51.8%, -50%);
+    }
+  }
+  // ＝＝＝＝＝＝＝  section 9 ＝＝＝＝＝＝＝＝＝
+  .i-section9 {
+    width: 100%;
+    height: 2270px;
+    background-image: url("/images/index/buttom_bg.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .section9_boxTop {
+      padding-top: 650px;
+      .unstore_title {
+        // border: 1px solid red;
+        color: $colorT;
+        padding: 80px * 0.7 0 80px;
+        &-c {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 63px * 0.7;
+            height: 43px * 0.7;
+            margin-bottom: 5px;
+          }
+          h1 {
+            font-size: $h1;
+            padding: 5px 20px 10px;
+          }
+        }
+        &-e {
+          text-align: center;
+          font-size: $p1;
+        }
+      }
+
+      // ------ Swiper  ------
+      .index_swiper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2%;
+        .index_prbtn {
+          margin-right: 15px;
+        }
+        .index_nextbtn {
+          margin-left: 15px;
+        }
+      }
+      .swiper-container {
+        width: 85%;
+        height: 100%;
+
+        .swiper-slide {
+          padding: 10px;
+          text-align: center;
+          font-size: 18px;
+
+          background-color: rgba(218, 199, 199, 0.6);
+          height: 400px;
+          width: 400px;
+          border: 5px solid rgb(65, 121, 173);
+          // border-radius: 55%;
+
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+
+          .info_img {
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .inner_text {
+            max-width: 280px;
+            // height: 80px;
+            font-size: $p1;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+
+    //boxButtom  start
+
+    .section9_boxButtom {
+      .unstore_title {
+        // border: 1px solid red;
+        color: $colorT;
+        padding: 80px 0;
+        &-c {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 63px * 0.7;
+            height: 43px * 0.7;
+            margin-bottom: 5px;
+          }
+          h1 {
+            font-size: $h1;
+            padding: 5px 20px 10px;
+          }
+        }
+        &-e {
+          text-align: center;
+          font-size: $p1;
+        }
+      }
+
+      // ------ Swiper  ------
+      .index_swiper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2%;
+        .index_prbtn {
+          margin-right: 15px;
+        }
+        .index_nextbtn {
+          margin-left: 15px;
+        }
+      }
+      .swiper-container {
+        width: 85%;
+        height: 100%;
+
+        .swiper-slide {
+          padding: 10px;
+          text-align: center;
+          font-size: 18px;
+
+          background-color: rgba(218, 199, 199, 0.6);
+          height: 400px;
+          width: 400px;
+          border: 5px solid rgb(65, 121, 173);
+          // border-radius: 55%;
+
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+
+          .info_img {
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .inner_text {
+            max-width: 280px;
+            // height: 80px;
+            font-size: $p1;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+
+    //boxButtom  end
   }
 }

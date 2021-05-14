@@ -48,337 +48,459 @@ img {
     //     // border: 5px solid orange;
     // }
 
-//     @include mobile {
-//         // border: 5px solid green;
-//     }
-// }
+    //     @include mobile {
+    //         // border: 5px solid green;
+    //     }
+    // }
 
 
 
 
-.MC_title {
-    // margin: 320*.7px 0 550*.7px 0;
-    // border: $border red;
+    .MC_title {
+        // margin: 320*.7px 0 550*.7px 0;
+        // border: $border red;
 
 
 
-    color: $colorT;
-    padding: (80px + 240px) * .7 0 0;
+        color: $colorT;
+        padding: (80px + 240px) * .7 0 0;
 
-    margin-bottom: 550px*.7;
+        margin-bottom: 550px*.7;
 
-    &-c {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        &-c {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        img {
-            width: 63px * .7;
-            height: 43px * .7;
-            margin-bottom: 5px;
+            img {
+                width: 63px * .7;
+                height: 43px * .7;
+                margin-bottom: 5px;
+            }
+        }
+
+        h1 {
+            font-size: $h1;
+            padding: 5px 20px 10px;
+        }
+
+        &-e {
+            text-align: center;
+            font-size: $p1;
         }
     }
 
-    h1 {
-        font-size: $h1;
-        padding: 5px 20px 10px;
-    }
+    // .MC_title-c {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
 
-    &-e {
-        text-align: center;
-        font-size: $p1;
-    }
-}
+    //     img {
+    //         width: 63*.7px;
+    //         height: 43px * .7;
 
-// .MC_title-c {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
+    //     }
 
-//     img {
-//         width: 63*.7px;
-//         height: 43px * .7;
-
-//     }
-
-//     h1 {
-//         font-size: map-get($font_size, H1);
-//         text-align: center;
-//         color: map-get($color, lightblue);
-//         margin: 0 31*.7px 0;
-//     }
-// }
-
-// .MC_title-e {
-//     // margin-bottom: 540px;
-
-//     h4 {
-//         font-size: map-get($font_size, H4);
-//         text-align: center;
-//         color: map-get($color, lightblue);
-
-//         border: $border;
-
-//     }
-// }
-
-.mid_block {
-    border: $border red;
-    width: 1300*.7px;
-    position: relative;
-
-    // width: 100%;
-    // @include md {
-    //     border: 5px solid yellow;
-    //     width: 1050px*.7;
+    //     h1 {
+    //         font-size: map-get($font_size, H1);
+    //         text-align: center;
+    //         color: map-get($color, lightblue);
+    //         margin: 0 31*.7px 0;
+    //     }
     // }
 
-    // @include pad {
-    //     border: 5px solid orange;
-    //     width: 700px*.7;
+    // .MC_title-e {
+    //     // margin-bottom: 540px;
+
+    //     h4 {
+    //         font-size: map-get($font_size, H4);
+    //         text-align: center;
+    //         color: map-get($color, lightblue);
+
+    //         border: $border;
+
+    //     }
     // }
 
-    // @include mobile {
-    //     border: 5px solid green;
-    //     width: 550px*.7;
-    // }
+    .mid_block {
+        border: $border red;
+        width: 1300*.7px;
+        position: relative;
 
-    .tab {
-        display: flex;
-        position: absolute;
-        top: -37px;
-      
-
-        color: map-get($color, font_color);
-
+        // width: 100%;
         // @include md {
-        //     top: -40px;
+        //     border: 5px solid yellow;
+        //     width: 1050px*.7;
         // }
 
         // @include pad {
-        //     top: -42px;
+        //     border: 5px solid orange;
+        //     width: 700px*.7;
         // }
 
         // @include mobile {
-        //     top: -44px;
+        //     border: 5px solid green;
+        //     width: 550px*.7;
         // }
 
+        .tab {
+            display: flex;
+            position: absolute;
+            top: -37px;
 
-        &_btn {
-            font-size: map-get($font_size, H3);
-            background-color: map-get($color, gray);
-            width: 265*.7px;
-            height: 75*.7px;
-            // border: $border;
-            border-radius: 20*.7px 20*.7px 0 0;
-            line-height: 75*.7px;
-            text-align: center;
-            cursor: pointer;
-            margin-left: 37*.7px;
+
+            color: map-get($color, font_color);
 
             // @include md {
-            //     width: 200*.7px;
-
+            //     top: -40px;
             // }
 
             // @include pad {
-            //     width: 135*.7px;
-            //     font-size: 17px
+            //     top: -42px;
             // }
 
             // @include mobile {
-            //     width: 110*.7px;
-            //     font-size: 12px
+            //     top: -44px;
             // }
 
 
-            &:nth-of-type(1) {
-                background-color: map-get($color, white);
-                margin-left: 108*.7px;
+            &_btn {
+                font-size: map-get($font_size, H3);
+                background-color: map-get($color, gray);
+                width: 265*.7px;
+                height: 75*.7px;
+                // border: $border;
+                border-radius: 20*.7px 20*.7px 0 0;
+                line-height: 75*.7px;
+                text-align: center;
+                cursor: pointer;
+                margin-left: 37*.7px;
 
                 // @include md {
-                //     margin-left: 75*.7px
+                //     width: 200*.7px;
+
                 // }
 
                 // @include pad {
-                //     margin-left: 30*.7px
+                //     width: 135*.7px;
+                //     font-size: 17px
                 // }
 
                 // @include mobile {
-                //     margin-left: 19px
+                //     width: 110*.7px;
+                //     font-size: 12px
                 // }
+
+
+                &:nth-of-type(1) {
+                    background-color: map-get($color, white);
+                    margin-left: 108*.7px;
+
+                    // @include md {
+                    //     margin-left: 75*.7px
+                    // }
+
+                    // @include pad {
+                    //     margin-left: 30*.7px
+                    // }
+
+                    // @include mobile {
+                    //     margin-left: 19px
+                    // }
+                }
             }
         }
-    }
 
-    .pic_out {
-        z-index: 2;
-
-        // @include md {
-        //     visibility: hidden;
-        // }
-    }
-}
-
-.mid_top {
-    display: flex;
-    // justify-content: center;
-    margin-top: 166*.7px;
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-    border: 1px solid green;
-
-    // @include md {
-    //     flex-wrap: wrap;
-    //     justify-content: center;
-
-    //     margin-top: 100*.7px;
-    // }
-
-
-    .left {
-
-        margin-left: 178*.7px;
-        margin-right: 140px*.7;
-        border: $border red;
-
-        img {
-
-            width: 330*.7px;
-            height: 310*.7px;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 16*.7px;
+        .pic_out {
+            z-index: 2;
 
             // @include md {
-            //     width: 230*.7px;
-            //     height: 210*.7px;
+            //     visibility: hidden;
             // }
-
-            // @include pad {
-            //     width: 180*.7px;
-            //     height: 160*.7px;
-            // }
-
-            // @include mobile {
-            //     width: 80*.7px;
-            //     height: 60*.7px;
-            // }
-        }
-
-        .name {
-            h4 {
-                font-size: map-get($font-size, H4);
-                color: map-get($color, pink);
-                text-align: center;
-            }
         }
     }
 
-    .right {
+    .mid_top {
+        display: flex;
+        // justify-content: center;
+        margin-top: 166*.7px;
+        position: absolute;
+        top: 0;
 
-        border: $border gold;
+        width: 100%;
+        border: 1px solid green;
 
-        h4 {
-            font-size: map-get($font_size, H4);
-            color: map-get($color, white);
+        // @include md {
+        //     flex-wrap: wrap;
+        //     justify-content: center;
 
-            &:nth-of-type(2n+1) {
-                color: #DEDEDE
+        //     margin-top: 100*.7px;
+        // }
+
+
+        .left {
+
+            margin-left: 178*.7px;
+            margin-right: 140px*.7;
+            border: $border red;
+
+            img {
+
+                width: 330*.7px;
+                height: 310*.7px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 16*.7px;
+
+                // @include md {
+                //     width: 230*.7px;
+                //     height: 210*.7px;
+                // }
+
+                // @include pad {
+                //     width: 180*.7px;
+                //     height: 160*.7px;
+                // }
+
+                // @include mobile {
+                //     width: 80*.7px;
+                //     height: 60*.7px;
+                // }
+            }
+
+            .name {
+                h4 {
+                    font-size: map-get($font-size, H4);
+                    color: map-get($color, pink);
+                    text-align: center;
+                }
             }
         }
 
-        .info {
+        .right {
+
+            border: $border gold;
+
             h4 {
-                margin-bottom: 19*.7px;
-            }
+                font-size: map-get($font_size, H4);
+                color: map-get($color, white);
 
-            .info_1 {
-                display: flex;
-                margin-bottom: 69*.7px;
-                border: $border red;
-
-
-
-                .info_Name {
-                    margin-right: 186*.7px;
-                    border: $border;
-
+                &:nth-of-type(2n+1) {
+                    color: #DEDEDE
                 }
             }
 
-            .info_2 {
-                display: flex;
-                margin-bottom: 108*.7px;
-                border: $border red;
-
-
-
-                .info_Sex {
-                    margin-right: 215*.7px;
-                    border: $border;
-
-
+            .info {
+                h4 {
+                    margin-bottom: 19*.7px;
                 }
 
+                .info_1 {
+                    display: flex;
+                    margin-bottom: 69*.7px;
+                    border: $border red;
+
+
+
+                    .info_Name {
+                        margin-right: 186*.7px;
+                        border: $border;
+
+                    }
+                }
+
+                .info_2 {
+                    display: flex;
+                    margin-bottom: 108*.7px;
+                    border: $border red;
+
+
+
+                    .info_Sex {
+                        margin-right: 215*.7px;
+                        border: $border;
+
+
+                    }
+
+                }
             }
         }
+
+
     }
 
 
-}
+    .bottom {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 160*.7px;
+        width: 100%;
 
+        // @include md {
+        //     bottom: 0;
+        // }
 
-.bottom {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 160*.7px;
-    width: 100%;
+        // @include pad {
+        //     bottom: 0;
+        // }
 
-    // @include md {
-    //     bottom: 0;
-    // }
+        // @include mobile {
+        //     bottom: 0;
+        // }
 
-    // @include pad {
-    //     bottom: 0;
-    // }
+        border: 1px solid green;
 
-    // @include mobile {
-    //     bottom: 0;
-    // }
+        // h2 {
+        //     font-size: map-get($font_size, H2);
+        //     color: map-get($color, white);
+        //     border: 4px*.7 solid #BCBCBC;
+        //     width: 280*.7px;
+        //     height: 110*.7px;
+        //     line-height: 110*.7px;
+        //     text-align: center;
+        //     border-radius: 30*.7px;
+        //     margin-right: 64*.7px;
+        //     cursor: pointer;
 
-    border: 1px solid green;
-
-    // h2 {
-    //     font-size: map-get($font_size, H2);
-    //     color: map-get($color, white);
-    //     border: 4px*.7 solid #BCBCBC;
-    //     width: 280*.7px;
-    //     height: 110*.7px;
-    //     line-height: 110*.7px;
-    //     text-align: center;
-    //     border-radius: 30*.7px;
-    //     margin-right: 64*.7px;
-    //     cursor: pointer;
-
-    //     &:hover {
-    //         border: 3px solid rgba(245, 255, 103, 0.5);
-    //     }
+        //     &:hover {
+        //         border: 3px solid rgba(245, 255, 103, 0.5);
+        //     }
 
 
 
-    // }
+        // }
 
-    @include btn-module('.change_pic', 280, 100) {
-        color: white;
-        margin-right: 62px*.7;
-    }
+        @include btn-module('.change_pic', 280, 100) {
+            color: white;
+            margin-right: 62px*.7;
+        }
 
-    @include btn-module('.change_data', 280, 100) {
-        color: white;
+        @include btn-module('.change_data', 280, 100) {
+            color: white;
+        }
     }
 }
-}
+
+
+// .popout {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background: rgba(7, 7, 7, 0.3);
+//     display: none;
+//     z-index: 1000;
+//     overflow-y: scroll;
+// }
+
+// .popup {
+//     margin: 145px auto;
+//     background-color: #fff;
+//     border-radius: 180px;
+//     width: 660px;
+//     position: relative;
+//     z-index: 1000;
+
+//     .close_login_btn {
+//         position: absolute;
+//         top: 0px;
+//         right: -5%;
+//         color: #fff;
+//         font-size: 50px;
+//     }
+
+//     .close_signup_btn {
+//         position: absolute;
+//         top: 0px;
+//         right: -5%;
+//         color: #fff;
+//         font-size: 50px;
+//     }
+// }
+
+// .login_title {
+//     h1 {
+//         font-size: $h1;
+//         text-align: center;
+//         padding-top: 3%;
+//     }
+// }
+
+// .login_info {
+//     &_content {
+//         width: 60%;
+//         border: 1px solid red;
+//         @include center;
+
+
+
+//         h3 {
+//             font-size: $h3;
+//             margin: 3% 0;
+//         }
+
+//         input {
+//             background-color: gray;
+//             width: 100%;
+//             margin: 3% 0;
+//             font-size: $h3;
+
+//         }
+
+//         .logina {
+//             display: flex;
+//             justify-content: space-between;
+//             margin-bottom: 5%;
+//         }
+
+//         @include btn-module(".send", 200, 90) {
+//             display: block;
+//             margin: 0 auto;
+//         }
+//     }
+// }
+
+// .signuptitle {
+//     h1 {
+//         font-size: $h1;
+//         text-align: center;
+//         padding-top: 3%;
+//     }
+// }
+
+// .signup_info {
+//     &_content {
+//         width: 60%;
+//         border: 1px solid red;
+//         @include center;
+
+
+
+//         h3 {
+//             font-size: $h3;
+//             margin: 3% 0;
+//         }
+
+//         input {
+//             background-color: gray;
+//             width: 100%;
+//             margin: 3% 0;
+            
+
+//         }
+
+//         .signupa {
+//             display: flex;
+//             justify-content: center;
+//             margin: 5% auto;
+//         }
+
+//         @include btn-module(".sign", 200, 90) {
+//             display: block;
+//             margin: 0 auto;
+//         }
+//     }
+// }

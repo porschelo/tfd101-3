@@ -1,74 +1,134 @@
-
-
-
-
 .jl_wrapper3{
-    margin-top: 170px;
-    background-image: url(../images/horoscope_page/match_result_bkgd_1@2x.png); 
-    // width:1920px;
-    // height:1300px;
+    margin-top: 140px;
+    background-image: url(../images/horoscope_page/match3_bg.png); 
+    max-width:1920px;
+    max-height:1300px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width:100%;
     color: #B6C9F0;
-    // border: 5px red solid;
+    // border: 1px transparent solid;
+
+    .jl_match_percent{
+      margin-top: 10%;
+      margin-left: 20%;
+      text-align: center;
+      display:inline-block;
+
+      width: 150px;
+      height: 150px;
+      border-top: 10px $textColor double;
+      border-left: 5px $textColor dashed;
+      border-right: 5px $textColor dashed;
+      border-bottom: 10px $textColor double;
+      border-radius: 50%;
+    }
+
+
+    .jl_match_percent h4{
+      margin-top: 30%;
+      font-size: $h2;
+    }
+
+    .jl_match_percent h2{
+      color: red;
+      font-size: $h2;
+      font-weight: bolder;
+    }
+
+
+
+
+    .jl_pros h3{
+      margin-top: -60px;
+      margin-left:800px;
+      margin-right: 5%;
+      font-size: $p1;
+      padding: 20px;
+      
+      // height: 150px;
+      border-top: 10px $textColor double;
+      border-left: 3px $textColor dashed;
+      border-right: 3px $textColor dashed;
+      border-bottom: 10px $textColor double ;
+      border-radius: 40px;
+
+    }
+
+    .jl_monster_combine{
+
+      margin: 20px auto;
+      // margin-left: 300px;
+      width:250px;
+      height:250px;
+      // border: 4px solid red;
+      display: flex;
+    }
+
+    .jl_left_monster img{
+      margin-top: 0%;
+      
+      // border: 1px solid green;
+    }
+
+    .jl_right_monster img{
+      margin-top: 0%;
+      width:120%;
+      // border:1px solid yellow;
+    }
+
+
+    .jl_cons{
+      padding: 2%;
+      margin: 0% 5% 0 60%;
+      font-size: $p1;
+      border-top: 10px $textColor double;
+      border-bottom: 10px $textColor double;
+      border-radius: 40px;
+    }
+
+
+    .jl_match_comments span{
+      font-size:$h2;
+    }
+
+    .jl_lucky_charms{
+      margin-bottom: 50%;
+      margin-left: 5%;
+      
+
+      h3{
+        font-size: $h2;
+        text-align: center;
+        border: 2px solid red;
+      }
+    }
+
+
+
+
+    // end of contents
+
+    .jl-footer{
+      width: 100%;
+      height: 200px;
+      background-color: #44796A;
+    }
+
+    //nav-list 所在頁面樣式
+          .overlaymenu{
+              .menulist{
+                  .nav-menu{
+                      ul{
+                          li:nth-child(3){
+                              a{
+                                  color: yellow;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+
 }
 
-.jl_match_percent{
-  width: 150px;
-  height: 50px;
-  margin-top: 140px;
-  margin-left: 180px;
-  text-align: center;
-  display:inline-block
-
-}
-
-.jl_match_percent h4{
-  font-size: 28px;
-}
-
-.jl_match_percent h2{
-  color: red;
-  font-size: $h2;
-}
-
-.jl_match_comments span{
-  font-size:30px;
-}
-
-
-
-.jl_pros h3{
-  margin-top: -60px;
-  margin-left:900px;
-  font-size: $p1;
-
-}
-
-.jl_monster_combine{
-  // margin-top: 80px;
-  margin: 20px auto;
-  // margin-left: 300px;
-  width:300px;
-  height:300px;
-  // border: 4px solid red;
-  display: flex;
-}
-
-.jl_left_monster img{
-  margin-top: 0%;
-  
-  // border: 1px solid green;
-}
-
-.jl_right_monster img{
-  margin-top: 0%;
-  width:120%;
-  // border:1px solid yellow;
-}
-
-.jl_cons{
-  font-size: $h3;
-
-}
