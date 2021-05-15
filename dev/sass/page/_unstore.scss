@@ -1,5 +1,5 @@
 .wrapper_unstore{
-    
+     //背景圖
      background-image: url(../images/store/pdct_bg.png);
      background-size: cover;
      box-sizing: border-box;
@@ -32,18 +32,16 @@
        h1{
            font-size: $h1;
            padding: 5px 20px 10px;
-
            @include rwd(mobile){
-            font-size: $h1 - 6px;
+                font-size: $h1 - 6px;
             }
         }
 
        &-e{
             text-align: center;
             font-size: $p1;
-
             @include rwd(mobile){
-            font-size: $p1 - 6px;
+                font-size: $p1 - 6px;
             }
         }
     }
@@ -60,7 +58,7 @@
         @include center;
         line-height: 1.2;
         
-        
+        //儀錶板
         background-image: url(../images/store/pdctFrame_bg.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;

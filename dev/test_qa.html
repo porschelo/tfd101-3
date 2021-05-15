@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @@include('layout/scripts.html')
+    <title>Psychological Test - Sort</title>
+   
+</head>
+<body>
+    <div class="wrapper_tQuestion">
+        <div class="tQuestion_header">
+            @@include('layout/header.html')
+        </div>
+        
+        <div class="tQuestion_section">
+
+            <div class="tQuestion_title">
+                <div class="tQuestion_title-c">
+                    <img src="images/store/uv_icone.png" alt="">
+                    <h1>心理測驗</h1>
+                    <img src="images/store/uv_icone.png" alt="">
+                </div>
+                <div class="tQuestion_title-e">
+                    <h4>— Personality Test —</h4>
+                </div>
+            </div>
+
+            <div class="tQuestion_content">
+                <div class="tq_main">
+                    <p>1. 街角的便利店貼了一張懸賞一萬元的告示，你覺得那告示的內容是？</p>
+                    <div class="tq_answer">
+                        <div><input type="radio" name="qa1">A.尋找寵物</div>
+                        <div><input type="radio" name="qa1">B.尋人啟事</div>
+                        <div><input type="radio" name="qa1">C.尋找失物</div>
+                        <div><input type="radio" name="qa1">D.尋找車禍目擊證人</div>
+                        
+                    </div>
+
+                </div>
+                
+                <button class="tQuestion_next"><a href="test_result.html">NEXT</a></button>
+            </div>
+            
+           
+        </div>
+        <div class="tQuestion_footer">
+            @@include('layout/footer.html')
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

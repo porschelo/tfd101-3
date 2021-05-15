@@ -53,13 +53,14 @@
             position: absolute;
             left: 16vw;
             z-index: 5;
+            opacity: .9;
             img{
                 width: 100%;
                 height: auto;
             }
             &:hover{
                 width: 100vw * 1020 /1920; 
-                opacity: .9;
+                opacity: 1;
             }
         }
         .galx2{
@@ -68,13 +69,14 @@
             position: absolute;
             right: -20vw;
             z-index: 6;
+            opacity: .9;
             img{
                 width: 100%;
                 height: auto;
             }
             &:hover{
                 width: 100vw * 820 /1920; 
-                opacity: .9;
+                opacity: 1;
             }
         }
         .galx3{
@@ -83,13 +85,14 @@
             position: absolute;
             left: 50vw;
             z-index: 6;
+            opacity: .9;
             img{
                 width: 100%;
                 height: auto;
             }
             &:hover{
                 width: 100vw * 520 /1920; 
-                opacity: .9;
+                opacity: 1;
             }
         }
         .galx4{
@@ -98,13 +101,14 @@
             position: absolute;
             left: -10vw;
             z-index: 6;
+            opacity: .9;
             img{
                 width: 100%;
                 height: auto;
             }
             &:hover{
                 width: 100vw * 620 /1920; 
-                opacity: .9;
+                opacity: 1;
             }
         }
 
