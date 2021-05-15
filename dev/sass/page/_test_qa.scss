@@ -1,16 +1,16 @@
-.wrapper_tSort{
+.wrapper_tQuestion{
     
     a{
         text-decoration: none;
          color: white;
      }
 
-    .tSort_header{
+    .tQuestion_header{
         height: 140px;
         background-color: #023552;
     }
 
-    .tSort_section{
+    .tQuestion_section{
         //背景圖
          background-image: url(../images/test/bgi_star.png);
          background-size: 100% 100%;
@@ -20,8 +20,7 @@
          }
      }
 
-    .tSort_title{
-        // border: 1px solid red;
+    .tQuestion_title{
         color: $colorT;
         padding: ( 80px ) * .7 0 0;
         &-c{
@@ -54,13 +53,15 @@
 
     }
 
-    .tSort_content{
+    .tQuestion_content{
         // border: 1px solid yellow;
         width: 85%;
         height: 85%;
         padding-top: 10px;
         padding-bottom: 220px * .7;
         color: white;
+        font-size: $h3;
+        line-height: 1.6;
         @include center;
 
         //儀錶板
@@ -71,61 +72,35 @@
         @include rwd(mobile){
             background-image: none;
             margin-top: 0px;
+            font-size: $h3 - 6px;
             padding-bottom: 30px;
         }
-    }
-
-    .tSort_option{
-        // border: 1px solid red;
-        width: 70%;
-        @include center;
-        margin-top: 240px * .7;
-        margin-bottom: 20px;
-        @include rwd(mobile){
-            width: 100%;
-            margin-top: 100px;
-        }
-       
-        ul{
-            display: flex;
-            justify-content: center;
-        }
-        li{
-            display: flex;
-            margin: 20px;
-            
-            img{
-                width: 45px * .7;
-                height: 31px * .7;
+        .tq_main{
+            border: 1px solid red;
+            width: 70%;
+            @include center;
+            margin-top: 240px * .7;
+            @include rwd(mobile){
+                width: 100%;
+                margin-top: 100px;
             }
-            h2{
-                font-size: $h2;
-                margin-left: 5px;
-                @include rwd(mobile){
-                    font-size: $h2 - 6px;
-                }
+            p{
+                margin-bottom: 50px;
             }
         }
+
     }
 
-    .tSort_poster{
-        // border: 1px solid red;
-        width: 50%;
-        @include center;
-        font-size: 0;
-        @include rwd(mobile){
-            width: 100%;
-        }
-    }
+    
 
-    @include btn-module('.tSort_start', 280, 100){
+    @include btn-module('.tQuestion_next', 280, 100){
         color: white;
         display: block;
         margin: 28px auto;
     }
 
 
-    .tSort_footer{
+    .tQuestion_footer{
         width: 100%;
         height: 200px;
         background-color: #44796A;
