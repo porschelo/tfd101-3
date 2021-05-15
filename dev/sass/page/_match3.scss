@@ -77,15 +77,35 @@
       // border:1px solid yellow;
     }
 
+    .jl_lucky_charms{
+      border-top: 10px $textColor double;
+      border-left: 3px $textColor dashed;
+      border-right: 3px $textColor dashed;
+      border-bottom: 10px $textColor double ;
+      border-radius: 40px;
+      display: block;
+      width: 400px;
+    }
+
 
     .jl_cons{
       padding: 2%;
-      margin: 0% 5% 0 60%;
       font-size: $p1;
+
       border-top: 10px $textColor double;
-      border-bottom: 10px $textColor double;
+      border-left: 3px $textColor dashed;
+      border-right: 3px $textColor dashed;
+      border-bottom: 10px $textColor double ;
       border-radius: 40px;
     }
+
+      .jl_match_comments{
+      border-top: 10px $textColor double;
+      border-left: 3px $textColor dashed;
+      border-right: 3px $textColor dashed;
+      border-bottom: 10px $textColor double ;
+      border-radius: 40px;
+      }
 
 
     .jl_match_comments span{
