@@ -1,10 +1,5 @@
 .wrapper_tSort{
     
-    a{
-        text-decoration: none;
-         color: white;
-     }
-
     .tSort_header{
         height: 140px;
         background-color: #023552;
@@ -17,6 +12,7 @@
          padding-bottom: 140px;
          @include rwd(mobile){
             background-size: 100% 50%;
+            background-image: url(../images/test/bgi_phone.png);
          }
      }
 
@@ -116,12 +112,19 @@
         @include rwd(mobile){
             width: 100%;
         }
+        img{
+            width: 100%;
+        }
     }
 
     @include btn-module('.tSort_start', 280, 100){
         color: white;
         display: block;
         margin: 28px auto;
+        a{
+            text-decoration: none;
+             color: white;
+         }
     }
 
 
@@ -129,5 +132,19 @@
         width: 100%;
         height: 200px;
         background-color: #44796A;
+    }
+
+    .overlaymenu{
+        .menulist{
+            .nav-menu{
+                ul{
+                    li:nth-child(3){
+                        a{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

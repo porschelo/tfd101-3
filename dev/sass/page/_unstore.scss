@@ -1,20 +1,16 @@
 .wrapper_unstore{
+    overflow: hidden;
      //背景圖
      background-image: url(../images/store/pdct_bg.png);
      background-size: cover;
      box-sizing: border-box;
+
      @include rwd(mobile){
         background-image: url(../images/store/pdctD_bg.png);
      }
 
-     a{
-        text-decoration: none;
-         color: white;
-     }
-
      /*===== 標題 =====*/
     .unstore_title{
-        // border: 1px solid red;
         color: $colorT;
         padding: ( 80px + 240px ) * .7 0 0;
         &-c{
@@ -47,16 +43,22 @@
     }
 
     /*===== 頁籤 =====*/
-    @include bookmark('.unstore_sort');
+    @include bookmark('.unstore_sort'){
+        a{
+            text-decoration: none;
+             color: white;
+         }
+    };
     
     /*===== 商品內容 =====*/
     .unstore_content{
-        // border: 1px solid yellow;
         width: 85%;
         height: 85%;
         color: white;
         @include center;
         line-height: 1.2;
+        text-align: center;
+        padding-top: 20px;
         
         //儀錶板
         background-image: url(../images/store/pdctFrame_bg.png);
@@ -69,20 +71,25 @@
             margin-top: 11px;
         }
 
+        a{
+            text-decoration: none;
+             color: white;
+         }
+
         .unstore_product{
-            //border: 1px solid red;
             width: 90%;
             max-width: 1200px;
             @include center;
             display: flex;
             flex-wrap: wrap;
             padding-top: 50px;
-            // justify-content: space-around;
+            @include rwd(mobile){
+                padding-top: 10px;
+            }
             
         }
 
         .item{
-            // border: 1px solid red;
             width: calc((100% - 60px) / 3);
 
             // flex-grow: 1;
@@ -125,7 +132,6 @@
 
     /*===== 客製我小怪獸 =====*/
     .unstore_monster{
-        // border: 1px solid red;
         position: relative;
 
         a:hover{
@@ -133,7 +139,6 @@
         }
 
         img{
-            // border: 1px solid white;
             position: absolute;
             right: 0;
             width: 28vw;

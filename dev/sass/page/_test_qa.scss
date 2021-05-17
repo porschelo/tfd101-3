@@ -1,9 +1,4 @@
 .wrapper_tQuestion{
-    
-    a{
-        text-decoration: none;
-         color: white;
-     }
 
     .tQuestion_header{
         height: 140px;
@@ -17,6 +12,7 @@
          padding-bottom: 140px;
          @include rwd(mobile){
             background-size: 100% 50%;
+            background-image: url(../images/test/bgi_phone.png);
          }
      }
 
@@ -76,8 +72,7 @@
             padding-bottom: 30px;
         }
         .tq_main{
-            border: 1px solid red;
-            width: 70%;
+            width: 65%;
             @include center;
             margin-top: 240px * .7;
             @include rwd(mobile){
@@ -97,6 +92,10 @@
         color: white;
         display: block;
         margin: 28px auto;
+        a{
+            text-decoration: none;
+             color: white;
+         }
     }
 
 
@@ -104,5 +103,19 @@
         width: 100%;
         height: 200px;
         background-color: #44796A;
+    }
+
+    .overlaymenu{
+        .menulist{
+            .nav-menu{
+                ul{
+                    li:nth-child(3){
+                        a{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

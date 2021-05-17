@@ -5,11 +5,7 @@ $h4:30*.7px;
 $p:30*.7px;
 $letter-spacing:2.5;
 
- *{
-    box-sizing: border-box;
-    // outline: 1px solid yellowgreen ;
-    
- }
+ 
  
  
  .j_order_wrapper{
@@ -18,24 +14,29 @@ $letter-spacing:2.5;
      width: 100%;
      background-repeat: no-repeat;
     background-position:center ;
-     background-size: cover;
+     background-size: 100% 100%;
      margin: 0 auto;
+     
+        box-sizing: border-box;
+        
+     
         
 
  }
 
  .j_order{
-     border:1px solid red;
+    //  border:1px solid red;
     // height:1929*.7px;
 
     margin: 0 auto;
     max-width:1636*.7px;
-    width: 90%;
+    // width: 90%;
     margin-top: 542*.7px;
+    padding-bottom:100px;
     position: relative;
          ul{
 
-            border:1px solid green;
+            // border:1px solid green;
 
             max-width:1187*.7px;
             width: 100%;
@@ -61,11 +62,15 @@ $letter-spacing:2.5;
         img{
             position: absolute;
             pointer-events: none;
-            // width: 100%;
-
-            // z-index:-2;
+            
         }
-        
+
+.j_order_img{
+    max-width:1636*.7px;
+
+    // height: 1400*.7px;
+    height: 95%;
+}
  }
  .firstorder{
             max-width:1187*.7px;
@@ -205,9 +210,11 @@ $letter-spacing:2.5;
     margin-left: 183*.7px;
     padding-left: 42*.7px;
     .order_payment{
+        text-align:right;
         @include btn-module('.order_payment', 236, 93){
-            color: blue;
-            text-align: right;
+            color: $color;
+            text-align: center;
+            
           }
     }
 
