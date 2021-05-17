@@ -5,13 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/membercentre.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Raleway:wght@100;200;300;400;500&display=swap"
-        rel="stylesheet"> -->
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     @@include('layout/scripts.html')
 </head>
 <body>
@@ -40,12 +35,9 @@
 
         <div class="mid_block">
             <div class="tab">
-                <!-- <h2>個人資料</h2>
-                <h2>訂單資料</h2>
-                <h2>我的收藏</h2> -->
-                <button class="tab_btn">個人資料</button>
-                <button class="tab_btn">訂單資料</button>
-                <button class="tab_btn">我的收藏</button>
+                <a href="./membercentre.html" class="tab_btn">個人資料</a>
+                <a href="./memberorderlist.html" class="tab_btn">訂單資料</a>
+                <a href="./membercollection.html" class="tab_btn">我的收藏</a>
             </div>
 
             <div class="pic_out">
@@ -87,85 +79,24 @@
                         </div>
                     </div>
                     <div class="right__bottom">
-                        <h4>累積星幣 : </h4>
+                        <h4>累積星幣 :  999</h4>
+                        <img src="./images/membercentre/star_coin.png" alt="">
+                        <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
                     </div>
                 </div>
             </div>
             <div class="bottom">
-                <!-- <h2>修改頭像</h2>
-                <h2>修改資料</h2> -->
 
-                <button class="change_pic">修改頭像</button>
+                <!-- <button class="change_pic">修改頭像</button> -->
                 <button class="change_data">修改資料</button>
+                
+                
 
             </div>  
-            
-            
-            <!-- login-popup -->
-            <!-- <div class="popout loginpopup">
-                <div class="popup">
-                    <a class="close_login_btn" href="">&times;</a>
-            
-            
-                    <div class="login_title">
-                        <h1>登入</h1>
-                    </div>
-            
-                    <div class="sec-c login_info">
-                        <div class="login_info_content">
-                            <h3>帳號:</h3>
-                            <input type="text" class="account wh" id="account" placeholder="" required>
-                            <h3>密碼:</h3>
-                            <input type="text" class="password wh" id="password" placeholder="" required>
-                            <div class="logina">
-                                <a href="">忘記密碼？</a>
-                                <a href="" class="gosignup">註冊新帳號</a>
-                            </div>
-                            <button class="send" id="send">出發冒險</button>
-                        </div>
-
-                    </div>
-            
-                </div>
-            </div> -->
     </div>
     <!-- footer -->
     @@include('layout/footer.html')
 
-
-    
-    
-    <!-- signup-popup -->
-    <!-- <div class="popout signup">
-        <div class="popup">
-            <a class="close_signup_btn" href="#">&times;</a>
-    
-            <div class="signuptitle">
-                <h1>註冊</h1>
-            </div>
-            <div class="sec-c signup_info">
-                <div class="signup_info_content">
-                    <h3>帳號:</h3>
-                    <input type="text" class="accounts wh" id="accounts" placeholder=" 請輸入8~15字英文及數字" required>
-                    <h3>密碼:</h3>
-                    <input type="text" class="passwords wh" id="passwords" placeholder=" 請輸入8~15字英文及數字" required>
-                    <h3>確認密碼:</h3>
-                    <input type="text" class="passwordss wh" id="passwordss" placeholder=" 請輸入8~15字英文及數字" required>
-                    <h3>手機號碼:</h3>
-                    <input type="text" class="cellp wh" id="cellp" placeholder=" 09XX-XXX-XXX" required>
-                    
-    
-                    <div class="signupa">
-                        <a href="" class="gologin">已有帳號？登入</a>
-                    </div>
-    
-                    <button class="sign" id="sign">加入冒險</button>
-                </div>
-            </div>
-    
-        </div>
-    </div> -->
-    <!-- index-popup end -->
 </body>
 
 </html>
