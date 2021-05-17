@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="j_wrapper">
-      <!-- @@include('layout/header.html') -->
+      @@include('layout/header.html')
 
         <!-- 中間背景 -->
         <div class="j_middle">
@@ -61,79 +61,73 @@
                     </div>
                   </li>
             </div>
+
             <!-- 儀錶板 -->
             <div class="j_panel">
                 <div class="j_panel_title">
                     <h2>選擇時段</h2>
+                </div> 
+                
                     <!-- <div class="j_panel_content">
                     
                     </div> -->
-                    <table class="blueTable" >
-                        <thead style="width:100%">
-                        <tr>
-                        <th>4/18(日)</th>
-                        <th>4/19(一)</th>
-                        <th>4/20(二)</th>
-                        <th>4/21(三)</th>
-                        <th>4/22(四)</th>
-                        <th>4/23(五)</th>
-                        <th>4/24(六)</th>
-                        </tr>
-                        </thead>
-                        <tfoot style="width:100%">
-                        <tr>
-                        <td colspan="7">
-                        <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
-                        </td>
-                        </tr>
-                        </tfoot>
-                        <tbody style="width:100%">
-                        <tr>
-                        <td>可預約</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        </tr>
-                        <tr >
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>可預約</td>
-                        <td>&nbsp;</td>
-                        <td>可預約</td>
-                        <td>可預約</td>
-                        <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                        <td>可預約</td>
-                        <td></td>
-                        <td></td>
-                        <td>可預約</td>
-                        <td></td>
-                        <td>&nbsp;</td>
-                        <td>可預約</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                        <!-- <p>&nbsp;</p>    -->
-                
+                    <!-- table -->
+                    <ul class="j_date_table">
+                      <li class="date_title">
+                        <ol class="date_time">
+                          <li >5/9(日)</li>
+                          <li>5/10(一)</li>
+                          <li>5/11(二)</li>
+                          <li>5/12(三)</li>
+                          <li>5/13(四)</li>
+                          <li>5/14(五)</li>
+                          <li>5/15(六)</li>
+                        </ol>
+                      </li>
+                      <li class="tbody">
+                          <ol class="date_time">
+                            <li data-title="早：5/9(日)"></li>
+                            <li class="able" data-title="早：5/10(一)">可預約</li>
+                            <li data-title="早：5/11(二)"></li>
+                            <li class="able" data-title="早：5/12(三)">可預約</li>
+                            <li data-title="早：5/13(四)"></li>
+                            <li data-title="早：5/14(五)"></li>
+                            <li class="able" data-title="早：5/15(六)">可預約</li>
+                            
+                          </ol>
+                          <ol class="date_time">
+                            <li data-title="午：5/9(日)"></li>
+                            <li class="able" data-title="午：5/10(一)">可預約</li>
+                            <li data-title="午：5/11(二)"></li>
+                            <li data-title="午：5/12(三)"></li>
+                            <li class="able" data-title="午：5/13(四)">可預約</li>
+                            <li class="able" data-title="午：5/14(五)">可預約</li>
+                            <li data-title="午：5/15(六)"></li>
+                          </ol>
+                          <ol class="date_time">
+                            <li class="able" data-title="晚：5/9(日)">可預約</li>
+                            <li data-title="晚：5/10(一)"></li>
+                            <li data-title="晚：5/11(二)"></li>
+                            <li class="able" data-title="晚：5/12(三)">可預約</li>
+                            <li class="able" data-title="晚：5/13(四)">可預約</li>
+                            <li data-title="晚：5/14(五)"></li>
+                            <li data-title="晚：5/15(六)"></li>
+                          </ol>
+                        </li>
+                    </ul>
+
+                    <!-- button -->
                         <form action="" class="j_btn">
-                            <button type="button" value="page" class="J_btn2" onclick="location.href ='./appointment.html'">回上頁</button>
-                            <button type="button" value="page" class="J_btn2" onclick="location.href ='./ap_confirm.html'">下一頁</button>
+                            <button type="button" value="page" class="j_btn2" onclick="location.href='./appointment.html'">回上頁
+                            </button>
+                            <button type="button" value="page" class="j_btn2" onclick="location.href ='./ap_confirm.html'">下一頁</button>
 
                         </form>
             </div>
             
         </div>
 
-        
-
-    
-      
-        </div>
-      <!-- @@include('layout/footer.html') -->
+      @@include('layout/footer.html')
 
     </div>
 </body>
