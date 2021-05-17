@@ -4,34 +4,38 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(7, 7, 7, 0.3);
+    background: rgba(7, 7, 7, 0.6);
     display: none;
     z-index: 1000;
     overflow-y: scroll;
 }
 
 .popup {
-    margin: 145px auto;
+    margin: 120px auto;
     background-color: #fff;
-    border-radius: 180px;
-    width: 660px;
+    border-radius: 120px;
+    width: 550px;
     position: relative;
     z-index: 1000;
 
     .close_login_btn {
         position: absolute;
-        top: 0px;
+        top: -5%;
         right: -5%;
         color: #fff;
-        font-size: 50px;
+        font-size: 70px;
+        font-weight: 200;
+        text-decoration: none;
     }
 
     .close_signup_btn {
         position: absolute;
-        top: 0px;
+        top: -5%;
         right: -5%;
         color: #fff;
-        font-size: 50px;
+        font-size: 70px;
+        font-weight: 200;
+        text-decoration: none;
     }
 }
 
@@ -39,7 +43,7 @@
     h1 {
         font-size: $h1;
         text-align: center;
-        padding-top: 3%;
+        padding-top: 8%;
     }
 }
 
@@ -47,6 +51,7 @@
     &_content {
         width: 60%;
         border: 1px solid red;
+        padding: 20px 0 50px;
         @include center;
 
 
@@ -68,11 +73,13 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 5%;
+            margin-top: 10px;
+            text-decoration: underline;
         }
 
         @include btn-module(".send", 200, 90) {
             display: block;
-            margin: 0 auto;
+            margin: 30px auto 0;
         }
     }
 }
@@ -81,7 +88,7 @@
     h1 {
         font-size: $h1;
         text-align: center;
-        padding-top: 3%;
+        padding-top: 8%;
     }
 }
 
@@ -89,6 +96,7 @@
     &_content {
         width: 60%;
         border: 1px solid red;
+        padding: 20px 0 50px;
         @include center;
 
 
@@ -110,11 +118,13 @@
             display: flex;
             justify-content: center;
             margin: 5% auto;
+            margin-top: 10px;
+            text-decoration: underline;
         }
 
         @include btn-module(".sign", 200, 90) {
             display: block;
-            margin: 0 auto;
+            margin: 30px auto 0;
         }
     }
 }

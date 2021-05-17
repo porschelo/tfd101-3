@@ -1,24 +1,22 @@
 .wrapper_tResult{
-    
-    //  background-image: url(../images/test/bgi_hf.png);
-    //  background-size: cover;
-    //  box-sizing: border-box;
-    a{
-        text-decoration: none;
-         color: white;
-     }
 
     .tResult_header{
-        height: 168px;
+        height: 140px;
         background-color: #023552;
     }
 
     .tResult_section{
+        //背景圖
          background-image: url(../images/test/bgi_star.png);
          background-size: 100% 100%;
          padding-bottom: 140px;
+         @include rwd(mobile){
+            background-size: 100% 30%;
+            background-image: url(../images/test/bgi_phone.png);
+        }
      }
 
+     /*===== 標題 =====*/
     .tResult_title{
         // border: 1px solid red;
         color: $colorT;
@@ -38,11 +36,17 @@
        h1{
            font-size: $h1;
            padding: 5px 20px 10px;
+           @include rwd(mobile){
+                font-size: $h1 - 6px;
+            }
        }
 
        &-e{
             text-align: center;
             font-size: $p1;
+            @include rwd(mobile){
+                font-size: $p1 - 6px;
+            }
        }
 
     }
@@ -54,38 +58,67 @@
         color: white;
         @include center;
 
+        //儀錶板
         background-image: url(../images/test/bgi-2.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         margin-top: 56px;
+        @include rwd(mobile){
+            background-image: none;
+            margin-top: 0px;
+        }
 
         .tResult_main{
             // border: 1px solid white;
             width: 70%;
             @include center;
-            padding-top: 150px;
+            padding-top: 180px;
             display: flex;
             line-height: 1.6;
+            @include rwd(mobile){
+                display: block;
+                width: 100%;
+                padding-top: 100px;
+            }
         }
+
+        
 
         .result_left{
             // border: 1px solid greenyellow;
             width: 50%;
-            padding: 20px 10px 0 10px;
+            padding: 0px 10px 0 10px;
+            @include rwd(mobile){
+                width: 100%;
+            }
         }
 
-        .left_top{
-            margin-bottom: 35px;
+        /*===== 結果直條圖=====*/
+        .tr_chart{
+            width: 75%;
+            @include rwd(mobile){
+                width: 100%;
+                margin-bottom: 50px;
+            }
         }
-
-        .left_bottom{
+        
+        
+         /*===== 結果敘述=====*/
+        .tr_result{
             margin-bottom: 230px * .7;
+            @include rwd(mobile){
+                margin-bottom: 80px;
+            }
         }
 
         .result_right{
 
             width: 50%;
             padding: 0 10px;
+            @include rwd(mobile){
+                width: 100%;
+            }
+            
             h2{
                 margin-bottom: 10px;
             }
@@ -94,22 +127,24 @@
             }
         }
 
+         /*===== 適合星座=====*/
         .right_top{
             border: 3px solid $colorT;
             text-align: center;
             border-radius: 20px;
             padding: 10px;
         }
-
-        .right_bottom{
-            @extend.right_top;
-            margin-top: 10px;
-        }
-
+        
         .kind_Constellations{
             display: flex;
             justify-content: center;
             
+        }
+
+        /*===== 不適合星座=====*/
+        .right_bottom{
+            @extend.right_top;
+            margin-top: 10px;
         }
 
         .distance_Constellations{
