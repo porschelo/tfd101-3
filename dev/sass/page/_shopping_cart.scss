@@ -12,8 +12,6 @@ $color:(white:#fff,
 );
 
 
-
-
 .SC_wrapper {
     * {
         box-sizing: border-box;
@@ -34,8 +32,6 @@ $color:(white:#fff,
     align-items: center;
     background-image: url(../images/shopping_cart/member-bg2x.png);
     background-size: cover;
-
-
 
     .SC_title {
         // margin: 320*.7px 0 550*.7px 0;
@@ -69,54 +65,71 @@ $color:(white:#fff,
         }
     }
 
-
-    .F_order {
-        margin: 0 auto;
-        max-width: 1636*.7px;
-        // width: 90%;
-        margin-top: 542*.7px;
-        padding-bottom: 100px;
+    .SC_mid_block {
+        // border: 1px solid red;
+        width: 1300*.7px;
         position: relative;
 
-        ul {
-
-            // border:1px solid green;
-
-            max-width: 1187*.7px;
+        .list_info {
+            position: absolute;
+            top: 8%;
             width: 100%;
-            display: flex;
-            color: white;
-            flex-grow: 1;
-            margin: 0 auto;
+            font-size: $h3;
+            color: map-get($color, white);
 
-            li {
-                list-style: none;
+            @include btn-module('.delete_item', 191, 75) {
+                color: white;
+                line-height: (75*.7)-6px;
+                // margin:25% auto;
+                @include center;
+            }
 
-                // width:400*.7px;
-                width: 100%;
-                margin-top: 74*.7px;
-                text-align: center;
+
+        }
+
+
+        table {
+            // margin-top: 3%;
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+
+
+
+            .line {
+                width: 90%;
+                margin: 40px auto;
+                border-top: 2px solid gray;
+            }
+
+            td {
+                vertical-align: middle;
+            }
+        }
+
+        .total_block {
+            position: absolute;
+            bottom: 20%;
+            right: 6%;
+
+            h3 {
                 font-size: $h3;
-
-
+                color: map-get($color, white);
             }
 
         }
 
-        img {
-            // position: absolute;
-            pointer-events: none;
-            // width: 100%;
-            // height: 90%;
-            // z-index:-2;
+        .pay_btn {
+            position: absolute;
+            bottom: 5%;
+            right: 7%;
+
+            @include btn-module('.pay_check', 191, 75) {
+                color: white;
+                line-height: (75*.7)-6px;
+                // margin:25% auto;
+                @include center;
+            }
         }
-
-
-    }
-
-    .F_order_img {
-        // max-width:1636*.7px;
-
-        height: 1400*.7px;
     }
 }
