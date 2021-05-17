@@ -51,6 +51,9 @@
 
     .game_box{
         width: 60%;
+        img{
+            width: 100%;
+        }
         @include center;
         position: relative;
         @include rwd(mobile){
