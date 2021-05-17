@@ -22,13 +22,16 @@ $border :1px solid;
     // outline: 1px solid yellow;
 }
 
-img {
-    max-width: 100%;
-}
+
 
 
 
 .wrapper {
+
+    img {
+        max-width: 100%;
+    }
+
     // max-width: 1920px;
     // height: 2346*.7px;
     width: 100%;
@@ -151,22 +154,14 @@ img {
 
             color: map-get($color, font_color);
 
-            // @include md {
-            //     top: -40px;
-            // }
 
-            // @include pad {
-            //     top: -42px;
-            // }
-
-            // @include mobile {
-            //     top: -44px;
-            // }
 
 
             &_btn {
+
                 font-size: map-get($font_size, H3);
                 background-color: map-get($color, gray);
+                color: map-get($color, font_color);
                 width: 265*.7px;
                 height: 75*.7px;
                 // border: $border;
@@ -175,38 +170,14 @@ img {
                 text-align: center;
                 cursor: pointer;
                 margin-left: 37*.7px;
-
-                // @include md {
-                //     width: 200*.7px;
-
-                // }
-
-                // @include pad {
-                //     width: 135*.7px;
-                //     font-size: 17px
-                // }
-
-                // @include mobile {
-                //     width: 110*.7px;
-                //     font-size: 12px
-                // }
+                text-decoration: none;
 
 
                 &:nth-of-type(1) {
                     background-color: map-get($color, white);
                     margin-left: 108*.7px;
 
-                    // @include md {
-                    //     margin-left: 75*.7px
-                    // }
 
-                    // @include pad {
-                    //     margin-left: 30*.7px
-                    // }
-
-                    // @include mobile {
-                    //     margin-left: 19px
-                    // }
                 }
             }
         }
@@ -214,9 +185,7 @@ img {
         .pic_out {
             z-index: 2;
 
-            // @include md {
-            //     visibility: hidden;
-            // }
+
         }
     }
 
@@ -325,6 +294,18 @@ img {
 
                 }
             }
+
+            &__bottom {
+                display: flex;
+
+                h4 {
+                    margin-right: 3%;
+                }
+
+                img {
+                    width: 20px;
+                }
+            }
         }
 
 
@@ -382,125 +363,3 @@ img {
         }
     }
 }
-
-
-// .popout {
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background: rgba(7, 7, 7, 0.3);
-//     display: none;
-//     z-index: 1000;
-//     overflow-y: scroll;
-// }
-
-// .popup {
-//     margin: 145px auto;
-//     background-color: #fff;
-//     border-radius: 180px;
-//     width: 660px;
-//     position: relative;
-//     z-index: 1000;
-
-//     .close_login_btn {
-//         position: absolute;
-//         top: 0px;
-//         right: -5%;
-//         color: #fff;
-//         font-size: 50px;
-//     }
-
-//     .close_signup_btn {
-//         position: absolute;
-//         top: 0px;
-//         right: -5%;
-//         color: #fff;
-//         font-size: 50px;
-//     }
-// }
-
-// .login_title {
-//     h1 {
-//         font-size: $h1;
-//         text-align: center;
-//         padding-top: 3%;
-//     }
-// }
-
-// .login_info {
-//     &_content {
-//         width: 60%;
-//         border: 1px solid red;
-//         @include center;
-
-
-
-//         h3 {
-//             font-size: $h3;
-//             margin: 3% 0;
-//         }
-
-//         input {
-//             background-color: gray;
-//             width: 100%;
-//             margin: 3% 0;
-//             font-size: $h3;
-
-//         }
-
-//         .logina {
-//             display: flex;
-//             justify-content: space-between;
-//             margin-bottom: 5%;
-//         }
-
-//         @include btn-module(".send", 200, 90) {
-//             display: block;
-//             margin: 0 auto;
-//         }
-//     }
-// }
-
-// .signuptitle {
-//     h1 {
-//         font-size: $h1;
-//         text-align: center;
-//         padding-top: 3%;
-//     }
-// }
-
-// .signup_info {
-//     &_content {
-//         width: 60%;
-//         border: 1px solid red;
-//         @include center;
-
-
-
-//         h3 {
-//             font-size: $h3;
-//             margin: 3% 0;
-//         }
-
-//         input {
-//             background-color: gray;
-//             width: 100%;
-//             margin: 3% 0;
-            
-
-//         }
-
-//         .signupa {
-//             display: flex;
-//             justify-content: center;
-//             margin: 5% auto;
-//         }
-
-//         @include btn-module(".sign", 200, 90) {
-//             display: block;
-//             margin: 0 auto;
-//         }
-//     }
-// }
