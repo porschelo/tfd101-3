@@ -5,8 +5,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    @@include('layout/scripts.html')
+    
 </head>
 <body>
-    12333333
+   <div class="F_wrapper">
+    <!-- header -->
+    @@include('layout/header.html')
+    <!-- header END  -->
+    @@include('layout/login.html')
+    <!-- Title -->
+
+    <div class="MF_title">
+        <div class="MF_title-c">
+            <img src="images/membercollection/earth.png" alt="">
+            <h1>會員中心</h1>
+            <img src="images/membercollection/earth.png" alt="">
+        </div>
+    
+        <div class="MF_title-e">
+            <h4>一 Member Centre 一</h4>
+        </div>
+    </div>
+    <!-- Title END-->
+
+
+    <div class="MF_mid_block">
+        <div class="tab">
+            <a href="./membercentre.html" class="tab_btn">個人資料</a>
+            <a href="./memberorderlist.html" class="tab_btn">訂單資料</a>
+            <a href="./membercollection.html" class="tab_btn">我的收藏</a>
+        </div>
+
+        <div class="pic_out">
+            <img src="images/membercollection/mid_data_bg.png" alt="">
+        </div>
+
+        
+        <div class="list_info">
+            <table>
+                <thead>
+                    <tr>
+                        <td>商品圖片</td>
+                        <td>商品名稱</td>
+                        <td>金額</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <div class="line"></div>
+                        </td>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                <tr>
+                    <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                    <td>宇宙能量手環</td>
+                    <td>600</td>
+                    <td rowspan="1">
+                        <button class="canel_collection">取消收藏</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <div class="line"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                    <td>宇宙能量手環</td>
+                    <td>600</td>
+                    <td rowspan="1">
+                        <button class="canel_collection">取消收藏</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        <div class="line"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                    <td>宇宙能量手環</td>
+                    <td>600</td>
+                    <td rowspan="1">
+                        <button class="canel_collection">取消收藏</button>
+                    </td>
+                </tr>
+
+                
+                
+
+            </tbody>
+
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- footer -->
+    @@include('layout/footer.html')
+   <!--wrapper END  -->
+   </div>
+
+    
 </body>
 </html>
