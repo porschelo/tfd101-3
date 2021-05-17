@@ -1,19 +1,24 @@
 .jl_wrapper3{
     margin-top: 140px;
     background-image: url(../images/horoscope_page/match3_bg.png); 
-    max-width:1920px;
     max-height:1300px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     width:100%;
     color: #B6C9F0;
+
+    
     // border: 1px transparent solid;
 
+    .jl_top_fix{
+      overflow:hidden;
+    }
+
     .jl_match_percent{
-      margin-top: 10%;
-      margin-left: 20%;
+      margin-top: 2%;
+      margin-left: 15%;
       text-align: center;
-      display:inline-block;
+      // display:inline-block;
 
       width: 150px;
       height: 150px;
@@ -22,29 +27,23 @@
       border-right: 5px $textColor dashed;
       border-bottom: 10px $textColor double;
       border-radius: 50%;
+
+      h4{
+        margin-top: 30%;
+        font-size: $h2;
+      }
+      h2{
+        color: red;
+        font-size: $h2;
+        font-weight: bolder;
+      }
     }
-
-
-    .jl_match_percent h4{
-      margin-top: 30%;
-      font-size: $h2;
-    }
-
-    .jl_match_percent h2{
-      color: red;
-      font-size: $h2;
-      font-weight: bolder;
-    }
-
-
 
 
     .jl_pros h3{
-      margin-top: -60px;
-      margin-left:800px;
-      margin-right: 5%;
+      margin: -10% 5% 0 60%;
       font-size: $p1;
-      padding: 20px;
+      padding: 2%;
       
       // height: 150px;
       border-top: 10px $textColor double;
@@ -52,77 +51,103 @@
       border-right: 3px $textColor dashed;
       border-bottom: 10px $textColor double ;
       border-radius: 40px;
-
     }
+
+
 
     .jl_monster_combine{
 
-      margin: 20px auto;
-      // margin-left: 300px;
-      width:250px;
-      height:250px;
-      // border: 4px solid red;
+      margin: 5% auto;
+      width:340px;
       display: flex;
+      // border: 4px solid yellow;
     }
 
     .jl_left_monster img{
-      margin-top: 0%;
-      
       // border: 1px solid green;
     }
 
     .jl_right_monster img{
-      margin-top: 0%;
+      // margin-top: 0%;
       width:120%;
       // border:1px solid yellow;
     }
 
-    .jl_lucky_charms{
-      border-top: 10px $textColor double;
-      border-left: 3px $textColor dashed;
-      border-right: 3px $textColor dashed;
-      border-bottom: 10px $textColor double ;
-      border-radius: 40px;
-      display: block;
-      width: 400px;
-    }
-
 
     .jl_cons{
+      margin: -15% 5% 0 60%;
       padding: 2%;
       font-size: $p1;
-
       border-top: 10px $textColor double;
       border-left: 3px $textColor dashed;
       border-right: 3px $textColor dashed;
-      border-bottom: 10px $textColor double ;
+      border-bottom: 10px $textColor double;
       border-radius: 40px;
     }
+
+
+
+    .jl_buy{
+      margin: -10%;
+      text-align: center;
+      margin-left: 5%;
+      display: inline-block;
+      font-size: $h2;
+      // border: 3px solid red;
+
+      h2{
+        margin-bottom: 2%;
+      }
+
+      .jl_lucky_charm_box{
+        border-top: 10px $textColor double;
+        border-left: 3px $textColor dashed;
+        border-right: 3px $textColor dashed;
+        border-bottom: 10px $textColor double ;
+        border-radius: 40px;
+        
+        img{
+          padding:5%;
+          width: 100%;
+          // border: 5px solid pink;
+        }
+
+      }
+
+    }
+
 
       .jl_match_comments{
-      border-top: 10px $textColor double;
-      border-left: 3px $textColor dashed;
-      border-right: 3px $textColor dashed;
-      border-bottom: 10px $textColor double ;
-      border-radius: 40px;
+        margin: 5%;
+        border-top: 10px $textColor double;
+        border-left: 3px $textColor dashed;
+        border-right: 3px $textColor dashed;
+        border-bottom: 10px $textColor double ;
+        border-radius: 50px;
+        padding:3%;
+
+
+
+        span{
+          font-size: $p1;
+          // margin-bottom: 5%;
+          // border: 2px solid pink;
+          line-height: 1.6;
+        }
       }
 
 
-    .jl_match_comments span{
-      font-size:$h2;
-    }
-
-    .jl_lucky_charms{
-      margin-bottom: 50%;
-      margin-left: 5%;
-      
-
-      h3{
-        font-size: $h2;
-        text-align: center;
-        border: 2px solid red;
+      @include btn-module('.jl_button_money_payment', 280, 100) {
+        color: white;
+        margin: 2% auto;
       }
-    }
+
+      @include btn-module('.jl_button_paymentBypoints', 300, 100) {
+        color: white;
+        margin: 0 auto;
+        margin-left: 10%;    
+      }
+
 
 
 
