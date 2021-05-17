@@ -83,6 +83,9 @@
             display: flex;
             flex-wrap: wrap;
             padding-top: 50px;
+            @include rwd(mobile){
+                padding-top: 10px;
+            }
             
         }
 

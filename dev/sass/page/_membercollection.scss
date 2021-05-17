@@ -11,17 +11,19 @@ $color:(white:#fff,
     font_color:#777777,
 );
 
-* {
-    box-sizing: border-box;
-    font-family: 'Raleway', 'Noto Sans TC', sans-serif;
-    // letter-spacing: 2.5;
 
-    // outline: 1px solid yellow;
-}
 
 
 
 .F_wrapper {
+    * {
+        box-sizing: border-box;
+        font-family: 'Raleway', 'Noto Sans TC', sans-serif;
+        // letter-spacing: 2.5;
+
+        // outline: 1px solid yellow;
+    }
+
     img {
         max-width: 100%;
     }
