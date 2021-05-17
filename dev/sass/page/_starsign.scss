@@ -130,10 +130,14 @@
                 outline: 0;
                 border: 0;
                 background: 0;
-                width: 50px;
+                width: 45px;
+                box-sizing: content-box;
                 cursor: pointer;
                 &:hover{
                     opacity: .7;
+                }
+                img{
+                    width: 100%;
                 }
             }
             .prbtn{
