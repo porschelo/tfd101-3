@@ -1,10 +1,5 @@
 .wrapper_tResult{
 
-    a{
-        text-decoration: none;
-         color: white;
-     }
-
     .tResult_header{
         height: 140px;
         background-color: #023552;
@@ -16,7 +11,8 @@
          background-size: 100% 100%;
          padding-bottom: 140px;
          @include rwd(mobile){
-            background-size: 100% 50%;
+            background-size: 100% 30%;
+            background-image: url(../images/test/bgi_phone.png);
         }
      }
 

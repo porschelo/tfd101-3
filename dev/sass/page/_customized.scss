@@ -7,11 +7,6 @@
         background-image: url(../images/store/pdctD_bg.png);
      }
 
-     a{
-        text-decoration: none;
-        color: $colorPb;
-    }
-
     .customized_title{
         color: $colorT;
         padding: ( 80px + 240px ) * .7 0 0;
@@ -44,28 +39,23 @@
     }
 
     @include bookmark('.customized_sort'){
-        &:nth-child(5){
-            margin-left: 40%;
-            width: 11%;
-            @include rwd(mobile){
-               margin-left: 43%;
-               width: 10%;
-               padding-top: 10px;
-            }
+        a{
+            text-decoration: none;
+            color: $colorPb;
         }
     }
     
     .customized{
         &_content{
-            // border: 1px solid yellow;
             width: 85%;
             color: white;
             line-height: 1.6;
             @include center;
             
-            background-image: url(../images/store/frameC-b.png);
+            background-image: url(../images/store/frameC.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
+            margin-top: 11px;
 
             @include rwd(mobile){
                 background-image: none;
@@ -75,11 +65,11 @@
         }
 
         &_top{
-            // border: 1px solid red;
             padding-top: 60px;
             width: 80%;
             @include center;
             font-size: $h3;
+            color: $colorPb;
             @include rwd(mobile){
                 font-size: $h3 - 6px;
             }
@@ -100,9 +90,13 @@
                 font-size: 0;
                 h4{
                     position: absolute;
-                    left: 30%;
-                    top: 70%;
+                    top:70%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     font-size: $p1;
+                }
+                img{
+                    width: 100%;
                 }
 
                 @include rwd(mobile){
@@ -128,14 +122,13 @@
 
         &_bottom-left{
             font-size: $h3;
-            width: 70%;
+            width: 60%;
             @include rwd(pad){
                 width: 100%;
             }
             @include rwd(mobile){
                 font-size: $h3 - 6px;
             }
-           
             h3{
                 margin-bottom: 35px;
             }
@@ -143,8 +136,7 @@
         }
 
         &_box{
-            border: 1px solid red;
-            width: 100%;
+            width: 90%;
             // height: 420px;
             border: 5px solid $colorPb;
             margin-bottom: 56px;
@@ -212,8 +204,8 @@
             }
 
             .cust-white{
-                width: 25px;
-                height: 25px;
+                width: 30px;
+                height: 30px;
                 border-radius: 5px;
                 background-color: white;
             }
