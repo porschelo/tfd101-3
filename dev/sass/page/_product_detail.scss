@@ -4,10 +4,6 @@
      background-size: cover;
      box-sizing: border-box;
      
-     a{
-         text-decoration: none;
-         color: white;
-     }
      /*===== 標題 =====*/
      .unstore_title{
         // border: 1px solid red;
@@ -44,6 +40,7 @@
     }
     
     .product-detail{
+
         &_content{
             line-height: 1.6;
             // border: 1px solid yellow;
@@ -78,6 +75,10 @@
                 padding-bottom: 85px * .7;
                 @include rwd(mobile){
                     padding-left: 20px;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
                 }
             }
             .breadcrumb_list li{
@@ -346,27 +347,33 @@
                 }
             }
 
-            ul{
+            .pd_swiper{
                 display: flex;
-                justify-content: space-around;
-                width: 80%;
-                padding-bottom: 150px;
-                
-                // border: 1px solid red;
-                @include center;
+                justify-content: center;
+                align-items: center;
+                .pd_prbtn {
+                    margin-right: 20px;
+                }
+                .pd_nextbtn {
+                    margin-left: 20px;
+                }
             }
 
-            li{
-                margin: 0 10px;
+            .swiper-slide{
+                img{
+                    border: 5px solid $colorBd;
+                }
             }
 
-            img{
-                border: 5px solid $colorBd;
-                font-size: 0;
-            }
         }
-
+        
     }
+
+    .pd-footer{
+        height: 200px;
+        background-color: #302B23;
+    }
+
 
     /*===== header 所在頁面 =====*/
     .overlaymenu{
