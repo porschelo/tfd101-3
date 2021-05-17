@@ -81,7 +81,9 @@
                 color: darkcyan;
             }
         }
-
+        a{ //暫連membercentre用
+            text-decoration: none;
+        }
         @include btn-module(".send", 200, 90) {
             display: block;
             margin: 30px auto 0;
@@ -137,7 +139,6 @@
                 color: darkcyan;
             }
         }
-
         @include btn-module(".sign", 200, 90) {
             display: block;
             margin: 30px auto 0;
