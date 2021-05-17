@@ -416,14 +416,13 @@ $letter-spacing:2.5;
     
     .form_right{
         width:500*.7px;
-        // border:1px solid darkgreen;
         text-align: right;
         margin-bottom: 10*.7px;
-        z-index: 5;
+        // z-index: 5;
         // pointer-events: none;
-          
-            #right{
-                width:150*.7px;
+        .j_right{
+          // border:5px solid darkred;
+          width:150*.7px;
                 height:50*.7px;
                 line-height:50*.7px;
                 background-color:#94B4F4;
@@ -431,8 +430,26 @@ $letter-spacing:2.5;
                 margin-bottom: 10*.7px;
                 border:none;
 
-            }
+                  a{
+                    color:$color;
+                    text-decoration: none;
+                  }
+        }
+            
+          
+          
+            // #right{
+            //     width:150*.7px;
+            //     height:50*.7px;
+            //     line-height:50*.7px;
+            //     background-color:#94B4F4;
+            //     color:#fff;
+            //     margin-bottom: 10*.7px;
+            //     border:none;
+
+            // }
     }
+    
     .form_left{
         padding-bottom: 10*.7px;
         max-width: 400*.7px;
