@@ -112,6 +112,9 @@
         @include rwd(mobile){
             width: 100%;
         }
+        img{
+            width: 100%;
+        }
     }
 
     @include btn-module('.tSort_start', 280, 100){
