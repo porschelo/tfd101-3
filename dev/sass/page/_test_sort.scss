@@ -1,10 +1,5 @@
 .wrapper_tSort{
     
-    a{
-        text-decoration: none;
-         color: white;
-     }
-
     .tSort_header{
         height: 140px;
         background-color: #023552;
@@ -17,6 +12,7 @@
          padding-bottom: 140px;
          @include rwd(mobile){
             background-size: 100% 50%;
+            background-image: url(../images/test/bgi_phone.png);
          }
      }
 
@@ -122,6 +118,10 @@
         color: white;
         display: block;
         margin: 28px auto;
+        a{
+            text-decoration: none;
+             color: white;
+         }
     }
 
 
