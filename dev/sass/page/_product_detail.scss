@@ -1,5 +1,4 @@
 .wrapper_product-detail{
-    
      background-image: url(../images/store/pdctD_bg.png);
      background-size: cover;
      box-sizing: border-box;
@@ -333,7 +332,7 @@
 
         /*===== 可能喜歡的商品 =====*/
         &_like{
-            width: 85%;
+            width: 90%;
             @include center;
             text-align: center;
 
@@ -353,9 +352,14 @@
                 align-items: center;
                 .pd_prbtn {
                     margin-right: 20px;
+                    width: 100px;
                 }
                 .pd_nextbtn {
                     margin-left: 20px;
+                    width: 100px;
+                }
+                img{
+                    width: 100%;
                 }
             }
 

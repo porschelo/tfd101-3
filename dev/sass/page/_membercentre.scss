@@ -14,19 +14,21 @@ $color:(white:#fff,
 
 $border :1px solid;
 
-* {
-    box-sizing: border-box;
-    font-family: 'Raleway', 'Noto Sans TC', sans-serif;
-    // letter-spacing: 2.5;
 
-    // outline: 1px solid yellow;
-}
 
 
 
 
 
 .wrapper {
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Raleway', 'Noto Sans TC', sans-serif;
+        // letter-spacing: 2.5;
+
+        // outline: 1px solid yellow;
+    }
 
     img {
         max-width: 100%;
@@ -43,18 +45,7 @@ $border :1px solid;
     background-size: cover;
 
 
-    // @include md {
-    //     // border: 5px solid yellow;
-    // }
-
-    // @include pad {
-    //     // border: 5px solid orange;
-    // }
-
-    //     @include mobile {
-    //         // border: 5px solid green;
-    //     }
-    // }
+    
 
 
 
@@ -93,58 +84,14 @@ $border :1px solid;
         }
     }
 
-    // .MC_title-c {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-
-    //     img {
-    //         width: 63*.7px;
-    //         height: 43px * .7;
-
-    //     }
-
-    //     h1 {
-    //         font-size: map-get($font_size, H1);
-    //         text-align: center;
-    //         color: map-get($color, lightblue);
-    //         margin: 0 31*.7px 0;
-    //     }
-    // }
-
-    // .MC_title-e {
-    //     // margin-bottom: 540px;
-
-    //     h4 {
-    //         font-size: map-get($font_size, H4);
-    //         text-align: center;
-    //         color: map-get($color, lightblue);
-
-    //         border: $border;
-
-    //     }
-    // }
+    
 
     .mid_block {
-        border: $border red;
+        // border: $border red;
         width: 1300*.7px;
         position: relative;
 
-        // width: 100%;
-        // @include md {
-        //     border: 5px solid yellow;
-        //     width: 1050px*.7;
-        // }
-
-        // @include pad {
-        //     border: 5px solid orange;
-        //     width: 700px*.7;
-        // }
-
-        // @include mobile {
-        //     border: 5px solid green;
-        //     width: 550px*.7;
-        // }
+        
 
         .tab {
             display: flex;
@@ -197,21 +144,16 @@ $border :1px solid;
         top: 0;
 
         width: 100%;
-        border: 1px solid green;
+        // border: 1px solid green;
 
-        // @include md {
-        //     flex-wrap: wrap;
-        //     justify-content: center;
-
-        //     margin-top: 100*.7px;
-        // }
+        
 
 
         .left {
 
             margin-left: 178*.7px;
             margin-right: 140px*.7;
-            border: $border red;
+            // border: $border red;
 
             img {
 
@@ -221,20 +163,7 @@ $border :1px solid;
                 margin: 0 auto;
                 margin-bottom: 16*.7px;
 
-                // @include md {
-                //     width: 230*.7px;
-                //     height: 210*.7px;
-                // }
-
-                // @include pad {
-                //     width: 180*.7px;
-                //     height: 160*.7px;
-                // }
-
-                // @include mobile {
-                //     width: 80*.7px;
-                //     height: 60*.7px;
-                // }
+                
             }
 
             .name {
@@ -248,7 +177,7 @@ $border :1px solid;
 
         .right {
 
-            border: $border gold;
+            // border: $border gold;
 
             h4 {
                 font-size: map-get($font_size, H4);
@@ -267,13 +196,13 @@ $border :1px solid;
                 .info_1 {
                     display: flex;
                     margin-bottom: 69*.7px;
-                    border: $border red;
+                    // border: $border red;
 
 
 
                     .info_Name {
                         margin-right: 186*.7px;
-                        border: $border;
+                        // border: $border;
 
                     }
                 }
@@ -281,13 +210,13 @@ $border :1px solid;
                 .info_2 {
                     display: flex;
                     margin-bottom: 108*.7px;
-                    border: $border red;
+                    // border: $border red;
 
 
 
                     .info_Sex {
                         margin-right: 215*.7px;
-                        border: $border;
+                        // border: $border;
 
 
                     }
@@ -319,39 +248,11 @@ $border :1px solid;
         bottom: 160*.7px;
         width: 100%;
 
-        // @include md {
-        //     bottom: 0;
-        // }
+       
 
-        // @include pad {
-        //     bottom: 0;
-        // }
+        // border: 1px solid green;
 
-        // @include mobile {
-        //     bottom: 0;
-        // }
-
-        border: 1px solid green;
-
-        // h2 {
-        //     font-size: map-get($font_size, H2);
-        //     color: map-get($color, white);
-        //     border: 4px*.7 solid #BCBCBC;
-        //     width: 280*.7px;
-        //     height: 110*.7px;
-        //     line-height: 110*.7px;
-        //     text-align: center;
-        //     border-radius: 30*.7px;
-        //     margin-right: 64*.7px;
-        //     cursor: pointer;
-
-        //     &:hover {
-        //         border: 3px solid rgba(245, 255, 103, 0.5);
-        //     }
-
-
-
-        // }
+       
 
         @include btn-module('.change_pic', 280, 100) {
             color: white;

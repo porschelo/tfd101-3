@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    @@include('layout/scripts.html')
+</head>
+<body>
+    <div class="SC_wrapper">
+        <!-- header -->
+        @@include('layout/header.html')
+        <!-- header END  -->
+
+        <!-- Title -->
+        
+        <div class="SC_title">
+            <div class="SC_title-c">
+                <img src="images/shopping_cart/earth.png" alt="">
+                <h1>購物車</h1>
+                <img src="images/shopping_cart/earth.png" alt="">
+            </div>
+        
+            <div class="SC_title-e">
+                <h4>一 Shopping Cart 一</h4>
+            </div>
+        </div>
+
+        <!-- Title END-->
+
+        <div class="SC_mid_block">
+            <div class="pic_out">
+                <img src="images/shopping_cart/mid_data_bg.png" alt="">
+            </div>
+
+            <div class="list_info">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>商品圖片</td>
+                            <td>商品名稱</td>
+                            <td>金額</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <div class="line"></div>
+                            </td>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                            <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                            <td>宇宙能量手環</td>
+                            <td>500</td>
+                            <td rowspan="1">
+                                <button class="delete_item">刪除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <div class="line"></div>
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                            <td>宇宙能量手環</td>
+                            <td>600</td>
+                            <td rowspan="1">
+                                <button class="delete_item">刪除</button>
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="5">
+                                <div class="line"></div>
+                            </td>
+                        </tr>
+                    </tbody>          
+                </table>
+            </div>
+
+            <div class="total_block">
+                <h3>總計 : 1100 元</h3>
+            </div>
+
+            <div class="pay_btn">
+                <button class="pay_check" onclick="location.href='./order.html'">前往付款</button>
+            </div>
+
+
+        <!--SC_mid_block END -->
+        </div>
+
+    <!-- footer -->
+    @@include('layout/footer.html')
+
+    <!--wrapper END  -->
+    </div>
+</body>
+</html>

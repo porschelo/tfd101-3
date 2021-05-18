@@ -130,10 +130,14 @@
                 outline: 0;
                 border: 0;
                 background: 0;
-                width: 50px;
+                width: 45px;
+                box-sizing: content-box;
                 cursor: pointer;
                 &:hover{
                     opacity: .7;
+                }
+                img{
+                    width: 100%;
                 }
             }
             .prbtn{
@@ -190,6 +194,7 @@
                         display: flex;
                         margin-top: 24px;
                         .prs{
+                                box-sizing: border-box;
                                 background-size: 145px 138px;
                                 width: 145px;
                                 height: 138px;
@@ -293,6 +298,8 @@
                         .artitle{
                             font-size: $h3 - 1px;
                             line-height: 1.4;
+                            text-decoration: none;
+                            cursor: pointer;
                         }
                         .artminp{
                             font-size: $p2;
@@ -300,7 +307,7 @@
                             padding-top: 10px;
                             font-weight: 300;
                         }
-                        .morebtn{
+                        .armorebtn{
                             font-size: $p2;
                             color: rgb(252, 140, 99);
                             display: block;
@@ -323,7 +330,74 @@
             
         }
     }
-    
+
+    //article popup
+    .overlayarticle{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(7, 7, 7, 0.6);
+        display: none;
+        z-index: 1000;
+        overflow: scroll;
+        .artiflex{
+            display: flex;
+            justify-content: center;
+            .articlepop{
+                margin: 110px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 15px;
+                width: 55%;
+                position: relative;
+                z-index: 1000;
+                .articlosebtn {
+                    position: absolute;
+                    top: 3px;
+                    right: 23px;
+                    color: #aaa;
+                    font-size: 55px;
+                    font-weight: 200;
+                    text-decoration: none;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+                h2{
+                    color: rgb(82, 82, 121);
+                    font-size: $h3;
+                    margin: 70px 12% 10px;
+                }
+                img{
+                    width: 70%;
+                    margin: 30px 0;
+                }
+                p{
+                    color: #777;
+                    font-size: $p2;
+                    margin: 10px 15% 10px;
+                    letter-spacing: $ls;
+                    line-height: 1.4;
+                }
+                .articlebtn{
+                    margin: 40px 0 50px;
+                    display: flex;
+                    width: 70%;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        color: rgb(82, 82, 121);
+                        font-size: $p2;
+                    }
+                }
+                
+            }
+        }
+    }
 
 
     footer{

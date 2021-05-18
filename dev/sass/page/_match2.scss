@@ -5,7 +5,7 @@ $hoverBorderColor: #F0DC9A;
 
 
 .jl_wrapper2{
-  background-image: url(../images/horoscope_page/matching2.png);
+  background-image: url(../../images/horoscope_page/matching2.png);
   background-size: cover;
   background-repeat: no-repeat;
   width:100%;
@@ -19,7 +19,7 @@ $hoverBorderColor: #F0DC9A;
     align-items: center;  
     width: 75%;
     margin: 140px auto 0;
-    //outline: 10px solid orange;
+    // outline: 10px solid orange;
   }
 
 .jl_section_left, .jl_section_right{
@@ -77,7 +77,7 @@ $hoverBorderColor: #F0DC9A;
 
 
 // All border color, txt color, transparent background, size, border-radius + hover effect
-  .jl_self_birth_year, .jl_opp_birth_year, .jl_self_birth_month, .jl_self_birth_date, .jl_selfsex, .jl_opp_gender, .jl_opp_birth_date, .jl_opp_birth_month{
+  .jl_self_birth_year, .jl_opp_birth_year, .jl_self_birth_month, .jl_self_birth_date, .jl_selfsex, .jl_opp_gender, .jl_opp_birth_date, .jl_opp_birth_month {
     background-color: $transBackgnd;
     color: $textColor;
     font-size: 20px;
@@ -111,6 +111,7 @@ $hoverBorderColor: #F0DC9A;
     text-align: center;
     margin: 0 auto;
     font-size: 20px;
+    // border: 3px solid red;
 
     &:hover{
       border: 2px solid #F0DC9A;
@@ -127,7 +128,14 @@ $hoverBorderColor: #F0DC9A;
       margin: 0 auto;
   }
 
-
+.jl_temp a{
+  font-size: $h2;
+  color: $textColor;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-bottom: 5%;
+}
 
 /*  Match Button Ends */
 

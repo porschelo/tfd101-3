@@ -20,8 +20,8 @@
 
     .close_login_btn {
         position: absolute;
-        top: -5%;
-        right: -5%;
+        top: -20px;
+        right: -20px;
         color: #fff;
         font-size: 70px;
         font-weight: 200;
@@ -30,8 +30,8 @@
 
     .close_signup_btn {
         position: absolute;
-        top: -5%;
-        right: -5%;
+        top: -20px;
+        right: -20px;
         color: #fff;
         font-size: 70px;
         font-weight: 200;
@@ -41,31 +41,33 @@
 
 .login_title {
     h1 {
-        font-size: $h1;
+        font-size: $h2;
         text-align: center;
         padding-top: 8%;
+        color: darkcyan;
     }
 }
 
 .login_info {
     &_content {
         width: 60%;
-        border: 1px solid red;
         padding: 20px 0 50px;
         @include center;
 
 
 
         h3 {
-            font-size: $h3;
+            font-size: $h3 - 2px;
             margin: 3% 0;
+            color: #555;
         }
 
         input {
-            background-color: gray;
+            background-color: #ddd;
             width: 100%;
-            margin: 3% 0;
-            font-size: $h3;
+            margin: 1% 0 5%;
+            font-size: $h3 - 3px;
+            padding: 5px 3px;
 
         }
 
@@ -75,42 +77,55 @@
             margin-bottom: 5%;
             margin-top: 10px;
             text-decoration: underline;
+            a{
+                color: darkcyan;
+            }
         }
-
+        a{ //暫連membercentre用
+            text-decoration: none;
+        }
         @include btn-module(".send", 200, 90) {
             display: block;
             margin: 30px auto 0;
+            color: #555;
+            border-color: #555;
+            &:hover{
+                color: darkcyan;
+                border-color: darkcyan;
+            }
         }
     }
 }
 
 .signuptitle {
     h1 {
-        font-size: $h1;
+        font-size: $h2;
         text-align: center;
         padding-top: 8%;
+        color: darkcyan;
     }
 }
 
 .signup_info {
     &_content {
         width: 60%;
-        border: 1px solid red;
         padding: 20px 0 50px;
         @include center;
 
 
 
         h3 {
-            font-size: $h3;
+            font-size: $h3 - 2px;
             margin: 3% 0;
+            color: #555;
         }
 
         input {
-            background-color: gray;
+            background-color: #ddd;
             width: 100%;
-            margin: 3% 0;
-
+            margin: 1% 0 5%;
+            font-size: $h3 - 3px;
+            padding: 5px 3px;
 
         }
 
@@ -120,11 +135,19 @@
             margin: 5% auto;
             margin-top: 10px;
             text-decoration: underline;
+            a{
+                color: darkcyan;
+            }
         }
-
         @include btn-module(".sign", 200, 90) {
             display: block;
             margin: 30px auto 0;
+            color: #555;
+            border-color: #555;
+            &:hover{
+                color: darkcyan;
+                border-color: darkcyan;
+            }
         }
     }
 }

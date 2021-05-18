@@ -27,11 +27,13 @@
 
 
 //page
+@import'page/landing';
 @import'page/unstore';
 @import'page/starsign';
 @import 'page/membercentre';
 @import 'page/memberorderlist';
 @import 'page/membercollection';
+@import 'page/shopping_cart';
 @import 'page/index';
 @import 'page/customized';
 @import'page/product_detail';
@@ -49,3 +51,7 @@
 @import 'page/match1';
 @import 'page/match2';
 @import 'page/match3';
+
+
+// backend
+@import 'page/backend';

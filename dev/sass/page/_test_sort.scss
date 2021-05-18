@@ -112,6 +112,9 @@
         @include rwd(mobile){
             width: 100%;
         }
+        img{
+            width: 100%;
+        }
     }
 
     @include btn-module('.tSort_start', 280, 100){
@@ -129,5 +132,19 @@
         width: 100%;
         height: 200px;
         background-color: #44796A;
+    }
+
+    .overlaymenu{
+        .menulist{
+            .nav-menu{
+                ul{
+                    li:nth-child(3){
+                        a{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

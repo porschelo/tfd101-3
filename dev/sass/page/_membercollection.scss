@@ -11,17 +11,19 @@ $color:(white:#fff,
     font_color:#777777,
 );
 
-* {
-    box-sizing: border-box;
-    font-family: 'Raleway', 'Noto Sans TC', sans-serif;
-    // letter-spacing: 2.5;
 
-    // outline: 1px solid yellow;
-}
 
 
 
 .F_wrapper {
+    * {
+        box-sizing: border-box;
+        font-family: 'Raleway', 'Noto Sans TC', sans-serif;
+        // letter-spacing: 2.5;
+
+        // outline: 1px solid yellow;
+    }
+
     img {
         max-width: 100%;
     }
@@ -70,7 +72,7 @@ $color:(white:#fff,
     // 中間資料
 
     .MF_mid_block {
-        border: 1px solid red;
+        // border: 1px solid red;
         width: 1300*.7px;
         position: relative;
 
@@ -118,43 +120,11 @@ $color:(white:#fff,
         .list_info {
             display: flex;
             width: 100%;
-            border: 1px solid green;
+            // border: 1px solid green;
             font-size: $h3;
-            color: map-get($color, font_color);
-
-            position: absolute;
-            top: 10%;
+            color: map-get($color, white);
 
 
-            li {
-                flex-grow: 1;
-
-                &:nth-of-type(1) {
-                    margin-left: 12%;
-                }
-            }
-        }
-
-        // .list_content {
-        //     display: flex;
-        //     width: 100%;
-        //     border: 1px solid green;
-        //     font-size: $h3;
-        //     color: map-get($color, font_color);
-
-        //     position: absolute;
-        //     top: 20%;
-
-
-        //     li {
-        //         flex-grow: 1;
-
-        //         &:nth-of-type(1) {
-        //             margin-left: 12%;
-        //         }
-        //     }
-        // }
-        .list_info {
             position: absolute;
             top: 8%;
             // left: 2%;
@@ -166,7 +136,20 @@ $color:(white:#fff,
                 // margin:25% auto;
                 @include center;
             }
+
+            li {
+                flex-grow: 1;
+
+                &:nth-of-type(1) {
+                    margin-left: 12%;
+                }
+            }
+
+
+
+
         }
+
 
         table {
             // margin-top: 3%;
@@ -177,7 +160,7 @@ $color:(white:#fff,
 
 
             .line {
-                width: 95%;
+                width: 90%;
                 margin: 40px auto;
                 border-top: 2px solid gray;
             }

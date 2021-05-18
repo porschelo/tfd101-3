@@ -66,12 +66,13 @@
 
         &_top{
             padding-top: 60px;
-            width: 80%;
+            width: 85%;
             @include center;
             font-size: $h3;
             color: $colorPb;
             @include rwd(mobile){
                 font-size: $h3 - 6px;
+                padding-top: 30px;
             }
             
             h3{
@@ -83,7 +84,7 @@
                 flex-wrap: wrap;
             }
             li{
-                width: calc((100% - 80px) / 4);
+                width: calc((100% - 120px) / 4);
                 border: 5px solid $colorPb;
                 margin: 10px;
                 position: relative;
@@ -100,10 +101,10 @@
                 }
 
                 @include rwd(mobile){
-                    width: calc((100% - 20px) / 2);
+                    width: calc((100% - 40px) / 2);
                     margin:0 5px 10px 5px;
                     h4{
-                        font-size: $p1 - 6px;
+                        font-size: $p1 - 8px;
                     }
                 }
             }    
@@ -141,6 +142,9 @@
             border: 5px solid $colorPb;
             margin-bottom: 56px;
             position: relative;
+            @include rwd(mobile){
+                @include center;
+            }
 
             &::before{
                 content:"";
@@ -165,11 +169,13 @@
         }
 
         &_bottom-right{
-            // border: 1px solid yellow;
             width: 30%;
             margin-top: 60px;
             margin-left: 50px;
             font-size: $p1;
+            img{
+                width: 100%;
+            }
             @include rwd(pad){
                 display: flex;
                 width: 100%;
@@ -182,13 +188,13 @@
 
             .cust_select-first{
                 @include rwd(mobile){
-                    width: 55%;
+                    width: 48%;
                 }
             }
             .cust_select-second{
                 @include rwd(mobile){
-                    width: 45%;
-                    margin-left: 10%;
+                    width: 47%;
+                    margin-left: 5%;
                 }
             }
 

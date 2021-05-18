@@ -5,11 +5,7 @@ $h4:30*.7px;
 $p:30*.7px;
 $letter-spacing:2.5;
 
- *{
-    box-sizing: border-box;
-    // outline: 1px solid yellowgreen ;
-    
- }
+ 
  
  
  .j_order_wrapper{
@@ -20,6 +16,10 @@ $letter-spacing:2.5;
     background-position:center ;
      background-size: 100% 100%;
      margin: 0 auto;
+     
+        box-sizing: border-box;
+        
+     
         
 
  }
@@ -62,15 +62,14 @@ $letter-spacing:2.5;
         img{
             position: absolute;
             pointer-events: none;
-            // width: 100%;
-            // height: 90%;
-            // z-index:-2;
+            
         }
 
 .j_order_img{
-    // max-width:1636*.7px;
+    max-width:1636*.7px;
 
-    height: 1400*.7px;
+    // height: 1400*.7px;
+    height: 95%;
 }
  }
  .firstorder{

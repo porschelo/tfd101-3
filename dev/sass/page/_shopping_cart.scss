@@ -1,0 +1,135 @@
+$font_size:(H1:52*.7px,
+    H2:40*.7px,
+    H3:35*.7px,
+    H4:30*.7px,
+    p:20*.7px);
+
+$color:(white:#fff,
+    gray:#CACACA,
+    pink:#FFC2CF,
+    lightblue:#D6E0F7,
+    font_color:#777777,
+);
+
+
+.SC_wrapper {
+    * {
+        box-sizing: border-box;
+        font-family: 'Raleway', 'Noto Sans TC', sans-serif;
+        // letter-spacing: 2.5;
+
+        // outline: 1px solid yellow;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/shopping_cart/member-bg2x.png);
+    background-size: cover;
+
+    .SC_title {
+        // margin: 320*.7px 0 550*.7px 0;
+        // border: $border red;
+
+        color: $colorT;
+        padding: (80px + 200px) * .7 0 0;
+
+        margin-bottom: 550px*.7;
+
+        &-c {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 63px * .7;
+                height: 43px * .7;
+                margin-bottom: 5px;
+            }
+        }
+
+        h1 {
+            font-size: $h1;
+            padding: 5px 20px 10px;
+        }
+
+        &-e {
+            text-align: center;
+            font-size: $p1;
+        }
+    }
+
+    .SC_mid_block {
+        // border: 1px solid red;
+        width: 1300*.7px;
+        position: relative;
+
+        .list_info {
+            position: absolute;
+            top: 8%;
+            width: 100%;
+            font-size: $h3;
+            color: map-get($color, white);
+
+            @include btn-module('.delete_item', 191, 75) {
+                color: white;
+                line-height: (75*.7)-6px;
+                // margin:25% auto;
+                @include center;
+            }
+
+
+        }
+
+
+        table {
+            // margin-top: 3%;
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+
+
+
+            .line {
+                width: 90%;
+                margin: 40px auto;
+                border-top: 2px solid gray;
+            }
+
+            td {
+                vertical-align: middle;
+            }
+        }
+
+        .total_block {
+            position: absolute;
+            bottom: 20%;
+            right: 6%;
+
+            h3 {
+                font-size: $h3;
+                color: map-get($color, white);
+            }
+
+        }
+
+        .pay_btn {
+            position: absolute;
+            bottom: 5%;
+            right: 7%;
+
+            @include btn-module('.pay_check', 191, 75) {
+                color: white;
+                line-height: (75*.7)-6px;
+                // margin:25% auto;
+                @include center;
+            }
+        }
+    }
+}
