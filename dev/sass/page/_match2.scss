@@ -19,7 +19,7 @@ $hoverBorderColor: #F0DC9A;
     align-items: center;  
     width: 75%;
     margin: 140px auto 0;
-    outline: 10px solid orange;
+    // outline: 10px solid orange;
   }
 
 .jl_section_left, .jl_section_right{
@@ -128,7 +128,14 @@ $hoverBorderColor: #F0DC9A;
       margin: 0 auto;
   }
 
-
+.jl_temp a{
+  font-size: $h2;
+  color: $textColor;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-bottom: 5%;
+}
 
 /*  Match Button Ends */
 
