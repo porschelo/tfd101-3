@@ -63,7 +63,7 @@
         @content;
         @include rwd(mobile) {
           width: 10%;
-          padding-top: 10px;
+          // padding-top: 10px;
         }
       }
     }
