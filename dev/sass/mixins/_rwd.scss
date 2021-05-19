@@ -8,11 +8,15 @@
     @media all and (max-width: 991px) {
       @content;
     }
-  } @else if $breakpoint == "pad" {
+  }@else if $breakpoint == "pad" {
     @media all and (max-width: 1199px)  {
       @content;
     }
-  } @else if $breakpoint == "mobile" {
+  }@else if $breakpoint == "pad2" {
+      @media all and (max-width: 1100px)  {
+        @content;
+      }
+  }@else if $breakpoint == "mobile" {
     @media all and (max-width: 767px) {
       @content;
     }
