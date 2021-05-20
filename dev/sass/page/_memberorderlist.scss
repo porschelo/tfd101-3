@@ -22,6 +22,24 @@ $border :1px solid;
 
 .MOL_wrapper {
 
+    @include rwd("mobile") {
+        h1 {
+            font-size: $h1 - 8px !important;
+        }
+
+        h2 {
+            font-size: $h2 - 6px !important;
+        }
+
+        h3 {
+            font-size: $h3 - 6px !important;
+        }
+
+        h4 {
+            font-size: $p1 - 6px !important;
+        }
+    }
+
     * {
         box-sizing: border-box;
 
@@ -75,13 +93,15 @@ $border :1px solid;
 
     .MOL_midblock_out {
 
-        border: $border red;
+        // border: $border red;
         max-width: 1300*.7px;
         width: 100%;
+
 
         .list_tab {
             display: flex;
             justify-content: space-evenly;
+
 
 
             a {
@@ -100,7 +120,7 @@ $border :1px solid;
                 text-decoration: none;
 
                 @include rwd("mobile") {
-                    width: 31%;
+                    width: 25%;
                     font-size: $h3 - 6px
                 }
 
@@ -115,6 +135,7 @@ $border :1px solid;
             border: 3px solid white;
             font-size: $h3;
             color: map-get($color, white);
+            margin: 0 5%;
 
             @include rwd("mobile") {
 
@@ -127,13 +148,21 @@ $border :1px solid;
                 margin-top: 4%;
                 margin-bottom: 5%;
 
+
+
                 @include btn-module('.buyagain', 191, 75) {
                     color: white;
-                    line-height: (75*.7)-6px;
-                    // @include center;
+                    line-height: (75*.7) - 6px;
                     margin: 10% auto;
 
+                    @include rwd(mobile){
+                        font-size: $h3 - 6px;
+                        
+                    }
+                    
                 }
+
+
 
                 td {
                     vertical-align: middle;
@@ -146,11 +175,16 @@ $border :1px solid;
                     border-top: 2px solid gray;
                 }
 
-                .price,.numid {
+                .price,
+                .numid {
                     color: map-get($color, pink);
 
 
                 }
+
+                
+
+
 
 
             }

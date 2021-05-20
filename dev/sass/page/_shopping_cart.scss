@@ -13,6 +13,24 @@ $color:(white:#fff,
 
 
 .SC_wrapper {
+    @include rwd("mobile") {
+        h1 {
+            font-size: $h1 - 8px !important;
+        }
+
+        h2 {
+            font-size: $h2 - 6px !important;
+        }
+
+        h3 {
+            font-size: $h3 - 6px !important;
+        }
+
+        h4 {
+            font-size: $p1 - 6px !important;
+        }
+    }
+
     * {
         box-sizing: border-box;
         font-family: 'Raleway', 'Noto Sans TC', sans-serif;
@@ -87,6 +105,7 @@ $color:(white:#fff,
 
             td {
                 vertical-align: middle;
+                border: 1px solid green;
 
             }
 
@@ -102,6 +121,12 @@ $color:(white:#fff,
                 @include center;
                 margin-bottom: 3%;
 
+                @include rwd("mobile") {
+                    font-size: $h3 - 8px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                }
+
             }
 
             @include btn-module('.pay_check', 191, 75) {
@@ -109,6 +134,14 @@ $color:(white:#fff,
                 line-height: (75*.7)-6px;
                 @include center;
                 margin-top: 10%;
+
+                @include rwd("mobile") {
+                    font-size: $h3 - 8px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                }
+
+
 
             }
 
@@ -118,9 +151,11 @@ $color:(white:#fff,
             }
 
             .item_count {
-                width: 30%;
+                width: 25%;
                 border-radius: 5px;
             }
+
+
         }
 
     }

@@ -16,12 +16,27 @@ $border :1px solid;
 
 .wrapper {
 
+    @include rwd("mobile") {
+        h1 {
+            font-size: $h1 - 8px !important;
+        }
+
+        h2 {
+            font-size: $h2 - 6px !important;
+        }
+
+        h3 {
+            font-size: $h3 - 6px !important;
+        }
+
+        h4 {
+            font-size: $p1 - 6px !important;
+        }
+    }
+
     * {
         box-sizing: border-box;
-        // font-family: 'Raleway', 'Noto Sans TC', sans-serif;
-        // letter-spacing: 2.5;
 
-        // outline: 1px solid yellow;
     }
 
     img {
@@ -60,6 +75,10 @@ $border :1px solid;
         h1 {
             font-size: $h1;
             padding: 5px 20px 10px;
+
+            // @include rwd("mobile"){
+            //     font-size: $h1 - 8px;
+            // }
         }
 
         &-e {
@@ -76,6 +95,8 @@ $border :1px solid;
         // border: 1px solid red;
         max-width: 1300*.7px;
         width: 100%;
+
+
 
 
 
@@ -101,7 +122,7 @@ $border :1px solid;
                 text-decoration: none;
 
                 @include rwd("mobile") {
-                    width: 31%;
+                    width: 25%;
                     font-size: $h3 - 6px
                 }
 
@@ -114,6 +135,8 @@ $border :1px solid;
 
         .mid {
             border: 3px solid white;
+            margin: 0 5%;
+
         }
 
         .mid_top {
@@ -140,9 +163,11 @@ $border :1px solid;
                 }
 
                 h4 {
-                    font-size: map-get($font-size, H4);
+                    font-size: $p1;
                     color: map-get($color, pink);
                     text-align: center;
+
+
                 }
             }
 
@@ -160,6 +185,8 @@ $border :1px solid;
                     &:nth-of-type(2n+1) {
                         color: #DEDEDE
                     }
+
+
                 }
 
                 .info {
@@ -293,9 +320,21 @@ $border :1px solid;
             justify-content: center;
             margin-bottom: 5%;
 
+            @include rwd("mobile") {
+                margin-bottom: 10%;
+            }
+
             @include btn-module('.change_data', 280, 100) {
                 color: white;
+
+                @include rwd("mobile") {
+                    font-size: $h3 - 6px;
+                    width: 170 * 0.7px;
+                    height: 80 * 0.7px;
+                }
             }
+
+
         }
     }
 
