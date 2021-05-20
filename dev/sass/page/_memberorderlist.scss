@@ -20,47 +20,31 @@ $border :1px solid;
 
 
 
-.wrapper {
+.MOL_wrapper {
 
     * {
         box-sizing: border-box;
-        font-family: 'Raleway', 'Noto Sans TC', sans-serif;
-        // letter-spacing: 2.5;
 
-        // outline: 1px solid yellow;
     }
 
     img {
         max-width: 100%;
     }
 
-    // max-width: 1920px;
-    // height: 2346*.7px;
-    // height: 100%;
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../images/membercentre/member-bg2x.png);
+    background-image: url(../images/memberorderlist/member-bg2x.png);
     background-size: cover;
 
-
-    
-
-
-
-
     .MOL_title {
-        // margin: 320*.7px 0 550*.7px 0;
-        // border: $border red;
-
-
 
         color: $colorT;
         padding: (80px + 240px) * .7 0 0;
 
-        margin-bottom: 550px*.7;
+        margin-bottom: 280px*.7;
 
         &-c {
             display: flex;
@@ -91,47 +75,33 @@ $border :1px solid;
 
     .MOL_midblock_out {
 
-        // border: $border red;
-        width: 1475*.7px;
-        position: relative;
-
-        .bg {
-            position: absolute;
-            pointer-events: none;
-        }
+        border: $border red;
+        max-width: 1300*.7px;
+        width: 100%;
 
         .list_tab {
             display: flex;
-            position: absolute;
-            top: -5.3%;
-
-            // border: $border yellowgreen 3px;
+            justify-content: space-evenly;
 
 
+            a {
 
-
-
-
-            &_btn {
-                font-size: map-get($font_size, H3);
+                font-size: $h3;
                 background-color: map-get($color, gray);
-                width: 265*.7px;
-                height: 75*.7px;
-                // border: $border;
+                color: map-get($color, font_color);
+                max-width: 265*.7px;
+                max-height: 75*.7px;
+                width: 100%;
                 border-radius: 20*.7px 20*.7px 0 0;
                 line-height: 75*.7px;
                 text-align: center;
                 cursor: pointer;
-                margin-right: 37*.7px;
-
+                // margin-left: 37*.7px;
                 text-decoration: none;
-                color: map-get($color, font_color);
 
-
-
-
-                &:nth-of-type(1) {
-                    margin-left: 127*.7px;
+                @include rwd("mobile") {
+                    width: 31%;
+                    font-size: $h3 - 6px
                 }
 
                 &:nth-of-type(2) {
@@ -141,55 +111,53 @@ $border :1px solid;
             }
         }
 
+        .list_box {
+            border: 3px solid white;
+            font-size: $h3;
+            color: map-get($color, white);
 
-    }
+            @include rwd("mobile") {
 
-    .list_content {
-        color: map-get($color, white);
-        font-size: map-get($font_size, H4);
-        width: 90%;
-        margin: 0 auto;
-        // border: 5px solid green;
-        // position: absolute;
-
-        // // top: 0;
-
-
-    }
-
-    .list_order1 {
-        // border: 1px solid green;
-
-
-        @include btn-module('.buyagain', 191, 75) {
-            color: white;
-            line-height: (75*.7)-6px;
-            // margin:25% auto;
-            @include center;
-        }
-
-        // }
-        table {
-            margin-top: 10%;
-            width: 100%;
-            text-align: center;
-
-
-
-            .line {
-                width: 95%;
-                margin: 40px auto;
-                border-top: 2px solid gray;
+                font-size: $h3 - 8px
             }
 
-            td {
-                vertical-align: middle;
-            }
+            table {
+                text-align: center;
+                width: 100%;
+                margin-top: 4%;
+                margin-bottom: 5%;
 
-            .numid {
-                margin-bottom: 20%;
+                @include btn-module('.buyagain', 191, 75) {
+                    color: white;
+                    line-height: (75*.7)-6px;
+                    // @include center;
+                    margin: 10% auto;
+
+                }
+
+                td {
+                    vertical-align: middle;
+
+                }
+
+                .line {
+                    width: 95%;
+                    margin: 3% auto;
+                    border-top: 2px solid gray;
+                }
+
+                .price,.numid {
+                    color: map-get($color, pink);
+
+
+                }
+
+
             }
         }
 
+
     }
+
+
 }
