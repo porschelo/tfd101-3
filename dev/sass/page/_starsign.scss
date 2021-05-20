@@ -37,7 +37,7 @@
                 font-size: $h1;
                 padding: 5px 20px 10px;
                 @include rwd(mobile){
-                    font-size: $h1 - 6px;
+                    font-size: $h1 - 8px;
                 }
             }
             &-e{
@@ -339,7 +339,7 @@
                     @include rwd(pad2){
                         background-image: none;
                         background-color: rgba(255, 255, 255, 0.1);
-                        border: rgb(245, 245, 245) solid 2px;
+                        border: rgb(245, 245, 245) solid 3px;
                         width: 75vw;
                         height: auto;
                     }
@@ -374,7 +374,7 @@
                     @include rwd(pad2){
                         background-image: none;
                         background-color: rgba(255, 255, 255, 0.1);
-                        border: rgb(245, 245, 245) solid 2px;
+                        border: rgb(245, 245, 245) solid 3px;
                         width: 75vw;
                         height: auto;
                         margin-bottom: 30px;
@@ -421,7 +421,7 @@
                 @include rwd(pad2){
                     background-image: none;
                     background-color: rgba(255, 255, 255, 0.1);
-                    border: rgb(245, 245, 245) solid 2px;
+                    border: rgb(245, 245, 245) solid 3px;
                     width: 75vw;
                     height: auto;
                 }
