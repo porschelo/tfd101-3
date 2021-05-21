@@ -1,11 +1,16 @@
 .wrapper_customized{
     
-     background-image: url(../images/store/unstorebg.png);
-     background-size: cover;
-     box-sizing: border-box;
-     @include rwd(mobile){
-        background-image: url(../images/store/pdctD_bg.png);
-     }
+    background-image: url(../images/store/unstorebg1200.png);
+    background-size: cover;
+    box-sizing: border-box;
+
+    @include rwd(pad){
+       background-image:  url(../images/store/unstorebg.png);
+    }
+
+    @include rwd(mobile){
+       background-image: url(../images/store/pdctD_bg.png);
+    }
 
     .customized_title{
         color: $colorT;
@@ -204,7 +209,7 @@
 
             ul{
                 display: flex;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
             p{
                 margin-bottom: 20px;
