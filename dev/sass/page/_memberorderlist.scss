@@ -20,47 +20,49 @@ $border :1px solid;
 
 
 
-.wrapper {
+.MOL_wrapper {
+
+    @include rwd("mobile") {
+        h1 {
+            font-size: $h1 - 8px !important;
+        }
+
+        h2 {
+            font-size: $h2 - 6px !important;
+        }
+
+        h3 {
+            font-size: $h3 - 6px !important;
+        }
+
+        h4 {
+            font-size: $p1 - 6px !important;
+        }
+    }
 
     * {
         box-sizing: border-box;
-        font-family: 'Raleway', 'Noto Sans TC', sans-serif;
-        // letter-spacing: 2.5;
 
-        // outline: 1px solid yellow;
     }
 
     img {
         max-width: 100%;
     }
 
-    // max-width: 1920px;
-    // height: 2346*.7px;
-    // height: 100%;
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../images/membercentre/member-bg2x.png);
+    background-image: url(../images/memberorderlist/member-bg2x.png);
     background-size: cover;
 
-
-    
-
-
-
-
     .MOL_title {
-        // margin: 320*.7px 0 550*.7px 0;
-        // border: $border red;
-
-
 
         color: $colorT;
         padding: (80px + 240px) * .7 0 0;
 
-        margin-bottom: 550px*.7;
+        margin-bottom: 280px*.7;
 
         &-c {
             display: flex;
@@ -92,46 +94,34 @@ $border :1px solid;
     .MOL_midblock_out {
 
         // border: $border red;
-        width: 1475*.7px;
-        position: relative;
+        max-width: 1300*.7px;
+        width: 100%;
 
-        .bg {
-            position: absolute;
-            pointer-events: none;
-        }
 
         .list_tab {
             display: flex;
-            position: absolute;
-            top: -5.3%;
-
-            // border: $border yellowgreen 3px;
+            justify-content: space-evenly;
 
 
 
+            a {
 
-
-
-            &_btn {
-                font-size: map-get($font_size, H3);
+                font-size: $h3;
                 background-color: map-get($color, gray);
-                width: 265*.7px;
-                height: 75*.7px;
-                // border: $border;
+                color: map-get($color, font_color);
+                max-width: 265*.7px;
+                max-height: 75*.7px;
+                width: 100%;
                 border-radius: 20*.7px 20*.7px 0 0;
                 line-height: 75*.7px;
                 text-align: center;
                 cursor: pointer;
-                margin-right: 37*.7px;
-
+                // margin-left: 37*.7px;
                 text-decoration: none;
-                color: map-get($color, font_color);
 
-
-
-
-                &:nth-of-type(1) {
-                    margin-left: 127*.7px;
+                @include rwd("mobile") {
+                    width: 25%;
+                    font-size: $h3 - 6px
                 }
 
                 &:nth-of-type(2) {
@@ -141,55 +131,90 @@ $border :1px solid;
             }
         }
 
+        .list_box {
+            border: 3px solid white;
+            font-size: $h3;
+            color: map-get($color, white);
+            margin: 0 5%;
 
-    }
+            @include rwd("mobile") {
 
-    .list_content {
-        color: map-get($color, white);
-        font-size: map-get($font_size, H4);
-        width: 90%;
-        margin: 0 auto;
-        // border: 5px solid green;
-        // position: absolute;
+                font-size: $h3 - 8px
+            }
 
-        // // top: 0;
+            table {
+                text-align: center;
+                width: 100%;
+                margin-top: 4%;
+                margin-bottom: 5%;
 
-
-    }
-
-    .list_order1 {
-        // border: 1px solid green;
+                @include rwd(mobile) {
+                    line-height:1.5;
+                }
 
 
-        @include btn-module('.buyagain', 191, 75) {
-            color: white;
-            line-height: (75*.7)-6px;
-            // margin:25% auto;
-            @include center;
+
+
+
+                @include btn-module('.buyagain', 191, 75) {
+                    color: white;
+                    line-height: (75*.7) - 6px;
+                    margin: 10% auto;
+                    font-size: $p2;
+
+                    @include rwd(mobile) {
+                        font-size: $p2 - 8px;
+                        width: 120px*.7;
+                        height: 50px*.7;
+                        line-height: (50*.7) - 6px;
+                    }
+
+                }
+
+
+
+                td {
+                    vertical-align: middle;
+
+                }
+
+                .line {
+                    width: 95%;
+                    margin: 3% auto;
+                    border-top: 2px solid gray;
+                }
+
+                .price,
+                .numid {
+                    color: map-get($color, pink);
+
+                }
+
+                .order_name,
+                .order_pic {
+                    @include rwd(mobile) {
+                        text-align: left;
+                    }
+                }
+
+                img {
+                    @include rwd(mobile) {
+                        width: 55px;
+                        height: 55px;
+                    }
+
+
+                }
+
+
+
+
+
+            }
         }
 
-        // }
-        table {
-            margin-top: 10%;
-            width: 100%;
-            text-align: center;
-
-
-
-            .line {
-                width: 95%;
-                margin: 40px auto;
-                border-top: 2px solid gray;
-            }
-
-            td {
-                vertical-align: middle;
-            }
-
-            .numid {
-                margin-bottom: 20%;
-            }
-        }
 
     }
+
+
 }

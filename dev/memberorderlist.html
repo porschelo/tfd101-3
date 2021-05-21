@@ -12,7 +12,7 @@
 <body>
 
 
-    <div class="wrapper">
+    <div class="MOL_wrapper">
 
         <!-- header -->
         @@include('layout/header.html')
@@ -33,8 +33,7 @@
         <!-- Title END-->
 
         <div class="MOL_midblock_out">
-            <img class="bg" src="images/memberorderlist/mid_data_bg.png" alt="">
-
+            
             <div class="list_tab">
                 <a href="./membercentre.html" class="list_tab_btn">個人資料</a>
                 <a href="./memberorderlist.html" class="list_tab_btn">訂單資料</a>
@@ -42,14 +41,13 @@
             </div>
 
 
-            <div class="list_content">
-                <div class="list_order1">
+            <div class="list_box">
                     <table>
                         <thead>
-                            <tr>
+                            <tr class="list_title">
                                 <td>訂單編號</td>
-                                <td>商品圖片</td>
-                                <td>商品名稱</td>
+                                <td class="order_pic">商品圖片</td>
+                                <td class="order_name">商品名稱</td>
                                 <td>數量</td>
                                 <td>金額</td>
                             </tr>
@@ -61,21 +59,27 @@
                         </thead>
 
                         <tbody>
-                            <tr>
+                            <tr class="orderlist1">
                                 <td rowspan="2">
                                     <div class="numid">20210123</div>
                                     <button class="buyagain" onclick="location.href='./order.html'">再次購買</button>
                                 </td>
                                 <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
-                                <td>宇宙能量手環</td>
+                                <td class="order_name">測試文字七個字</td>
                                 <td>1</td>
                                 <td>500</td>
                             </tr>
                             <tr>
                                 <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
-                                <td>宇宙能量手環</td>
+                                <td class="order_name">宇宙能量手環</td>
                                 <td>1</td>
                                 <td>500</td>
+                            </tr>
+
+                            <tr class="total_price">
+                                <td colspan="2"></td>
+                                <td >共計 2 件</td>
+                                <td colspan="2" class="price">1000元</td>
                             </tr>
 
                             <tr>
@@ -84,15 +88,21 @@
                                 </td>
                             </tr>
 
-                            <tr>
+                            <tr class="orderlist2">
                                 <td>
-                                    <div class="numid">20210123</div>
+                                    <div class="numid">20210124</div>
                                     <button class="buyagain">再次購買</button>
                                 </td>
                                 <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
-                                <td>宇宙能量手環</td>
+                                <td class="order_name">宇宙能量手環</td>
                                 <td>1</td>
-                                <td>500</td>
+                                <td>600</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>共計 1 件</td>
+                                <td  colspan="2" class="price">600元</td>
                             </tr>
 
 
@@ -100,11 +110,28 @@
                                 <td colspan="5">
                                     <div class="line"></div>
                                 </td>
+                            </tr>
+
+                            <tr class="orderlist3">
+                                <td>
+                                    <div class="numid">20210125</div>
+                                    <button class="buyagain">再次購買</button>
+                                </td>
+                                <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                                <td class="order_name">宇宙能量手環</td>
+                                <td>1</td>
+                                <td>700</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>共計 1 件</td>
+                                <td colspan="2" class="price">700元</td>
                             </tr>
 
                         </tbody>
                     </table>
-                </div>
+                
             </div>
         </div>
 
