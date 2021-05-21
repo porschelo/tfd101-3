@@ -3,6 +3,9 @@
     .tSort_header{
         height: 140px;
         background-color: #023552;
+        @include rwd(mobile){
+            height: 100px;
+        }
     }
 
     .tSort_section{
@@ -36,7 +39,7 @@
            font-size: $h1;
            padding: 5px 20px 10px;
            @include rwd(mobile){
-                font-size: $h1 - 6px;
+                font-size: $h1 - 8px;
             }
        }
 
@@ -79,7 +82,7 @@
         margin-bottom: 20px;
         @include rwd(mobile){
             width: 100%;
-            margin-top: 100px;
+            margin-top: 56px;
         }
        
         ul{
@@ -93,6 +96,10 @@
             img{
                 width: 45px * .7;
                 height: 31px * .7;
+            }
+            img:nth-child(3){
+                width: 33px * .7;
+                height: 32 * .7;
             }
             h2{
                 font-size: $h2;
