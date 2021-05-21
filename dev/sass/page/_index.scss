@@ -391,53 +391,47 @@
     .cloudGroup {
       position: relative;
       padding-top: whForPC(2635);
-    }
-    .m1 {
-      position: absolute;
-      top: -5vw;
-      // left: -26vw;
-      left: -76vw;
-    }
-    .m2 {
-      position: absolute;
-      top: 1vw;
-      right: -21vw;
-      right: -80vw;
-    }
-    .m3 {
-      position: absolute;
-      top: 3vw;
-      left: -30vw;
-      left: -85vw;
-    }
-    .m4 {
-      position: absolute;
-      top: 3vw;
-      right: -28vw;
-      right: -80vw;
-    }
-    .m5 {
-      position: absolute;
-      top: 20vw;
-      left: -23vw;
-      left: -78vw;
-    }
-    .m6 {
-      position: absolute;
-      top: 24vw;
-      left: -26vw;
-      left: -76vw;
-    }
-    .m7 {
-      position: absolute;
-      top: 29vw;
-      right: -21vw;
-      right: -81vw;
-    }
-    svg {
-      opacity: 1;
-      width: 150%;
-      // height: 100%;
+
+      .m1 {
+        position: absolute;
+        top: -5vw;
+        left: -76vw;
+      }
+      .m2 {
+        position: absolute;
+        top: 1vw;
+        right: -80vw;
+      }
+      .m3 {
+        position: absolute;
+        top: 3vw;
+        left: -85vw;
+      }
+      .m4 {
+        position: absolute;
+        top: 3vw;
+        right: -80vw;
+      }
+      .m5 {
+        position: absolute;
+        top: 20vw;
+        left: -78vw;
+      }
+      .m6 {
+        position: absolute;
+        top: 24vw;
+        left: -76vw;
+      }
+      .m7 {
+        position: absolute;
+        top: 29vw;
+        right: -81vw;
+      }
+      svg {
+        opacity: 1;
+        width: 150%;
+        // height: 100%;
+      }
     }
   }
 
@@ -1120,18 +1114,70 @@
   .i-section8 {
     position: relative;
     margin: 220px 0 300px;
-    .cloudBg2 {
-      position: relative;
-      padding-top: whForPC(2323); //圖的高
-      opacity: 0.4;
-    }
+    // .cloudBg2 {
+    //   position: relative;
+    //   padding-top: whForPC(2323); //圖的高
+    //   opacity: 0.4;
+    // }
+    // .cloudGroup2 {
+    //   max-width: initial;
+    //   width: whForPC(2717); //圖的寬
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-51.8%, -50%);
+    // }
     .cloudGroup2 {
-      max-width: initial;
-      width: whForPC(2717); //圖的寬
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-51.8%, -50%);
+      position: relative;
+      margin: 220px 0 100px;
+      padding-top: whForPC(2185);
+      .m8 {
+        position: absolute;
+        top: -5vw;
+        // left: -26vw;
+        left: -66vw;
+      }
+      .m9 {
+        position: absolute;
+        top: 1vw;
+        // right: -21vw;
+        right: -61vw;
+      }
+      .m10 {
+        position: absolute;
+        top: 3vw;
+        // right: -10vw;
+        right: -65vw;
+      }
+      .m11 {
+        position: absolute;
+        top: -10vw;
+        // left: -28vw;
+        left: -68vw;
+      }
+      .m12 {
+        position: absolute;
+        top: 32vw;
+        // left: -23vw;
+        left: -66vw;
+      }
+      .m13 {
+        position: absolute;
+        top: 17vw;
+        // left: -22vw;
+        left: -70vw;
+      }
+      .m14 {
+        position: absolute;
+        top: 21vw;
+        // right: -21vw;
+        right: -72vw;
+      }
+      svg {
+        opacity: 1;
+        width: 130%;
+        // height: 100%;
+      }
     }
   }
   // ＝＝＝＝＝＝＝  section 9 ＝＝＝＝＝＝＝＝＝
