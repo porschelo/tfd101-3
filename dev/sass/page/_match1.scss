@@ -1,87 +1,156 @@
-.jl-m1-header{
-  height: 140px;
-  background-color: #023553;
-}
-
 .jl_wrapper1{
+    background-image: url(../images/horoscope_page/match1_bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // width:100%;
 
-  background-image: url(../images/horoscope_page/match1_bg.png);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  width:100%;
-  position: absolute;
-  color:#D6E0F7;
-  text-decoration: none;
-
-  .jl_section1 {
-  position:relative;
-  // border: 5px solid red;
-  margin-top: 15%;
-  margin-left: 25%;
-
-  h2{
     color:#D6E0F7;
-    font-size: $h1;
-    text-align: center;
     text-decoration: none;
+
+    .jl_top_fix {
+      overflow:hidden;
+    }
+
+
+  .jl_section {
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    // border: 5px solid yellow ;
+    width:30%;
+      @include rwd(pad){  // 1199px
+        margin-top: 20%;
+      }
+      @include rwd(mobile){  // 768px
+        margin-top: 20%;
+      }
+
+    img{
+      //this is the yellow planet
+      // border: 5px solid green;
+      width: 100%;    
+    }
+
+    h2{
+      //yellow planet text
+      position: absolute;
+      color:#D6E0F7;
+      font-size: $h1;
+      text-align: center;
+      text-decoration: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // border: 5px solid red;
+      width:100%;
+
+      @include rwd(pad){  // 1199px
+        font-size: $p1;
+      }
+
+      @include rwd(mobile){  // 768px
+        font-size: $f;
+      }
+
+    }
+  } //jl_section
+
+
+  .jl_yellow{
+    display: block;
+    position: relative;
+    margin-right: auto;
+
+
+  } //jl_yellow end
+
+
+  // red planet start
+
+  .jl_section2{
+    border: 5px solid orange;
+    position: relative;
+
+    .jl_red{
+      display: block;
+      position: relative;
+      margin-right: 5vw;
+      margin-left: auto;
+      // margin-top:-300px;
+      border: 3px solid green;
+  
+        img{
+          // position: static;
+          margin-left: 55vw;
+          border:2px solid pink;
+          height: 580px;
+  
+          @include rwd(pad){  // 1199px
+            width:580px *0.7;
+          }
+        
+          @include rwd(mobile){  // 768px
+            width:580px *0.4;
+          }
+        }
+  
+        h2{
+          position:absolute;
+          color:#D6E0F7;
+          font-size: $h1;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 3px solid yellow;
+        }
+
   }
-}
-
-.jl_section1_planet{
-  width:100%;
-  max-width: 600px;
-}
-
-.jl_section1txt a{
-  color:#D6E0F7;
-  font-size: $h1;
-  text-align: center;
-  text-decoration: none;
-  position:absolute;
-  top:45%;
-  left: 22%;
-}
 
 
 
-.jl_section2 {
-  // position:absolute;
-  font-size: $h1;
-  text-align: center;
-  // margin-top:30%;
-  margin-left: 46%;
-  padding-bottom: 10%;
-  // border: 2px solid yellow;
+    }
 
-  h2{
-    color:#D6E0F7;
-    font-size: $h1;
-    text-align: center;
-    text-decoration: none;
-  }
+  // .jl_section2 {
+  //   font-size: $h1;
+  //   text-align: center;
+  //   // display:inline;
+  //   border: 2px solid yellow;
+  //   position: relative;
 
-}
+  //   // img{
+  //   //   //this is the red planet
 
-.jl_section2_planet{
-  width:100%;
-  max-width: 1000px;
-}
+  //   //   position:absolute;
+  //   //   height: 400px;
+  //   //   border: 3px solid green;
+  //   //   margin-left: 55%;
 
-.jl_section2txt{
-  color:#D6E0F7;
-  font-size: $h1;
-  text-align: center;
-  text-decoration: none;
-  position:absolute;
-  top: 63%;
-  right:9%;
+  //   //   // height: 800px;
+  //   //   border: 3px solid green;
+  //     // margin-left: 55%;
+  //     // position: absolute;
+  //     // overflow: hidden;
+  //   }
 
-  a, h3, h4{
-    text-decoration: none;
-    color:#D6E0F7;
-  }
-  }
+  //     h2{
+  //       //planet's title text
+  //       position: absolute;
+  //       color:#D6E0F7;
+  //       font-size: $h1;
+  //       text-align: center;
+  //       text-decoration: none;
+  //       border: 5px solid yellow;
+  //       top: 40%;
+  //       left: 70%;
+  //       transform: translate(-50%, -50%);
+  //     }
+  //   }
+
+
+
+
+
 
 
   .jl-footer{
@@ -109,7 +178,8 @@
           }
       }
 
-}
+    
  // end of jl_wrapper1
 
-
+    
+}
