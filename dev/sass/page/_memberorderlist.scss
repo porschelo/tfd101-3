@@ -148,18 +148,27 @@ $border :1px solid;
                 margin-top: 4%;
                 margin-bottom: 5%;
 
+                @include rwd(mobile) {
+                    line-height:1.5;
+                }
+
+
+
 
 
                 @include btn-module('.buyagain', 191, 75) {
                     color: white;
                     line-height: (75*.7) - 6px;
                     margin: 10% auto;
+                    font-size: $p2;
 
-                    @include rwd(mobile){
-                        font-size: $h3 - 6px;
-                        
+                    @include rwd(mobile) {
+                        font-size: $p2 - 8px;
+                        width: 120px*.7;
+                        height: 50px*.7;
+                        line-height: (50*.7) - 6px;
                     }
-                    
+
                 }
 
 
@@ -179,10 +188,24 @@ $border :1px solid;
                 .numid {
                     color: map-get($color, pink);
 
+                }
+
+                .order_name,
+                .order_pic {
+                    @include rwd(mobile) {
+                        text-align: left;
+                    }
+                }
+
+                img {
+                    @include rwd(mobile) {
+                        width: 55px;
+                        height: 55px;
+                    }
+
 
                 }
 
-                
 
 
 

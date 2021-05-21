@@ -140,6 +140,8 @@ $color:(white:#fff,
                 margin-top: 4%;
                 margin-bottom: 4%;
 
+                
+
                 td {
                     vertical-align: middle;
 
@@ -154,16 +156,18 @@ $color:(white:#fff,
                 @include btn-module('.canel_collection', 191, 75) {
                     color: white;
                     line-height: (75*.7)-6px;
+                    font-size: $p2;
                     @include center;
 
                     @include rwd("mobile") {
-                        font-size: $h3 - 6px;
-                        width: 170 * 0.7px;
-                        height: 80 * 0.7px;
+                        font-size: $p2 - 8px;
+                        width: 120px*.7;
+                        height: 70px*.7;
+                        line-height: (70*.7) - 6px;
                     }
-
-
                 }
+
+
             }
         }
 
