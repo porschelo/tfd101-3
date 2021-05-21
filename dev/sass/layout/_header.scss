@@ -53,7 +53,7 @@ header {
     }
   }
 
-  @include header-mobile {
+  @include rwd(mobile) {
     height: 150px * 0.7;
     .navbar {
       margin: 10px 18px 0px 0px;

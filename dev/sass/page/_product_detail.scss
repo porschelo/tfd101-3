@@ -8,6 +8,9 @@
         // border: 1px solid red;
         color: $colorT;
         padding: ( 80px + 240px ) * .7 0 0;
+        @include rwd(mobile){
+            padding: 220px  * .7 0 0;
+        }
         &-c{
             display: flex;
             justify-content: center;
@@ -32,7 +35,7 @@
             text-align: center;
             font-size: $p1;
             @include rwd(mobile){
-                font-size: $p1 - 6px;
+                font-size: $p1 - 8px;
             }
         }
 
@@ -62,7 +65,6 @@
         }
 
         &_top{
-            position: relative;
 
             /*===== 麵包屑 =====*/
             .breadcrumb {
@@ -72,8 +74,10 @@
                 padding-left: 50px;
                 padding-top: 80px * .7;
                 padding-bottom: 85px * .7;
+                line-height: 1;
                 @include rwd(mobile){
                     padding-left: 20px;
+                    padding-top: 40px;
                 }
                 a{
                     text-decoration: none;
@@ -91,18 +95,6 @@
                 }
                 &:first-child:before{
                     content: " ";
-                }
-
-            }
-
-            /*===== 愛心收藏 =====*/
-            .pd-love{
-                width: 60px * .7;
-                position: absolute;
-                right: 70px;
-                top: 70px;
-                @include rwd(mobile){
-                    right: 20px;
                 }
 
             }
@@ -163,26 +155,41 @@
             /*===== 商品簡介 =====*/
             .pd-rightblock{
                 width: 50%;
-                padding: 50px;
-                h2{
-                    font-size: $h2;
-                    margin-bottom: 50px;
-                }
+                // padding: 50px;
                 p{
+                    margin-top: 70px;
                     font-size: $p2;
                 }
                 @include rwd(mobile){
                     width: 100%;
                     padding: 10px;
-                    h2{
-                        font-size: $h2 - 6px;
-                        margin-top: 50px;
-                    }
+                    
                     p{
                         font-size: $p2 - 3px;
                     }
-                 }
+                }
+                 /*===== 愛心收藏 =====*/
+                .pd-love{
+                    margin-top: 30px;
+                    display: flex;
+                    align-items: center;
+                    h2{
+                        font-size: $h2;
+                        margin-right: 50px;
+                    }
+                    img{
+                        width: 40px;
+                    }
+                    @include rwd(mobile){
+                        margin-top: 50px;
+                        h2{
+                            font-size: $h2 - 6px;
+                        }
+                    }
+
+                }
             }
+        
 
             .pd-price{
                font-size: $h3;
@@ -204,17 +211,22 @@
                     }
                 }
             }
+            .pd-butn{
+                @include center;
+            }
 
         
             @include btn-module('.pd-add', 236, 93){
                 color: white;
                 margin-right: 10px;
+                margin-left: 40px;
 
                 @include rwd(mobile){
                     font-size: $h3 - 8px;
                     width: 170 * 0.7px;
                     height: 80 * 0.7px;
                     margin-right: 0;
+                    margin-left: 0;
                 }
             }
 
