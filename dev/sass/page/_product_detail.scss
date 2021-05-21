@@ -71,13 +71,13 @@
                 max-width: 1200px;
                 margin: 0 auto;
                 /* border: 1px solid red; */
-                padding-left: 50px;
                 padding-top: 80px * .7;
                 padding-bottom: 85px * .7;
                 line-height: 1;
                 @include rwd(mobile){
                     padding-left: 20px;
                     padding-top: 40px;
+                    padding-bottom: 40px;
                 }
                 a{
                     text-decoration: none;
@@ -108,7 +108,7 @@
             display: flex;
             @include rwd(mobile){
                 display: block;
-             }
+            }
 
              /*===== 商品角度切換 =====*/
             .pd-leftblock{
@@ -212,7 +212,8 @@
                 }
             }
             .pd-butn{
-                @include center;
+                display: flex;
+                justify-content: center;
             }
 
         
@@ -225,8 +226,7 @@
                     font-size: $h3 - 8px;
                     width: 170 * 0.7px;
                     height: 80 * 0.7px;
-                    margin-right: 0;
-                    margin-left: 0;
+                    margin-left: 0px;
                 }
             }
 
