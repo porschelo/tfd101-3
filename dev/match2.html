@@ -12,20 +12,18 @@
   
 <div class="jl_wrapper2">
   @@include('layout/header.html')
-  <div class="jl-outside">
-    
-    <div class="jl_section_a">
-    
-      <div class="jl_section_left">
-        <img src="./images/horoscope_page/frame.svg" alt="frame_left">
-
-        <input type="text" placeholder="請輸入您的名字" class="jl_self_name">
-
-          <label for="gender"></label>
-            <select name="self" id="jl_selfsex" class="jl_selfsex">
-              <option value="male">男性</option>
-              <option value="female">女性</option>
-            </select> <br>
+  <div class="jl_top_fix"> 
+    <div class="jl_match2_title">
+      <h2>星座配對 <br> - Horoscope Matching - </h2>
+    </div>
+    <div class="jl_left_box">
+      
+      <input type="text" placeholder="請輸入您的名字" class="jl_self_name">
+      <label for="gender"></label>
+        <select name="self" id="jl_selfsex" class="jl_selfsex">
+          <option value="male">男性</option>
+          <option value="female">女性</option>
+        </select> <br>
 
             <select name="self_birth_year" id="jl_self_birth_year" class="jl_self_birth_year">
               <option value="2020">2020</option>
@@ -48,15 +46,10 @@
               <br>
               <h2>天蠍座</h2>
             </div>
-      
-      </div> <!-- Section left end -->
-
+    </div>    <!-- end of jl_left_box -->
     
 
-
-        <div class="jl_section_right"> <!-- Section right start -->
-          <img src="./images/horoscope_page/frame.svg" alt="frame_left">
-          
+    <div class="jl_right_box">
           <input type="text" placeholder="請輸入對方名字" class="jl_opp_name">
 
           <select name="opp" id="jl_opp_gender" class="jl_opp_gender">
@@ -83,12 +76,17 @@
           <h3>對方星座</h3>
           <br>
           <h2>巨蟹座</h2>
-          
-        </div> <!-- Section right end -->
-    </div> <!-- jl_section_a end -->
+
+
+  </div>  <!-- end of jl_top_fix -->
+ 
+
+
+
+
     
-      
-  </div>    <!-- jl-outside end  -->
+    
+
 
   <button type="button" class="match_btn">MATCH</button>
 
