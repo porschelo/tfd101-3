@@ -6,6 +6,8 @@
     background-size: cover;
     width:100%;
     color: #B6C9F0;
+    overflow: hidden;
+    position: relative;
 
     
     // border: 1px transparent solid;
@@ -20,8 +22,8 @@
       text-align: center;
       // display:inline-block;
 
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-top: 10px $textColor double;
       border-left: 5px $textColor dashed;
       border-right: 5px $textColor dashed;

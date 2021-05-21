@@ -33,7 +33,7 @@
                 
             </div>
             <!-- 進度條 -->
-            <div class="progress">
+            <div class="j_progress">
                 
                 <li class="container__item">
                     <div class="stepper">
@@ -64,6 +64,8 @@
 
             <!-- 儀錶板 -->
             <div class="j_panel">
+              <!-- <div class=".j_panel_date_inner"> -->
+
                 <div class="j_panel_title">
                     <h2>選擇時段</h2>
                 </div> 
@@ -72,10 +74,10 @@
                     
                     </div> -->
                     <!-- table -->
-                    <ul class="j_date_table">
+                    <!-- <ul class="j_date_table"> 
                       <li class="date_title">
                         <ol class="date_time">
-                          <li >5/9(日)</li>
+                          <li>5/9(日)</li>
                           <li>5/10(一)</li>
                           <li>5/11(二)</li>
                           <li>5/12(三)</li>
@@ -114,7 +116,54 @@
                             <li data-title="晚：5/15(六)"></li>
                           </ol>
                         </li>
-                    </ul>
+                    </ul>  -->
+                    
+                  <table class="rwd-table">
+                    <tbody>
+                      <tr>
+                        <th>時間</th>
+                        <th>5/9(日)</th>
+                        <th>5/10(一)</th>
+                        <th>5/11(二)</th>
+                        <th>5/12(三)</th>
+                        <th>5/13(四)</th>
+                        <th>5/14(五)</th>
+                        <th>5/15(六)</th>
+                      </tr>
+                      <tr>
+                        <td data-th="時間">早上</td>
+                        <td data-th="5/9(日)" class="able">可預約</td>
+                        <td data-th="5/10(一)"></td>
+                        <td data-th="5/11(二)"></td>
+                        <td data-th="5/12(三)" class="able">可預約</td>
+                        <td data-th="5/13(四)" class="able">可預約</td>
+                        <td data-th="5/14(五)"></td>
+                        <td data-th="5/15(六)" class="able">可預約</td>
+                      </tr>
+                      <tr>
+                      <td data-th="時間">中午</td>
+                        <td data-th="5/9(日)" class="able">可預約</td>
+                        <td data-th="5/10(一)"></td>
+                        <td data-th="5/11(二)" class="able">可預約</td>
+                        <td data-th="5/12(三)" class="able">可預約</td>
+                        <td data-th="5/13(四)"></td>
+                        <td data-th="5/14(五)"></td>
+                        <td data-th="5/15(六)" class="able">可預約</td>
+                      </tr>
+                      <tr>
+                        <td data-th="時間">晚上</td>
+                        <td data-th="5/9(日)" class="able">可預約</td>
+                        <td data-th="5/10(一)"></td>
+                        <td data-th="5/11(二)" class="able">可預約</td>
+                        <td data-th="5/12(三)"></td>
+                        <td data-th="5/13(四)"></td>
+                        <td data-th="5/14(五)" class="able">可預約</td>
+                        <td data-th="5/15(六)"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
 
                     <!-- button -->
                         <form action="" class="j_btn">
@@ -123,6 +172,7 @@
                             <button type="button" value="page" class="j_btn2" onclick="location.href ='./ap_confirm.html'">下一頁</button>
 
                         </form>
+              <!-- </div>             -->
             </div>
             
         </div>
