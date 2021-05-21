@@ -40,7 +40,7 @@ $color:(white:#fff,
         color: $colorT;
         padding: (80px + 200px) * .7 0 0;
 
-        margin-bottom: 550px*.7;
+        margin-bottom: 280px*.7;
 
         &-c {
             display: flex;
@@ -67,69 +67,61 @@ $color:(white:#fff,
 
     .SC_mid_block {
         // border: 1px solid red;
-        width: 1300*.7px;
-        position: relative;
 
-        .list_info {
-            position: absolute;
-            top: 8%;
+        max-width: 1300*.7px;
+        width: 100%;
+        border: 3px solid white;
+        font-size: $h3;
+        color: map-get($color, white);
+
+        @include rwd("mobile") {
+
+            font-size: $h3 - 8px
+        }
+
+        table {
+            text-align: center;
             width: 100%;
-            font-size: $h3;
-            color: map-get($color, white);
+            margin-top: 4%;
+            margin-bottom: 4%;
+
+            td {
+                vertical-align: middle;
+
+            }
+
+            .line {
+                width: 95%;
+                margin: 5% auto;
+                border-top: 2px solid gray;
+            }
 
             @include btn-module('.delete_item', 191, 75) {
                 color: white;
                 line-height: (75*.7)-6px;
-                // margin:25% auto;
                 @include center;
+                margin-bottom: 3%;
+
             }
-
-
-        }
-
-
-        table {
-            // margin-top: 3%;
-            max-width: 100%;
-            width: 100%;
-            text-align: center;
-
-
-
-            .line {
-                width: 90%;
-                margin: 40px auto;
-                border-top: 2px solid gray;
-            }
-
-            td {
-                vertical-align: middle;
-            }
-        }
-
-        .total_block {
-            position: absolute;
-            bottom: 20%;
-            right: 6%;
-
-            h3 {
-                font-size: $h3;
-                color: map-get($color, white);
-            }
-
-        }
-
-        .pay_btn {
-            position: absolute;
-            bottom: 5%;
-            right: 7%;
 
             @include btn-module('.pay_check', 191, 75) {
                 color: white;
                 line-height: (75*.7)-6px;
-                // margin:25% auto;
                 @include center;
+                margin-top: 10%;
+
+            }
+
+
+            .total_price {
+                color: map-get($color, pink);
+            }
+
+            .item_count {
+                width: 30%;
+                border-radius: 5px;
             }
         }
+
     }
 }

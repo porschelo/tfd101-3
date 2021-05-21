@@ -20,6 +20,9 @@
             color: $colorT;
             padding: (80px+240px)*.7 0 0; 
             z-index: 15;
+            @include rwd(mobile){
+                padding: (220px)*.7 0 0; 
+            }
             &-c{
                 display: flex;
                 justify-content: center;
@@ -33,10 +36,16 @@
             h1{
                 font-size: $h1;
                 padding: 5px 20px 10px;
+                @include rwd(mobile){
+                    font-size: $h1 - 8px;
+                }
             }
             &-e{
                 text-align: center;
                 font-size: $p1;
+                @include rwd(mobile){
+                    font-size: $p1 - 6px;
+                }
             }
         }
         .starship{
@@ -133,6 +142,9 @@
                 width: 45px;
                 box-sizing: content-box;
                 cursor: pointer;
+                @include rwd(mobile){
+                    width: 5vw;
+                }
                 &:hover{
                     opacity: .7;
                 }
@@ -142,40 +154,77 @@
             }
             .prbtn{
                 margin-right: 30px;
+                @include rwd(pad2){
+                    margin-right: 2vw;
+                }
             }
             .nxbtn{
                 margin-left: 30px;
+                @include rwd(pad2){
+                    margin-left: 2vw;
+                }
             }
             .drivingcard{
                 background-color: rgb(230, 230, 230);
                 width: 800px;
                 height: 528px;
                 border-radius: 10px;
+                @include rwd(pad2){
+                    margin-top: 20px;
+                    width: 75vw;
+                    height: auto;
+                }
                 h2{
                     font-size: $h2;
                     font-weight: 500;
                     color: rgb(82, 82, 121);
                     padding: 45px 0 30px;
                     text-align: center;
+                    @include rwd(mobile){
+                        font-size: $h2 - 6px;
+                        padding: 30px 0 25px;
+                    }
                 }
                 .cardtop{
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @include rwd(pad2){
+                        align-items: flex-start;
+                    }
                     .cardpt{
                         width: 180px;
+                        @include rwd(pad2){
+                            width: 140px;
+                        }
+                        @include rwd(mobile){
+                            width: 20vw;
+                        }
                     }
                     .cardct{
                         padding-left: 32px;
                         width: 60%;
                         color: #555;
+                        @include rwd(mobile){
+                            padding-left: 3vw;
+                        }
                         h3{
                             font-size: $h3;
                             padding-bottom: 30px;
+                            @include rwd(pad2){
+                                padding-bottom: 2vw;
+                            }
+                            @include rwd(mobile){
+                                font-size: 3vw;
+                                padding-bottom: 2vw;
+                            }
                         }
                         p{
                             font-size: $p1;
                             line-height: 1.2;
+                            @include rwd(mobile){
+                                font-size: 3vw;
+                            }
                         }
                     }
                 }
@@ -189,10 +238,18 @@
                         color: #aaa;
                         padding-right: 30px;
                         padding-left: 15px;
+                        @include rwd(pad2){
+                            display: none;
+                        }
                     }
                     .cdbtr{
                         display: flex;
                         margin-top: 24px;
+                        @include rwd(pad2){
+                            margin-top: 22px;
+                            margin-bottom: 28px;
+                            justify-content: center;
+                        }
                         .prs{
                                 box-sizing: border-box;
                                 background-size: 145px 138px;
@@ -200,22 +257,37 @@
                                 height: 138px;
                                 padding-top: 40px;
                                 padding-left: 9px;
+                                @include rwd(mobile){
+                                    background-size: 20vw 19vw;
+                                    width: 20vw;
+                                    height: 19vw;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    padding-top: 0;
+                                    padding-left: 7px;
+                                }
                                 h3{
                                     font-size: $h3;
                                     line-height: 1.2;
                                     text-align: center;
+                                    @include rwd(mobile){
+                                        font-size: 3.5vw;
+                                        line-height: 1.1;
+                                    }
                                 }
                             }
                         .prs1{
                             background-image: url(../images/starsign/prs1.png);
-                            margin-right: 15px;
+                            margin-right: 1.5vw;
                             h3{
                                 color: #FA5078;
                             }
                         }
                         .prs2{
                             background-image: url(../images/starsign/prs2.png);
-                            margin-right: 15px;
+                            margin-right: 1.5vw;
                             h3{
                                 color: #4078C4;
                             }
@@ -236,19 +308,41 @@
             display: flex;
             flex-direction: row;
             margin-top: 40px;
+            @include rwd(pad2){
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+            }
             h2{
                 font-size: $h2;
                 color: rgb(252, 140, 99);
                 padding: 70px 0 40px;
                 text-align: center;
+                @include rwd(pad2){
+                    padding: 32px 0 25px;
+                }
+                @include rwd(mobile){
+                    font-size: $h2 - 6px;
+                    padding: 32px 0 25px;
+                }
             }
             .starsignleft{
                 width: 530px;
+                @include rwd(pad2){
+                    width: 75vw;
+                }
                 .luckyeveryday{
                     background-image: url(../images/starsign/lfbg.png);
                     background-size: 500px 520px;
                     width: 500px;
                     height: 520px;
+                    @include rwd(pad2){
+                        background-image: none;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border: rgb(245, 245, 245) solid 3px;
+                        width: 75vw;
+                        height: auto;
+                    }
                     p{
                         font-size: $h3 - 1px;
                         line-height: 1.6;
@@ -257,6 +351,18 @@
                         color: #fff;
                         margin: auto;
                         padding-left: 15px;
+                        @include rwd(pad2){
+                            font-size: $h3 - 4px;
+                            width: 85%;
+                            padding-left: 0;
+                            margin-bottom: 30px;
+                        }
+                        @include rwd(mobile){
+                            font-size: $h3 - 8px;
+                            width: 85%;
+                            padding-left: 0;
+                            margin-bottom: 30px;
+                        }
                     }
                 }
                 .productforyou{
@@ -265,18 +371,45 @@
                     width: 500px;
                     height: 520px;
                     margin-top: 30px;
+                    @include rwd(pad2){
+                        background-image: none;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border: rgb(245, 245, 245) solid 3px;
+                        width: 75vw;
+                        height: auto;
+                        margin-bottom: 30px;
+                    }
                     .sspd{
-                        width: 280px;
-                        height: 250px;
-                        overflow: hidden;
-                        border-radius: 5px;
                         margin: auto;
+                        img{
+                            width: 280px;
+                            height: 250px;
+                            display: block;
+                            margin: 0 auto;
+                            border-radius: 10px;
+                            @include rwd(pad2){
+                                width: 320px;
+                                height: auto;
+                            }
+                            @include rwd(mobile){
+                                width: 60%;
+                                height: auto;
+                            }
+                        }
                     }
                     h3{
                         font-size: $h3 - 1px;
                         color: #fff;
                         text-align: center;
                         margin-top: 30px;
+                        @include rwd(pad2){
+                            font-size: $h3 - 4px;
+                            margin-bottom: 30px;
+                        }
+                        @include rwd(mobile){
+                            font-size: $h3 - 7px;
+                            margin-bottom: 30px;
+                        }
                     }
                 }
             }
@@ -285,6 +418,13 @@
                 background-size: 550px 900px;
                 width: 550px;
                 height: 900px;
+                @include rwd(pad2){
+                    background-image: none;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border: rgb(245, 245, 245) solid 3px;
+                    width: 75vw;
+                    height: auto;
+                }
                 .artimenu{
                     display: flex;
                     flex-direction: column;
@@ -295,22 +435,42 @@
                         width: 430px;
                         color: #fff;
                         margin-bottom: 50px;
+                        @include rwd(pad2){
+                            width: 85%;
+                            padding-left: 0;
+                        }
                         .artitle{
                             font-size: $h3 - 1px;
                             line-height: 1.4;
+                            text-decoration: none;
+                            cursor: pointer;
+                            @include rwd(pad2){
+                                font-size: $h3 - 3px;
+                            }
+                            @include rwd(mobile){
+                                font-size: $h3 - 7px;
+                            }
                         }
                         .artminp{
                             font-size: $p2;
                             line-height: 1.6;
                             padding-top: 10px;
                             font-weight: 300;
+                            @include rwd(mobile){
+                                font-size: $p2 - 3px;
+                            }
                         }
-                        .morebtn{
+                        .armorebtn{
                             font-size: $p2;
                             color: rgb(252, 140, 99);
                             display: block;
                             text-align: right;
                             padding-right: 15px;
+                            padding-top: 10px;
+                            @include rwd(pad2){
+                                font-size: $p2 - 3px;
+                                padding-right: 15px;
+                            }
                         }
                     }
                 }
@@ -322,13 +482,110 @@
                     .-on{
                             color: rgb(252, 140, 99);
                     }
+                    @include rwd(pad2){
+                        margin-bottom: 30px;
+                    }
                 }
 
             }
             
         }
     }
-    
+
+    //article popup
+    .overlayarticle{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(7, 7, 7, 0.6);
+        display: none;
+        z-index: 1000;
+        overflow: scroll;
+        .artiflex{
+            display: flex;
+            justify-content: center;
+            .articlepop{
+                margin: 110px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 15px;
+                width: 65%;
+                position: relative;
+                z-index: 1000;
+                @include rwd(pad2){
+                    width: 80%;
+                }
+                @include rwd(mobile){
+                    width: 90%;
+                    margin: 60px 0;
+                }
+                .articlosebtn {
+                    position: absolute;
+                    top: 3px;
+                    right: 23px;
+                    color: #aaa;
+                    font-size: 55px;
+                    font-weight: 200;
+                    text-decoration: none;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+                h2{
+                    color: rgb(82, 82, 121);
+                    font-size: $h3;
+                    margin: 70px 12% 10px;
+                    @include rwd(mobile){
+                        font-size: $h3 - 6px;
+                        line-height: 1.5;
+                        margin: 70px 10% 10px;
+                    }
+                }
+                img{
+                    width: 70%;
+                    margin: 30px 0;
+                    border-radius: 10px;
+                    @include rwd(mobile){
+                        width: 65%;
+                        margin: 20px 0;
+                    }
+                }
+                p{
+                    color: #777;
+                    font-size: $p2;
+                    margin: 10px 15% 10px;
+                    letter-spacing: $ls;
+                    line-height: 1.4;
+                    @include rwd(mobile){
+                        font-size: $p2 - 3px;
+                        margin: 10px 10% 10px;
+                    }
+                }
+                .articlebtn{
+                    margin: 40px 0 50px;
+                    display: flex;
+                    width: 70%;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include rwd(mobile){
+                        width: 80%;
+                    }
+                    a{
+                        color: rgb(82, 82, 121);
+                        font-size: $p2;
+                        @include rwd(mobile){
+                            font-size: $p2 - 3px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
 
 
     footer{

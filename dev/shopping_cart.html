@@ -31,9 +31,6 @@
         <!-- Title END-->
 
         <div class="SC_mid_block">
-            <div class="pic_out">
-                <img src="images/shopping_cart/mid_data_bg.png" alt="">
-            </div>
 
             <div class="list_info">
                 <table>
@@ -42,6 +39,7 @@
                             <td>商品圖片</td>
                             <td>商品名稱</td>
                             <td>金額</td>
+                            <td>數量</td>
                         </tr>
                         <tr>
                             <td colspan="5">
@@ -55,6 +53,9 @@
                             <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
                             <td>宇宙能量手環</td>
                             <td>500</td>
+                            <td>
+                                <input type="number" value="1" min="0" class="item_count">
+                            </td>
                             <td rowspan="1">
                                 <button class="delete_item">刪除</button>
                             </td>
@@ -69,27 +70,59 @@
                             <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
                             <td>宇宙能量手環</td>
                             <td>600</td>
+                            <td>
+                                <input type="number" value="1" min="0" class="item_count">
+                            </td>
                             <td rowspan="1">
                                 <button class="delete_item">刪除</button>
                             </td>
                         </tr>
-            
+
                         <tr>
                             <td colspan="5">
                                 <div class="line"></div>
                             </td>
                         </tr>
+
+                         <tr>
+                            <td><img src="./images/memberorderlist/Taurus.png" alt=""></td>
+                            <td>宇宙能量手環</td>
+                            <td>600</td>
+                            <td>
+                                <input type="number" value="1" min="0" class="item_count">
+                            </td>
+                            <td rowspan="1">
+                                <button class="delete_item">刪除</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="5">
+                                <div class="line"></div>
+                            </td>
+                        </tr>
+
+                        <!-- total block -->
+                
+                        <tr class="total_price">
+                            <td colspan="4"></td>
+                            <td class="total_price">總計: 1700 元</td>
+                        </tr>
+
+                        <!-- pay block -->
+
+                        <tr class="pay_btn">
+                            <td colspan="4"></td>
+                            <td>
+                                <button class="pay_check" onclick="location.href='./order.html'">前往付款</button>
+                            </td>
+                        </tr>
+
                     </tbody>          
                 </table>
             </div>
 
-            <div class="total_block">
-                <h3>總計 : 1100 元</h3>
-            </div>
-
-            <div class="pay_btn">
-                <button class="pay_check" onclick="location.href='./order.html'">前往付款</button>
-            </div>
+            
 
 
         <!--SC_mid_block END -->

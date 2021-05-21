@@ -44,7 +44,7 @@ $color:(white:#fff,
         color: $colorT;
         padding: (80px + 240px) * .7 0 0;
 
-        margin-bottom: 550px*.7;
+        margin-bottom: 280px*.7;
 
         &-c {
             display: flex;
@@ -73,108 +73,79 @@ $color:(white:#fff,
 
     .MF_mid_block {
         // border: 1px solid red;
-        width: 1300*.7px;
-        position: relative;
+        max-width: 1300*.7px;
+        width: 100%;
+
 
         .tab {
             display: flex;
-            position: absolute;
-            top: -37px;
+            justify-content: space-evenly;
 
 
-            color: map-get($color, font_color);
+            a {
 
-
-
-
-            &_btn {
-
-                font-size: map-get($font_size, H3);
+                font-size: $h3;
                 background-color: map-get($color, gray);
                 color: map-get($color, font_color);
-                width: 265*.7px;
-                height: 75*.7px;
-                // border: $border;
+                max-width: 265*.7px;
+                max-height: 75*.7px;
+                width: 100%;
                 border-radius: 20*.7px 20*.7px 0 0;
                 line-height: 75*.7px;
                 text-align: center;
                 cursor: pointer;
-                margin-left: 37*.7px;
+                // margin-left: 37*.7px;
                 text-decoration: none;
 
-
-                &:nth-of-type(1) {
-                    margin-left: 108*.7px;
+                @include rwd("mobile") {
+                    width: 31%;
+                    font-size: $h3 - 6px
                 }
 
                 &:nth-of-type(3) {
                     background-color: map-get($color, white);
                 }
+
             }
         }
 
-        .pic_out {
-            z-index: 2;
-        }
-
-        .list_info {
-            display: flex;
-            width: 100%;
-            // border: 1px solid green;
+        .mid {
+            border: 3px solid white;
             font-size: $h3;
             color: map-get($color, white);
 
+            @include rwd("mobile") {
 
-            position: absolute;
-            top: 8%;
-            // left: 2%;
-            width: 100%;
-
-            @include btn-module('.canel_collection', 191, 75) {
-                color: white;
-                line-height: (75*.7)-6px;
-                // margin:25% auto;
-                @include center;
+                font-size: $h3 - 8px
             }
 
-            li {
-                flex-grow: 1;
+            table {
+                text-align: center;
+                width: 100%;
+                margin-top: 4%;
+                margin-bottom: 4%;
 
-                &:nth-of-type(1) {
-                    margin-left: 12%;
+                td {
+                    vertical-align: middle;
+
+                }
+
+                .line {
+                    width: 95%;
+                    margin: 5% auto;
+                    border-top: 2px solid gray;
+                }
+
+                @include btn-module('.canel_collection', 191, 75) {
+                    color: white;
+                    line-height: (75*.7)-6px;
+                    @include center;
+
+
                 }
             }
-
-
-
-
         }
-
-
-        table {
-            // margin-top: 3%;
-            max-width: 100%;
-            width: 100%;
-            text-align: center;
-
-
-
-            .line {
-                width: 90%;
-                margin: 40px auto;
-                border-top: 2px solid gray;
-            }
-
-            td {
-                vertical-align: middle;
-            }
-
-
-        }
-
 
     }
-
-
 
 }
