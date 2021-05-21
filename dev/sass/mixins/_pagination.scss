@@ -21,7 +21,7 @@
     width: 85%;
     @include center;
     display: flex;
-    margin-top: 375px;
+    margin-top: 70px;
     margin-bottom: -12px;
     @include rwd(mobile){
       margin-top: 50px;
@@ -52,13 +52,13 @@
       }
 
       &:nth-child(5) {
-        background-color: $colorPbg;
+        background-color: $colorPb;
         justify-content: right;
         color: white;
         margin-left: 40%;
         width: 12%;
         &:hover {
-          background-color: $colorPb;
+          background-color: $colorPbg;
         }
         @content;
         @include rwd(mobile) {
