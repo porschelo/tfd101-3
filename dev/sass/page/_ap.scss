@@ -873,91 +873,179 @@ $breakpoint-alpha: 875px;
   margin: 0 auto;
   width: 90%;// adjust to your needs
   border: red 3px solid;
-  // @media all and(max-width:900px) {
-  //   width: 80%;// adjust to your needs
-  // }
- }
   tbody{
 
-  // width:100%;
-  }
-  tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  th {
-    // border: darkcyan 3px solid;
-    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
-  }
-  
-  td {
-    display: block; 
-    width:90%;
-    // border: darkcyan 3px solid;
-    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
-	        box-shadow: 0 2px 2px -2px #0E1119;
-    &.able:hover{
-      box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
-      transform: translate3d(6px, -6px, 0);
-      transition-delay: 0s;
-      transition-duration: 0.4s;
-      transition-property: all;
-      transition-timing-function: line;
-      background-color: #FFF842;
-      color: #403E10;
-      font-weight: bold;
-      cursor: pointer;
+    // width:100%;
+    }
+    tr {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
     }
     
-    &:first-child {
-      padding-top: .5em;
+    th {
+      // border: darkcyan 3px solid;
+      display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
     }
-    &:last-child {
-      padding-bottom: .5em;
-    }
-
-    &:before {
-      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
-      font-weight: bold;
-
-      // optional stuff to make it look nicer
-      width: 5.5em; // magic number :( adjust according to your own content
-      display: inline-block;
-      // end options
-      
-      @media (min-width: $breakpoint-alpha) {
-        display: none;
+    
+    td {
+      display: block; 
+      width:90%;
+      // border: darkcyan 3px solid;
+      -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+       -moz-box-shadow: 0 2px 2px -2px #0E1119;
+            box-shadow: 0 2px 2px -2px #0E1119;
+      &.able:hover{
+        box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+        transform: translate3d(6px, -6px, 0);
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+        transition-timing-function: line;
+        background-color: #FFF842;
+        color: #403E10;
+        font-weight: bold;
+        cursor: pointer;
       }
-    }
-  }
-  
-  th, td {
-    text-align: left;
-    
-    @media (min-width: $breakpoint-alpha) {
-      display: table-cell;
-      // padding: .25em .5em;
       
       &:first-child {
-        padding-left: 0;
+        padding-top: .5em;
       }
-      
       &:last-child {
-        padding-right: 0;
+        padding-bottom: .5em;
+      }
+  
+      &:before {
+        content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+        font-weight: bold;
+  
+        // optional stuff to make it look nicer
+        width: 5.5em; // magic number :( adjust according to your own content
+        display: inline-block;
+        // end options
+        
+        @media (min-width: $breakpoint-alpha) {
+          display: none;
+        }
       }
     }
+    
+    th, td {
+      text-align: left;
+      
+      @media (min-width: $breakpoint-alpha) {
+        display: table-cell;
+        // padding: .25em .5em;
+        
+        &:first-child {
+          padding-left: 0;
+        }
+        
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+  
+    }
+    
+    
+  
+  
+  
+  // presentational styling
+  
+  // @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+  
+  // body {
+    
+  //   -webkit-font-smoothing: antialiased;
+  //   text-rendering: optimizeLegibility;
+  //   // color: #444;
+  //   // background: #eee;
+  // }
+  
+ }
+ 
+//   tbody{
 
-  }
+//   // width:100%;
+//   }
+//   tr {
+//     border-top: 1px solid #ddd;
+//     border-bottom: 1px solid #ddd;
+//   }
+  
+//   th {
+//     // border: darkcyan 3px solid;
+//     display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
+//   }
+  
+//   td {
+//     display: block; 
+//     width:90%;
+//     // border: darkcyan 3px solid;
+//     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+// 	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+// 	        box-shadow: 0 2px 2px -2px #0E1119;
+//     &.able:hover{
+//       box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+//       transform: translate3d(6px, -6px, 0);
+//       transition-delay: 0s;
+//       transition-duration: 0.4s;
+//       transition-property: all;
+//       transition-timing-function: line;
+//       background-color: #FFF842;
+//       color: #403E10;
+//       font-weight: bold;
+//       cursor: pointer;
+//     }
+    
+//     &:first-child {
+//       padding-top: .5em;
+//     }
+//     &:last-child {
+//       padding-bottom: .5em;
+//     }
+
+//     &:before {
+//       content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+//       font-weight: bold;
+
+//       // optional stuff to make it look nicer
+//       width: 5.5em; // magic number :( adjust according to your own content
+//       display: inline-block;
+//       // end options
+      
+//       @media (min-width: $breakpoint-alpha) {
+//         display: none;
+//       }
+//     }
+//   }
+  
+//   th, td {
+//     text-align: left;
+    
+//     @media (min-width: $breakpoint-alpha) {
+//       display: table-cell;
+//       // padding: .25em .5em;
+      
+//       &:first-child {
+//         padding-left: 0;
+//       }
+      
+//       &:last-child {
+//         padding-right: 0;
+//       }
+//     }
+
+//   }
   
   
 
 
 
-// presentational styling
+// // presentational styling
 
-// @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+// // @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
 
 body {
   
