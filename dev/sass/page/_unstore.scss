@@ -1,9 +1,13 @@
 .wrapper_unstore{
     overflow: hidden;
      //背景圖
-     background-image: url(../images/store/unstorebg.png);
+     background-image: url(../images/store/unstorebg1200.png);
      background-size: cover;
      box-sizing: border-box;
+
+     @include rwd(pad){
+        background-image:  url(../images/store/unstorebg.png);
+     }
 
      @include rwd(mobile){
         background-image: url(../images/store/pdctD_bg.png);
@@ -72,6 +76,7 @@
             background-image: none;
             border: 3px solid #F8F8F8;
             margin-top: 11px;
+            text-align: left;
         }
 
         a{
